@@ -1,0 +1,14 @@
+{
+    "name": "root",
+    "private": true,
+    "scripts": {
+        "start": "lerna run build",
+        "build:css": "yarn workspace @molecule-ui/styles build"
+    },
+    "devDependencies": {
+        "lerna": "^3.22.1"
+    },
+    "workspaces": [
+        "packages/*"
+    ]
+}

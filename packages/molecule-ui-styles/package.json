@@ -1,0 +1,19 @@
+{
+    "name": "@molecule-ui/styles",
+    "version": "1.0.0",
+    "license": "MIT",
+    "main": "build/main.module.css",
+    "style": "build/main.module.css",
+    "scripts": {
+        "build": "gulp"
+    },
+    "devDependencies": {
+        "autoprefixer": "^9.8.6",
+        "css-loader": "^4.2.0",
+        "cssnano": "^4.1.10",
+        "gulp": "^4.0.2",
+        "gulp-postcss": "^8.0.0",
+        "gulp-sass": "^4.1.0",
+        "node-sass": "^4.14.1"
+    }
+}

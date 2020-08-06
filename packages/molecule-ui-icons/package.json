@@ -1,0 +1,25 @@
+{
+    "name": "@molecule-ui/icons",
+    "version": "1.0.0",
+    "main": "build/index.js",
+    "typings": "build/index.d.ts",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/react": "^16.9.44",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "typescript": "^3.9.7",
+        "webpack": "^4.44.1",
+        "webpack-cli": "^3.3.12"
+    },
+    "dependencies": {
+        "@molecule-ui/styles": "1.0.0",
+        "@types/classnames": "^2.2.10",
+        "classnames": "^2.2.6"
+    },
+    "peerDependencies": {
+        "@types/react": "^16.9.44",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1"
+    }
+}

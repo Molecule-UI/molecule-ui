@@ -1,0 +1,13 @@
+{
+    "name": "@molecule-ui/react",
+    "version": "1.0.0",
+    "main": "build/index.js",
+    "license": "MIT",
+    "devDependencies": {
+        "typescript": "^3.9.7"
+    },
+    "dependencies": {
+        "@molecule-ui/icons": "1.0.0",
+        "@molecule-ui/styles": "1.0.0"
+    }
+}

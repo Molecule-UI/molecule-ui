@@ -1,0 +1,12 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "module": "CommonJS",
+        "declaration": true,
+        "rootDir": "src",
+        "outDir": "build",
+        "target": "ES6",
+        "moduleResolution": "Node",
+        "jsx": "react"
+    }
+}
