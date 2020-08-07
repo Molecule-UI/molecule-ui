@@ -2,6 +2,7 @@
     "name": "@molecule-ui/react",
     "version": "1.0.0",
     "main": "build/index.js",
+    "author": "Rushil dhinoja <mr.rushil17@gmail.com>",
     "license": "MIT",
     "devDependencies": {
         "typescript": "^3.9.7"

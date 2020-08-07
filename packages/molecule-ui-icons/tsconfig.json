@@ -4,9 +4,10 @@
         "module": "CommonJS",
         "declaration": true,
         "rootDir": "src",
-        "outDir": "build",
+        "outDir": "dist",
         "target": "ES6",
         "moduleResolution": "Node",
         "jsx": "react"
-    }
+    },
+    "include": ["./src/*.tsx"]
 }

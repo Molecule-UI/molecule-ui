@@ -3,7 +3,8 @@
     "private": true,
     "scripts": {
         "start": "lerna run build",
-        "build:css": "yarn workspace @molecule-ui/styles build"
+        "build:css": "yarn workspace @molecule-ui/styles build",
+        "build:icons": "yarn workspace @molecule-ui/icons build"
     },
     "devDependencies": {
         "lerna": "^3.22.1"
