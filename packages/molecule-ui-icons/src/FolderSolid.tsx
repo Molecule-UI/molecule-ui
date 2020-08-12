@@ -52,7 +52,7 @@ const FolderSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, class
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  d="M4 8a1 1 0 011-1h3.586a1 1 0 01.707.293L10 8h9a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V8z"/>

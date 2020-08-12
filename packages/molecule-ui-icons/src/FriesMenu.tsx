@@ -52,7 +52,7 @@ const FriesMenu: React.FC<Props> = ({ fill, size = 'normal', customSize, classNa
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M4 9a1 1 0 011-1h14a1 1 0 110 2H5a1 1 0 01-1-1zm0 6a1 1 0 011-1h14a1 1 0 110 2H5a1 1 0 01-1-1zm5-4a1 1 0 100 2h10a1 1 0 100-2H9z" clipRule="evenodd"/>

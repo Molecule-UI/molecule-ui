@@ -52,7 +52,7 @@ const WarningOutline: React.FC<Props> = ({ fill, size = 'normal', customSize, cl
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M12 2l-1.242 2.485L3.11 19.778 2 22h20l-1.111-2.222-7.647-15.293L12 2zm0 4.969L5.596 19.778h12.808L12 6.969zm1.111 3.92v4.444H10.89V10.89h2.222zM12 18.667a1.111 1.111 0 100-2.222 1.111 1.111 0 000 2.222z" clipRule="evenodd"/>

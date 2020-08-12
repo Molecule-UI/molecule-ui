@@ -52,7 +52,7 @@ const Analytics: React.FC<Props> = ({ fill, size = 'normal', customSize, classNa
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M5 6a1 1 0 011-1h12a1 1 0 011 1v12a1 1 0 01-1 1H6a1 1 0 01-1-1V6zm1 0h12v12H6V6zm5 1h2v10h-2V7zm-1 5H8v5h2v-5zm6-5h-2v5h2V7zm0 6h-2v4h2v-4z" clipRule="evenodd"/>

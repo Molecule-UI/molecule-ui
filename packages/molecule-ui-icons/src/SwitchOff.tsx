@@ -52,7 +52,7 @@ const SwitchOff: React.FC<Props> = ({ fill, size = 'normal', customSize, classNa
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M15 10a2 2 0 110 4H9a2 2 0 110-4h6zm0 3.583a1.583 1.583 0 110-3.166 1.583 1.583 0 010 3.166z" clipRule="evenodd"/>

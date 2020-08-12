@@ -52,7 +52,7 @@ const CakeMenu: React.FC<Props> = ({ fill, size = 'normal', customSize, classNam
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M12 9a1 1 0 100-2 1 1 0 000 2zm-7 1a1 1 0 100 2h14a1 1 0 100-2H5zm0 3a1 1 0 100 2h14a1 1 0 100-2H5zm-1 4a1 1 0 011-1h14a1 1 0 110 2H5a1 1 0 01-1-1z" clipRule="evenodd"/>

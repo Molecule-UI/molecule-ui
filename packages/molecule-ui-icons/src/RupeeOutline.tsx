@@ -52,7 +52,7 @@ const RupeeOutline: React.FC<Props> = ({ fill, size = 'normal', customSize, clas
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M19 12a7 7 0 11-14 0 7 7 0 0114 0zm1 0a8 8 0 11-16 0 8 8 0 0116 0zM9 8.627h2.667c.683 0 1.27.387 1.528.94H9.667L9 10.194h4.333c0 .866-.746 1.568-1.666 1.568H9v.65L13.45 16l.434-.476-3.89-3.135h1.673c1.288 0 2.333-.982 2.333-2.194l1-.628h-1.097a2.174 2.174 0 00-.603-.94h1.033L15 8H9.667L9 8.627z" clipRule="evenodd"/>

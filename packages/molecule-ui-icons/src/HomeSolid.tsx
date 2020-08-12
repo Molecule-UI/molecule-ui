@@ -52,7 +52,7 @@ const HomeSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, classNa
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  d="M20 11.461L12 5l-8 6.461h2V19h4v-5.385h4V19h4v-7.539h2z"/>

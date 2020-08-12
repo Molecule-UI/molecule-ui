@@ -52,7 +52,7 @@ const PlayOutline: React.FC<Props> = ({ fill, size = 'normal', customSize, class
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M12 20a8 8 0 100-16 8 8 0 000 16zm0-1a7 7 0 100-14 7 7 0 000 14zm5-7l-8 5V7l8 5z" clipRule="evenodd"/>

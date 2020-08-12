@@ -52,7 +52,7 @@ const MovieTicketSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, 
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M4.5 9a.5.5 0 00-.5.5V11a1 1 0 110 2v1.5a.5.5 0 00.5.5h15a.5.5 0 00.5-.5V13a1 1 0 110-2V9.5a.5.5 0 00-.5-.5h-15zm7.5 2.2a.5.5 0 100-1 .5.5 0 000 1zm2-.5a.5.5 0 11-1 0 .5.5 0 011 0zm-3.5.5a.5.5 0 100-1 .5.5 0 000 1zm2 .8a.5.5 0 11-1 0 .5.5 0 011 0zm1 .5a.5.5 0 100-1 .5.5 0 000 1zM11 12a.5.5 0 11-1 0 .5.5 0 011 0zm1 1.8a.5.5 0 100-1 .5.5 0 000 1zm2-.5a.5.5 0 11-1 0 .5.5 0 011 0zm-3.5.5a.5.5 0 100-1 .5.5 0 000 1z" clipRule="evenodd"/>

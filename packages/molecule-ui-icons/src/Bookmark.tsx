@@ -52,7 +52,7 @@ const Bookmark: React.FC<Props> = ({ fill, size = 'normal', customSize, classNam
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M12 16l3 2V7a1 1 0 00-1-1h-4a1 1 0 00-1 1v11l3-2zm-2 .131l2-1.333 2 1.333V7h-4v9.131z" clipRule="evenodd"/>

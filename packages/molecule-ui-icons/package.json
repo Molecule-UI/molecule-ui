@@ -8,6 +8,7 @@
     "scripts": {
         "jest": "jest --verbose",
         "jest:coverage": "jest --verbose --coverage",
+        "jest:watch": "jest --verbose --watch",
         "build": "gulp",
         "build:watch": "tsc --watch"
     },

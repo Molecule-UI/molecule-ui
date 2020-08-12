@@ -52,7 +52,7 @@ const LabelOff: React.FC<Props> = ({ fill, size = 'normal', customSize, classNam
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  d="M18.354 6.354a.5.5 0 00-.708-.708l-2.55 2.551A1 1 0 0014.5 8H7a1 1 0 00-1 1v6a1 1 0 001 1h.293l-1.647 1.646a.5.5 0 00.708.708L8.707 16H14.5a1 1 0 00.8-.4l2.25-3a1 1 0 000-1.2l-1.818-2.425 2.622-2.621z"/>

@@ -52,7 +52,7 @@ const Clock: React.FC<Props> = ({ fill, size = 'normal', customSize, className }
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M12 20a8 8 0 100-16 8 8 0 000 16zm0-1a7 7 0 100-14 7 7 0 000 14zm-.002-13.5a.5.5 0 01.5.5v5h5a.5.5 0 010 1h-5.5a.5.5 0 01-.5-.5V6a.5.5 0 01.5-.5z" clipRule="evenodd"/>

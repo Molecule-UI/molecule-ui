@@ -52,7 +52,7 @@ const ChevronRightSolid: React.FC<Props> = ({ fill, size = 'normal', customSize,
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M12.94 12.354a.5.5 0 000-.708L10 8.707A.5.5 0 0110.707 8l3.647 3.646a.5.5 0 010 .707L10.707 16a.5.5 0 11-.707-.707l2.94-2.94z" clipRule="evenodd"/>

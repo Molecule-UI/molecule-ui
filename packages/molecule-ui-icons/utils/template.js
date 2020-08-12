@@ -52,7 +52,7 @@ const %FILENAME%: React.FC<Props> = ({ fill, size = 'normal', customSize, classN
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             %PATH%

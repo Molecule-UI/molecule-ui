@@ -52,7 +52,7 @@ const SwapVertical: React.FC<Props> = ({ fill, size = 'normal', customSize, clas
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M17.354 7.646L14 4.293l-3.354 3.353.708.708L13.5 6.207V13h1V6.207l2.146 2.147.708-.708zM9.5 11v6.793l-2.146-2.147-.708.708L10 19.707l3.354-3.353-.707-.708-2.147 2.147V11h-1z" clipRule="evenodd"/>

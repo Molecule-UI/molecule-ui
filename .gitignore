@@ -1,6 +1,4 @@
 node_modules
 build
-svg
 yarn-error.log
 coverage
-molecule-ui-system

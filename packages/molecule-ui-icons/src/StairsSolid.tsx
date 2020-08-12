@@ -52,7 +52,7 @@ const StairsSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, class
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  d="M17 9h3v1h-2v1h-2v1h-2v1h-2v1h-2v1H8v1H5v-1h2v-1h2v-1h2v-1h2v-1h2v-1h2V9z"/>

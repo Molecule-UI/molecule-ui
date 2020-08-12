@@ -52,7 +52,7 @@ const NotebookSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, cla
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M6 6a1 1 0 011-1v12.5a.5.5 0 00.5.5h1a.5.5 0 00.5-.5V5h8a1 1 0 011 1v13a1 1 0 01-1 1H7a1 1 0 01-1-1V6zm10 1.5a.5.5 0 00-.5-.5h-4a.5.5 0 00-.5.5v2a.5.5 0 00.5.5h4a.5.5 0 00.5-.5v-2z" clipRule="evenodd"/>

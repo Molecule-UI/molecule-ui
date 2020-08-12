@@ -4,7 +4,7 @@ const glob = require('glob');
 const reactTemplate = require('./template');
 const pathsObj = {};
 
-// Template for creating a React Component
+fs.unlinkSync('../src/index.tsx');
 
 // Export string to add in Index.tsx
 const exportString = `export {default as %FILENAME%} from './%FILENAME%';`;

@@ -52,7 +52,7 @@ const LabelSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, classN
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  d="M6 9a1 1 0 011-1h7.5a1 1 0 01.8.4l2.25 3a1 1 0 010 1.2l-2.25 3a1 1 0 01-.8.4H7a1 1 0 01-1-1V9z"/>

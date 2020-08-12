@@ -52,7 +52,7 @@ const StarSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, classNa
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  d="M12 4l1.889 6.111H20l-4.944 3.777L16.944 20 12 16.223 7.056 20l1.888-6.111L4 10.111h6.111L12 4z"/>

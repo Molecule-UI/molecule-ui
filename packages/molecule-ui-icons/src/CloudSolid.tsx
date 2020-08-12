@@ -52,7 +52,7 @@ const CloudSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, classN
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  d="M4 14.536c0 1.217.916 2.231 2.133 2.464h11.734C19.084 16.767 20 15.753 20 14.536c0-1.23-.939-2.255-2.178-2.471.03-.178.045-.36.045-.545 0-1.944-1.672-3.52-3.734-3.52-1.54 0-2.863.88-3.434 2.136a2.813 2.813 0 00-.832-.125c-1.312 0-2.403.893-2.626 2.07a2.836 2.836 0 00-.574-.059C5.194 12.022 4 13.148 4 14.536z"/>

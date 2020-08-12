@@ -52,7 +52,7 @@ const CloseSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, classN
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M17.97 6.657a1 1 0 00-1.414 0l-4.242 4.242L8.07 6.657A1 1 0 006.657 8.07l4.242 4.243-4.242 4.242a1 1 0 001.414 1.415l4.243-4.243 4.242 4.243a1 1 0 001.415-1.415l-4.243-4.242L17.97 8.07a1 1 0 000-1.414z" clipRule="evenodd"/>

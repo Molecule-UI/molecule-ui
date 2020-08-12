@@ -52,7 +52,7 @@ const Done: React.FC<Props> = ({ fill, size = 'normal', customSize, className })
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M19.43 7.691a.9.9 0 01-.167 1.277L8.188 17.287a1 1 0 01-1.491-.344l-2.274-4.441a.91.91 0 111.619-.83l1.298 2.536a1 1 0 001.49.344l9.352-7.024a.9.9 0 011.248.163z" clipRule="evenodd"/>

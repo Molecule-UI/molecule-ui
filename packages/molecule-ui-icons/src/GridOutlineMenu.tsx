@@ -52,7 +52,7 @@ const GridOutlineMenu: React.FC<Props> = ({ fill, size = 'normal', customSize, c
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M7 5H5v2h2V5zM5 4H4v4h4V4H5zm2 13H5v2h2v-2zm-2-1H4v4h4v-4H5zm0-5h2v2H5v-2zm-1-1h4v4H4v-4zm9-5h-2v2h2V5zm-2-1h-1v4h4V4h-3zm0 13h2v2h-2v-2zm-1-1h4v4h-4v-4zm3-5h-2v2h2v-2zm-2-1h-1v4h4v-4h-3zm6-5h2v2h-2V5zm-1-1h4v4h-4V4zm3 13h-2v2h2v-2zm-2-1h-1v4h4v-4h-3zm0-5h2v2h-2v-2zm-1-1h4v4h-4v-4z" clipRule="evenodd"/>

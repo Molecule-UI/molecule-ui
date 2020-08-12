@@ -52,7 +52,7 @@ const ArrowRightSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, c
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  d="M19.604 12.604a.5.5 0 000-.708L14.957 7.25a.5.5 0 10-.707.707l3.773 3.773H4.75a.5.5 0 00-.5.5v.04a.5.5 0 00.5.5h13.273l-3.773 3.773a.5.5 0 10.707.707l4.647-4.646z"/>

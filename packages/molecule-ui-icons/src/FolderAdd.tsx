@@ -52,7 +52,7 @@ const FolderAdd: React.FC<Props> = ({ fill, size = 'normal', customSize, classNa
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M5 7a1 1 0 00-1 1v8a1 1 0 001 1h14a1 1 0 001-1V9a1 1 0 00-1-1h-9l-.707-.707A1 1 0 008.586 7H5zm10.5 3a.5.5 0 01.5.5V12h1.5a.5.5 0 010 1H16v1.5a.5.5 0 01-1 0V13h-1.5a.5.5 0 010-1H15v-1.5a.5.5 0 01.5-.5z" clipRule="evenodd"/>

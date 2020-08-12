@@ -52,7 +52,7 @@ const RecordSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, class
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M12 20a8 8 0 100-16 8 8 0 000 16zm0-6.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clipRule="evenodd"/>

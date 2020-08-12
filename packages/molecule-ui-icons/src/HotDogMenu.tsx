@@ -52,7 +52,7 @@ const HotDogMenu: React.FC<Props> = ({ fill, size = 'normal', customSize, classN
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M6 10a2 2 0 012-2h8a2 2 0 012 2H6zm-2 2a1 1 0 011-1h14a1 1 0 110 2H5a1 1 0 01-1-1zm14 2H6a2 2 0 002 2h8a2 2 0 002-2z" clipRule="evenodd"/>

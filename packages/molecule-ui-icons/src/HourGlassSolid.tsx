@@ -52,7 +52,7 @@ const HourGlassSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, cl
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  d="M8.5 5a1 1 0 011-1h5a1 1 0 011 1v3.638a1 1 0 01-.232.64L13 12l2.268 2.722a1 1 0 01.232.64V19a1 1 0 01-1 1h-5a1 1 0 01-1-1v-3.638a1 1 0 01.232-.64L11 12 8.732 9.278a1 1 0 01-.232-.64V5z"/>

@@ -52,7 +52,7 @@ const CardSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, classNa
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M6 9a1 1 0 011-1h10a1 1 0 011 1v4H6V9zm12 5H6v1a1 1 0 001 1h10a1 1 0 001-1v-1z" clipRule="evenodd"/>

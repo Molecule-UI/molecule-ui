@@ -52,7 +52,7 @@ const SearchSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, class
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  d="M14.354 15a5 5 0 10-3.872-1.836L5 18.646l.707.708 5.482-5.482A4.98 4.98 0 0014.354 15z"/>

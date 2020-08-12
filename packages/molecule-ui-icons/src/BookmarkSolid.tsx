@@ -52,7 +52,7 @@ const BookmarkSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, cla
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  d="M9 7a1 1 0 011-1h4a1 1 0 011 1v11l-3-2-3 2V7z"/>

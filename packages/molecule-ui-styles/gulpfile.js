@@ -18,7 +18,6 @@ gulp.task('sass-components', () => {
     return gulp
         .src('./src/component-styles/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(postcss(plugins))
         .pipe(gulp.dest('./build/'));
 });
 

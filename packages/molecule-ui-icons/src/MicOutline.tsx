@@ -52,7 +52,7 @@ const MicOutline: React.FC<Props> = ({ fill, size = 'normal', customSize, classN
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0zm1 0c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10zM9.972 7a2 2 0 014 0v5a2 2 0 11-4 0V7zm5.97 5.498c.034-.273-.193-.498-.47-.498-.275 0-.494.225-.54.497A3.002 3.002 0 0112.057 15h-.17a3.001 3.001 0 01-2.874-2.503c-.046-.272-.265-.497-.541-.497s-.503.225-.469.498a4 4 0 002.97 3.375V18a1 1 0 102 0v-2.127a4 4 0 002.968-3.375z" clipRule="evenodd"/>

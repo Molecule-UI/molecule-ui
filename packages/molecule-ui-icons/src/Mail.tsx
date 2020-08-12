@@ -52,7 +52,7 @@ const Mail: React.FC<Props> = ({ fill, size = 'normal', customSize, className })
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M5.35 7.24A.998.998 0 005 8v8a1 1 0 001 1h12a1 1 0 001-1V8a.998.998 0 00-.35-.76L12 13 5.35 7.24zM4 8a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H6a2 2 0 01-2-2V8z" clipRule="evenodd"/>

@@ -52,7 +52,7 @@ const PieChart: React.FC<Props> = ({ fill, size = 'normal', customSize, classNam
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M19.391 8.939A8 8 0 0012 4v8h8a8 8 0 00-.609-3.061zM18.928 11A7 7 0 0013 5.072V11h5.928zM10 14V7.084A6 6 0 1016.916 14H10zm7.928 0A7 7 0 1111 6v7h7c0 .336-.024.67-.072 1z" clipRule="evenodd"/>

@@ -52,7 +52,7 @@ const CloseOutline: React.FC<Props> = ({ fill, size = 'normal', customSize, clas
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M20 12a8 8 0 11-16 0 8 8 0 0116 0zm2 0c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10zm-6.818-4.243a.75.75 0 111.06 1.061L13.062 12l3.182 3.182a.75.75 0 11-1.061 1.06L12 13.062l-3.182 3.182a.75.75 0 01-1.06-1.061L10.938 12 7.757 8.818a.75.75 0 011.061-1.06L12 10.938l3.182-3.182z" clipRule="evenodd"/>

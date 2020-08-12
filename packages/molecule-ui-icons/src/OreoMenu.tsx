@@ -52,7 +52,7 @@ const OreoMenu: React.FC<Props> = ({ fill, size = 'normal', customSize, classNam
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M6 6.5a2 2 0 00-2 2h16a2 2 0 00-2-2H6zm0 6a2 2 0 00-2 2h16a2 2 0 00-2-2H6zm-2-3h16a2 2 0 01-2 2H6a2 2 0 01-2-2zm16 6H4a2 2 0 002 2h12a2 2 0 002-2z" clipRule="evenodd"/>

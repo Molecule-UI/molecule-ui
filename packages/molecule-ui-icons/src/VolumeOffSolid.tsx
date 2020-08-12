@@ -52,7 +52,7 @@ const VolumeOffSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, cl
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  d="M7 9.875a.5.5 0 01.5-.5h4.312a.5.5 0 00.33-.124l4.029-3.525a.5.5 0 01.829.376v11.796a.5.5 0 01-.83.376l-4.029-3.525a.5.5 0 00-.329-.124H7.5a.5.5 0 01-.5-.5v-4.25z"/>

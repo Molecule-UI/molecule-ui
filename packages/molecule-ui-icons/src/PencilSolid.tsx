@@ -52,7 +52,7 @@ const PencilSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, class
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M14.75 7.725a1 1 0 111.415 1.414l-.707.707-1.414-1.414.707-.707zm-6.472 6.473l5.058-5.059 1.415 1.415-5.059 5.058-1.658.493a.2.2 0 01-.25-.248l.494-1.66z" clipRule="evenodd"/>

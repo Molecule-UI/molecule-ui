@@ -52,7 +52,7 @@ const RewindSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, class
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M6.313 12.64a.81.81 0 010-1.28l4.174-3.199c.516-.395 1.252-.019 1.252.64V15.2c0 .659-.736 1.035-1.252.64l-4.174-3.2zm6.26 0a.81.81 0 010-1.28l4.175-3.199c.516-.395 1.252-.019 1.252.64V15.2c0 .659-.736 1.035-1.252.64l-4.174-3.2z" clipRule="evenodd"/>

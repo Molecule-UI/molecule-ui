@@ -19,12 +19,29 @@ describe('Icons', () => {
             expect(Wrapper.exists()).toBe(true);
         });
 
+        test('should have a default class normal', () => {
+            const Wrapper = shallow(<Element />);
+
+            expect(Wrapper.props().className).toBe('normal');
+        });
+
         test('should have size prop as given', () => {
             const Wrapper = mount(<Element size='normal' />);
             expect(Wrapper.props().size).toEqual('normal');
         });
 
-        test('should have a normal class', () => {
+        test('should have a consumer defined class along with default class', () => {
+            const Wrapper = shallow(<Element className='custom' />);
+
+            expect(Wrapper.props().className).toBe('normal custom');
+        });
+
+        test('should not have a default fill property', () => {
+            const Wrapper = shallow(<Element />);
+            expect(Wrapper.props().children.props.fill).toBe(undefined);
+        });
+
+        test('should have a consumer defined class', () => {
             const Wrapper = mount(<Element className='normal' />);
             expect(Wrapper.hasClass('normal')).toBe(true);
         });

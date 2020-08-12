@@ -52,7 +52,7 @@ const ErrorFill: React.FC<Props> = ({ fill, size = 'normal', customSize, classNa
     return (
         <svg
             className={classes}
-            style={{ width: customSize, height: customSize }}
+            style={customSize ? { width: customSize, height: customSize }: {}}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm0-7a1 1 0 01-1-1V7a1 1 0 112 0v7a1 1 0 01-1 1zm1 2a1 1 0 11-2 0 1 1 0 012 0z" clipRule="evenodd"/>
