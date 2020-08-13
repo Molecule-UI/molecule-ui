@@ -2480,15 +2480,14 @@
   integrity sha512-6cDuZeKSCSJ1KvfEQ25Y8OXUjqDJZ+HgUs6dhASWbAX8fxVraTfPsSeRe2bN+4QJDsgUaXaMWBYfRomCr04GGg==
 
 "@molecule-ui/icons@1.0.0":
-  version "0.0.1-alpha.0"
+  version "0.0.3-alpha.0"
   dependencies:
-    "@molecule-ui/styles" "0.0.1-alpha.0"
     "@types/classnames" "^2.2.10"
     classnames "^2.2.6"
     gulp-uglify "^3.0.2"
 
 "@molecule-ui/styles@1.0.0":
-  version "0.0.1-alpha.0"
+  version "0.0.2-alpha.0"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
