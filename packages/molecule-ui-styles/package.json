@@ -1,8 +1,22 @@
 {
     "name": "@molecule-ui/styles",
-    "version": "1.0.0",
+    "version": "0.0.0",
     "license": "MIT",
-    "author": "Rushil dhinoja <mr.rushil17@gmail.com>",
+    "author": {
+        "email": "mr.rushil17@gmail.com",
+        "name": "Rushil Dhinoja"
+    },
+    "directories": {
+        "build": "./build"
+    },
+    "keywords": [
+        "css",
+        "styles",
+        "molecule-styles",
+        "css-framework",
+        "molecule-ui",
+        "molecule-design"
+    ],
     "main": "build/main.module.css",
     "style": "build/main.module.css",
     "scripts": {

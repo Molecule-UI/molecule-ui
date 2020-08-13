@@ -1,9 +1,26 @@
 {
     "name": "@molecule-ui/icons",
-    "version": "1.0.0",
-    "author": "Rushil dhinoja <mr.rushil17@gmail.com>",
+    "version": "0.0.0",
+    "author": {
+        "email": "mr.rushil17@gmail.com",
+        "name": "Rushil Dhinoja"
+    },
     "main": "build/index.js",
+    "description": "Molecule UI Icon library converted into react components",
     "typings": "build/index.d.ts",
+    "directories": {
+        "build": "./build",
+        "test": "./test"
+    },
+    "keywords": [
+        "react",
+        "react-component",
+        "molecule-ui",
+        "molecule-design",
+        "icon-component",
+        "svg-icons",
+        "icons"
+    ],
     "license": "MIT",
     "scripts": {
         "jest": "jest --verbose",

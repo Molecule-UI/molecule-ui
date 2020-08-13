@@ -1,6 +1,7 @@
 {
     "name": "@molecule-ui/react",
-    "version": "1.0.0",
+    "version": "0.0.0",
+    "private": "true",
     "main": "build/index.js",
     "author": "Rushil dhinoja <mr.rushil17@gmail.com>",
     "license": "MIT",
