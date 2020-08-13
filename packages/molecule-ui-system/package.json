@@ -3,6 +3,9 @@
   "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.0.1-alpha.0",
   "license": "0BSD",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "gatsby build",
     "develop": "env-cmd gatsby develop",
@@ -31,5 +34,6 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  },
+  "gitHead": "ae8b5229e708f9870542db8c74ec0ce763e0b78e"
 }

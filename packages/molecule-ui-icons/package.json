@@ -12,6 +12,9 @@
         "build": "./build",
         "test": "./test"
     },
+    "publishConfig": {
+        "access": "public"
+    },
     "keywords": [
         "react",
         "react-component",
@@ -61,5 +64,5 @@
             "\\.(css|less|scss|sass)$": "identity-obj-proxy"
         }
     },
-    "gitHead": "5cbeb861530b07e1561962a839343db5839ae063"
+    "gitHead": "ae8b5229e708f9870542db8c74ec0ce763e0b78e"
 }

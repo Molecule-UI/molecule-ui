@@ -4,11 +4,15 @@
     "main": "build/index.js",
     "author": "Rushil dhinoja <mr.rushil17@gmail.com>",
     "license": "MIT",
+    "publishConfig": {
+        "access": "public"
+    },
     "devDependencies": {
         "typescript": "^3.9.7"
     },
     "dependencies": {
         "@molecule-ui/icons": "1.0.0",
         "@molecule-ui/styles": "1.0.0"
-    }
+    },
+    "gitHead": "ae8b5229e708f9870542db8c74ec0ce763e0b78e"
 }
