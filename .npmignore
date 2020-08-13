@@ -1,0 +1,14 @@
+node_modules
+yarn-error.log
+coverage
+src
+svg
+test
+utils
+.babelrc
+gulpfile.js
+public
+static
+src
+.env
+.prettierrc
