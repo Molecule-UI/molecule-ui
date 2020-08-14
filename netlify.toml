@@ -1,1 +1,3 @@
-build.ignore
+[build]
+    command="yarn workspaces @molecule-ui/system build"
+    publish="packages/molecule-ui-docs/public"
