@@ -1,0 +1,42 @@
+@import "./reset.scss";
+@import "./responsiveMixin.scss";
+@import "./variables.scss";
+
+.footer {
+  display: flex;
+  height: 8rem;
+  padding: 0 10rem;
+  justify-content: space-between;
+  align-items: center;
+
+  @include respond(small) {
+    flex-direction: column;
+    height: 10rem;
+    justify-content: center;
+    margin-top: 1rem;
+    padding: 0 2rem;
+  }
+
+  div {
+    display: flex;
+
+    a {
+      text-decoration: none;
+      font-size: var(--body);
+      font-weight: 700;
+      transition: all 0.2s;
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+      &:hover {
+        color: var(--red);
+      }
+    }
+  }
+  p {
+    font-size: var(--body);
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+  }
+}
