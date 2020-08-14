@@ -1,3 +1,2 @@
 [build]
-    command="yarn workspace @molecule-ui/system build"
     publish="packages/molecule-ui-docs/public"
