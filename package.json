@@ -5,7 +5,9 @@
         "start": "lerna run build",
         "build:css": "yarn workspace @molecule-ui/styles build",
         "build:icons": "yarn workspace @molecule-ui/icons build",
-        "build:docs": "yarn workspace @molecule-ui/system build"
+        "bootstrap": "lerna bootstrap",
+        "docs": "yarn workspace @molecule-ui/system build",
+        "build:docs": "yarn bootstrap && yarn docs"
     },
     "devDependencies": {
         "lerna": "^3.22.1"
