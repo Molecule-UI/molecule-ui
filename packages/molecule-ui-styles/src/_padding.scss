@@ -1,0 +1,23 @@
+@each $name, $value in $values {
+    .p-#{$name} {
+        padding: #{$value}rem;
+    }
+    .px-#{$name} {
+        padding: 0 #{$value}rem;
+    }
+    .py-#{$name} {
+        padding: #{$value}rem 0;
+    }
+    .pt-#{$name} {
+        padding-top: #{$value}rem;
+    }
+    .pb-#{$name} {
+        padding-bottom: #{$value}rem;
+    }
+    .pl-#{$name} {
+        padding-left: #{$value}rem;
+    }
+    .pr-#{$name} {
+        padding-right: #{$value}rem;
+    }
+}

@@ -3,22 +3,28 @@ const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const mergerules = require('postcss-merge-rules');
+const mergelonghand = require('postcss-merge-longhand');
 
-const plugins = [autoprefixer(), cssnano()];
+const plugins = [autoprefixer(), mergerules(), mergelonghand()];
 
-gulp.task('sass-icons', () => {
+gulp.task('build', () => {
     return gulp
-        .src('./src/icon-styles/*.scss')
+        .src('./src/index.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(postcss([...plugins, cssnano()]))
+        .pipe(gulp.dest('./build'));
+});
+gulp.task('non-mini', () => {
+    return gulp
+        .src('./src/index.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss(plugins))
-        .pipe(gulp.dest('./build/'));
+        .pipe(gulp.dest('./build'));
 });
 
-gulp.task('sass-components', () => {
-    return gulp
-        .src('./src/component-styles/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./build/'));
+gulp.task('watch', () => {
+    gulp.watch('./src/index.scss', gulp.parallel('non-mini'));
 });
 
-gulp.task('default', gulp.parallel('sass-components', 'sass-icons'));
+gulp.task('default', gulp.parallel('build'));
