@@ -44,6 +44,7 @@
         "enzyme-adapter-react-16": "^1.15.2",
         "gulp": "^4.0.2",
         "gulp-typescript": "^6.0.0-alpha.1",
+        "gulp-uglify": "^3.0.2",
         "identity-obj-proxy": "^3.0.0",
         "jest": "^26.2.2",
         "prefix": "^1.0.0",
@@ -52,9 +53,7 @@
         "typescript": "^3.9.7"
     },
     "dependencies": {
-        "@types/classnames": "^2.2.10",
-        "classnames": "^2.2.6",
-        "gulp-uglify": "^3.0.2"
+        "classnames": "^2.2.6"
     },
     "peerDependencies": {
         "@types/react": "^16.9.44",
