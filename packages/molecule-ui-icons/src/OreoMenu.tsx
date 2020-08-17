@@ -1,7 +1,8 @@
 import * as React from 'react';
 import cx from 'classnames';
 import { throwPropError } from './helpers';
-import '@molecule-ui/styles/build/icons.css';
+import '../styles/index.css';
+
 
 type Props = {
     fill?: string;
@@ -47,12 +48,27 @@ const OreoMenu: React.FC<Props> = ({ fill, size = 'normal', customSize, classNam
         throwPropError('Value of props.className must be a string');
     }
 
+    let customStyles = {};
+
+    if (customSize) {
+        customStyles = {
+            width: customSize,
+            height: customSize,
+        };
+    }
+
+    if (customSize && window.innerWidth < 600) {
+        customStyles = {
+            width: +customSize / 2,
+            height: +customSize / 2,
+        };
+    }
 
     const classes = cx(size, className);
     return (
         <svg
             className={classes}
-            style={customSize ? { width: customSize, height: customSize }: {}}
+            style={customStyles}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M6 6.5a2 2 0 00-2 2h16a2 2 0 00-2-2H6zm0 6a2 2 0 00-2 2h16a2 2 0 00-2-2H6zm-2-3h16a2 2 0 01-2 2H6a2 2 0 01-2-2zm16 6H4a2 2 0 002 2h12a2 2 0 002-2z" clipRule="evenodd"/>

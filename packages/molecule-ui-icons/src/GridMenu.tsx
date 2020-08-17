@@ -1,7 +1,8 @@
 import * as React from 'react';
 import cx from 'classnames';
 import { throwPropError } from './helpers';
-import '@molecule-ui/styles/build/icons.css';
+import '../styles/index.css';
+
 
 type Props = {
     fill?: string;
@@ -47,12 +48,27 @@ const GridMenu: React.FC<Props> = ({ fill, size = 'normal', customSize, classNam
         throwPropError('Value of props.className must be a string');
     }
 
+    let customStyles = {};
+
+    if (customSize) {
+        customStyles = {
+            width: customSize,
+            height: customSize,
+        };
+    }
+
+    if (customSize && window.innerWidth < 600) {
+        customStyles = {
+            width: +customSize / 2,
+            height: +customSize / 2,
+        };
+    }
 
     const classes = cx(size, className);
     return (
         <svg
             className={classes}
-            style={customSize ? { width: customSize, height: customSize }: {}}
+            style={customStyles}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M4 4h4v4H4V4zm6 0h4v4h-4V4zm10 0h-4v4h4V4zm-4 6h4v4h-4v-4zm-2 0h-4v4h4v-4zM4 10h4v4H4v-4zm4 6H4v4h4v-4zm2 0h4v4h-4v-4zm10 0h-4v4h4v-4z" clipRule="evenodd"/>

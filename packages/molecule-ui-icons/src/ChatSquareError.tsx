@@ -1,7 +1,8 @@
 import * as React from 'react';
 import cx from 'classnames';
 import { throwPropError } from './helpers';
-import '@molecule-ui/styles/build/icons.css';
+import '../styles/index.css';
+
 
 type Props = {
     fill?: string;
@@ -47,12 +48,27 @@ const ChatSquareError: React.FC<Props> = ({ fill, size = 'normal', customSize, c
         throwPropError('Value of props.className must be a string');
     }
 
+    let customStyles = {};
+
+    if (customSize) {
+        customStyles = {
+            width: customSize,
+            height: customSize,
+        };
+    }
+
+    if (customSize && window.innerWidth < 600) {
+        customStyles = {
+            width: +customSize / 2,
+            height: +customSize / 2,
+        };
+    }
 
     const classes = cx(size, className);
     return (
         <svg
             className={classes}
-            style={customSize ? { width: customSize, height: customSize }: {}}
+            style={customStyles}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M4.5 17a.5.5 0 01-.5-.5v-10a.5.5 0 01.5-.5h15a.5.5 0 01.5.5v10a.5.5 0 01-.5.5H7l-.621 1.242c-.094.189-.379.122-.379-.09V17H4.5zM19 16V7H5v9h14zm-6.915-7.463a.5.5 0 01.5.5v3.658a.5.5 0 01-.5.5h-.17a.5.5 0 01-.5-.5V9.037a.5.5 0 01.5-.5h.17zm.5 5.694c0 .286-.262.517-.585.517-.323 0-.585-.231-.585-.517 0-.286.262-.518.585-.518.323 0 .585.232.585.518z" clipRule="evenodd"/>

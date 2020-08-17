@@ -1,7 +1,8 @@
 import * as React from 'react';
 import cx from 'classnames';
 import { throwPropError } from './helpers';
-import '@molecule-ui/styles/build/icons.css';
+import '../styles/index.css';
+
 
 type Props = {
     fill?: string;
@@ -47,12 +48,27 @@ const InboxVintage: React.FC<Props> = ({ fill, size = 'normal', customSize, clas
         throwPropError('Value of props.className must be a string');
     }
 
+    let customStyles = {};
+
+    if (customSize) {
+        customStyles = {
+            width: customSize,
+            height: customSize,
+        };
+    }
+
+    if (customSize && window.innerWidth < 600) {
+        customStyles = {
+            width: +customSize / 2,
+            height: +customSize / 2,
+        };
+    }
 
     const classes = cx(size, className);
     return (
         <svg
             className={classes}
-            style={customSize ? { width: customSize, height: customSize }: {}}
+            style={customStyles}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M14 4.5a1 1 0 00-1 1V7H6a2 2 0 00-2 2v5h6v4.5a.5.5 0 00.5.5h3a.5.5 0 00.5-.5V14h6V9a2 2 0 00-2-2h-4V5.5h2v-1h-2zM6.34 7.338a2 2 0 00-2 2v4.324H9V9c0-1.105-.497-1.662-1.601-1.662H6.34z" clipRule="evenodd"/>

@@ -1,7 +1,8 @@
 import * as React from 'react';
 import cx from 'classnames';
 import { throwPropError } from './helpers';
-import '@molecule-ui/styles/build/icons.css';
+import '../styles/index.css';
+
 
 type Props = {
     fill?: string;
@@ -47,12 +48,27 @@ const WifiSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, classNa
         throwPropError('Value of props.className must be a string');
     }
 
+    let customStyles = {};
+
+    if (customSize) {
+        customStyles = {
+            width: customSize,
+            height: customSize,
+        };
+    }
+
+    if (customSize && window.innerWidth < 600) {
+        customStyles = {
+            width: +customSize / 2,
+            height: +customSize / 2,
+        };
+    }
 
     const classes = cx(size, className);
     return (
         <svg
             className={classes}
-            style={customSize ? { width: customSize, height: customSize }: {}}
+            style={customStyles}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M12 10a7.49 7.49 0 00-6.094 3.127.5.5 0 11-.812-.584A8.49 8.49 0 0112 9a8.49 8.49 0 016.906 3.543.5.5 0 01-.812.584A7.49 7.49 0 0012 10zm0 2c-1.84 0-3.47.903-4.469 2.293a.5.5 0 01-.812-.583A6.492 6.492 0 0112 11a6.492 6.492 0 015.281 2.71.5.5 0 11-.812.583A5.492 5.492 0 0012 12zm0 2a3.495 3.495 0 00-2.844 1.46.5.5 0 01-.812-.584A4.495 4.495 0 0112 13c1.507 0 2.84.74 3.656 1.876a.5.5 0 11-.812.584A3.495 3.495 0 0012 14z" clipRule="evenodd"/>

@@ -1,7 +1,8 @@
 import * as React from 'react';
 import cx from 'classnames';
 import { throwPropError } from './helpers';
-import '@molecule-ui/styles/build/icons.css';
+import '../styles/index.css';
+
 
 type Props = {
     fill?: string;
@@ -47,12 +48,27 @@ const LinkSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, classNa
         throwPropError('Value of props.className must be a string');
     }
 
+    let customStyles = {};
+
+    if (customSize) {
+        customStyles = {
+            width: customSize,
+            height: customSize,
+        };
+    }
+
+    if (customSize && window.innerWidth < 600) {
+        customStyles = {
+            width: +customSize / 2,
+            height: +customSize / 2,
+        };
+    }
 
     const classes = cx(size, className);
     return (
         <svg
             className={classes}
-            style={customSize ? { width: customSize, height: customSize }: {}}
+            style={customStyles}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M5 12.5A2.5 2.5 0 017.5 10H11a.5.5 0 000-1H7.5a3.5 3.5 0 100 7H11a.5.5 0 000-1H7.5A2.5 2.5 0 015 12.5zM13 9a.5.5 0 000 1h3.5a2.5 2.5 0 010 5H13a.5.5 0 000 1h3.5a3.5 3.5 0 100-7H13zm-5.5 3.5a1 1 0 011-1h7a1 1 0 110 2h-7a1 1 0 01-1-1z" clipRule="evenodd"/>

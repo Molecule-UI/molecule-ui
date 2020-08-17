@@ -30,7 +30,8 @@
         "jest:coverage": "jest --verbose --coverage",
         "jest:watch": "jest --verbose --watch",
         "build": "gulp",
-        "build:watch": "tsc --watch"
+        "build:watch": "tsc --watch",
+        "build:icons": "node utils/CreateComponents.js"
     },
     "devDependencies": {
         "@babel/core": "^7.11.1",
@@ -44,12 +45,12 @@
         "gulp-typescript": "^6.0.0-alpha.1",
         "identity-obj-proxy": "^3.0.0",
         "jest": "^26.2.2",
+        "prefix": "^1.0.0",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "typescript": "^3.9.7"
     },
     "dependencies": {
-        "@molecule-ui/styles": "^0.0.2-alpha.0",
         "@types/classnames": "^2.2.10",
         "classnames": "^2.2.6",
         "gulp-uglify": "^3.0.2"

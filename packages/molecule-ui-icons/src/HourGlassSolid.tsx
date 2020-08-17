@@ -1,7 +1,8 @@
 import * as React from 'react';
 import cx from 'classnames';
 import { throwPropError } from './helpers';
-import '@molecule-ui/styles/build/icons.css';
+import '../styles/index.css';
+
 
 type Props = {
     fill?: string;
@@ -47,12 +48,27 @@ const HourGlassSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, cl
         throwPropError('Value of props.className must be a string');
     }
 
+    let customStyles = {};
+
+    if (customSize) {
+        customStyles = {
+            width: customSize,
+            height: customSize,
+        };
+    }
+
+    if (customSize && window.innerWidth < 600) {
+        customStyles = {
+            width: +customSize / 2,
+            height: +customSize / 2,
+        };
+    }
 
     const classes = cx(size, className);
     return (
         <svg
             className={classes}
-            style={customSize ? { width: customSize, height: customSize }: {}}
+            style={customStyles}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  d="M8.5 5a1 1 0 011-1h5a1 1 0 011 1v3.638a1 1 0 01-.232.64L13 12l2.268 2.722a1 1 0 01.232.64V19a1 1 0 01-1 1h-5a1 1 0 01-1-1v-3.638a1 1 0 01.232-.64L11 12 8.732 9.278a1 1 0 01-.232-.64V5z"/>

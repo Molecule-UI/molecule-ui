@@ -1,7 +1,8 @@
 import * as React from 'react';
 import cx from 'classnames';
 import { throwPropError } from './helpers';
-import '@molecule-ui/styles/build/icons.css';
+import '../styles/index.css';
+
 
 type Props = {
     fill?: string;
@@ -47,12 +48,27 @@ const BlockUserSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, cl
         throwPropError('Value of props.className must be a string');
     }
 
+    let customStyles = {};
+
+    if (customSize) {
+        customStyles = {
+            width: customSize,
+            height: customSize,
+        };
+    }
+
+    if (customSize && window.innerWidth < 600) {
+        customStyles = {
+            width: +customSize / 2,
+            height: +customSize / 2,
+        };
+    }
 
     const classes = cx(size, className);
     return (
         <svg
             className={classes}
-            style={customSize ? { width: customSize, height: customSize }: {}}
+            style={customStyles}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M16 9.5a1.5 1.5 0 001.223-2.37L15.13 9.224c.245.174.545.277.869.277zm.87-2.723L14.776 8.87a1.5 1.5 0 012.092-2.092zM16 10a2 2 0 100-4 2 2 0 000 4zm-5 2.917a2.5 2.5 0 100-5 2.5 2.5 0 000 5zm-3.176-.114c.181-.123.419-.088.59.048A4.15 4.15 0 0011 13.75c.977 0 1.875-.336 2.586-.9.171-.135.409-.17.59-.046A4.162 4.162 0 0116 16.25c0 .46-.373.833-.833.833H6.833A.833.833 0 016 16.25c0-1.433.723-2.697 1.824-3.447z" clipRule="evenodd"/>

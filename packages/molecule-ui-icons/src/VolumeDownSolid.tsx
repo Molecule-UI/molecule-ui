@@ -1,7 +1,8 @@
 import * as React from 'react';
 import cx from 'classnames';
 import { throwPropError } from './helpers';
-import '@molecule-ui/styles/build/icons.css';
+import '../styles/index.css';
+
 
 type Props = {
     fill?: string;
@@ -47,12 +48,27 @@ const VolumeDownSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, c
         throwPropError('Value of props.className must be a string');
     }
 
+    let customStyles = {};
+
+    if (customSize) {
+        customStyles = {
+            width: customSize,
+            height: customSize,
+        };
+    }
+
+    if (customSize && window.innerWidth < 600) {
+        customStyles = {
+            width: +customSize / 2,
+            height: +customSize / 2,
+        };
+    }
 
     const classes = cx(size, className);
     return (
         <svg
             className={classes}
-            style={customSize ? { width: customSize, height: customSize }: {}}
+            style={customStyles}
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'>
             <path fill={fill}  fillRule="evenodd" d="M5 9.875a.5.5 0 01.5-.5h4.312a.5.5 0 00.33-.124l4.029-3.525a.5.5 0 01.829.376v11.796a.5.5 0 01-.83.376l-4.029-3.525a.5.5 0 00-.329-.124H5.5a.5.5 0 01-.5-.5v-4.25zm10.567 5.84a.5.5 0 01.183-.684A3.497 3.497 0 0017.5 12a3.5 3.5 0 00-1.75-3.031.5.5 0 01.5-.866 4.5 4.5 0 010 7.794.5.5 0 01-.683-.183z" clipRule="evenodd"/>
