@@ -2,10 +2,26 @@
     .#{$name} {
         font-size: $value;
     }
+
+    @each $breakpointname, $breakpoint in $breakpoints {
+        @media screen and (min-width: $breakpoint) {
+            .#{$breakpointname}\:#{$name} {
+                font-size: $value;
+            }
+        }
+    }
 }
 @each $name, $value in $font-sizes {
     .font-#{$name} {
         font-size: #{$value}rem;
+    }
+
+    @each $breakpointname, $breakpoint in $breakpoints {
+        @media screen and (min-width: $breakpoint) {
+            .#{$breakpointname}\:font-#{$name} {
+                font-size: $value;
+            }
+        }
     }
 }
 
@@ -13,15 +29,36 @@
     .font-#{$name} {
         font-weight: $value;
     }
+    @each $breakpointname, $breakpoint in $breakpoints {
+        @media screen and (min-width: $breakpoint) {
+            .#{$breakpointname}\:font-#{$name} {
+                font-weight: $value;
+            }
+        }
+    }
 }
 @each $value in $align {
     .text-align-#{$value} {
         text-align: $value;
+    }
+    @each $breakpointname, $breakpoint in $breakpoints {
+        @media screen and (min-width: $breakpoint) {
+            .#{$breakpointname}\:text-align-#{$value} {
+                text-align: $value;
+            }
+        }
     }
 }
 
 @each $value in $transform {
     .#{$value} {
         text-transform: $value;
+    }
+    @each $breakpointname, $breakpoint in $breakpoints {
+        @media screen and (min-width: $breakpoint) {
+            .#{$breakpointname}\:#{$value} {
+                text-transform: $value;
+            }
+        }
     }
 }

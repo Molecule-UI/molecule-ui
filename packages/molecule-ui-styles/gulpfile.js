@@ -3,10 +3,11 @@ const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
-const mergerules = require('postcss-merge-rules');
 const mergelonghand = require('postcss-merge-longhand');
+const mergemedia = require('postcss-combine-media-query');
+const singleline = require('postcss-single-line');
 
-const plugins = [autoprefixer(), mergerules(), mergelonghand()];
+const plugins = [autoprefixer(), mergelonghand(), mergemedia()];
 
 gulp.task('build', () => {
     return gulp
@@ -19,12 +20,12 @@ gulp.task('non-mini', () => {
     return gulp
         .src('./src/index.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(postcss(plugins))
+        .pipe(postcss([...plugins, singleline()]))
         .pipe(gulp.dest('./build'));
 });
 
 gulp.task('watch', () => {
-    gulp.watch('./src/index.scss', gulp.parallel('non-mini'));
+    gulp.watch('./src/*.scss', gulp.parallel('non-mini'));
 });
 
 gulp.task('default', gulp.parallel('build'));

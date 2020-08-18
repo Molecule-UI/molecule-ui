@@ -2,22 +2,129 @@
     .p-#{$name} {
         padding: #{$value}rem;
     }
+}
+@each $name, $value in $values {
     .px-#{$name} {
-        padding: 0 #{$value}rem;
+        padding-left: #{$value}rem;
+        padding-right: #{$value}rem;
     }
+}
+@each $name, $value in $values {
     .py-#{$name} {
-        padding: #{$value}rem 0;
+        padding-top: #{$value}rem;
+        padding-bottom: #{$value}rem;
     }
+}
+
+@each $name, $value in $values {
     .pt-#{$name} {
         padding-top: #{$value}rem;
     }
+}
+
+@each $name, $value in $values {
     .pb-#{$name} {
         padding-bottom: #{$value}rem;
     }
+}
+
+@each $name, $value in $values {
     .pl-#{$name} {
         padding-left: #{$value}rem;
     }
+}
+
+@each $name, $value in $values {
     .pr-#{$name} {
         padding-right: #{$value}rem;
     }
 }
+
+@each $name, $value in $values {
+    @each $breakpointname, $breakpoint in $breakpoints {
+        @media screen and (min-width: $breakpoint) {
+            .#{$breakpointname}\:p-#{$name} {
+                padding: #{$value}rem;
+            }
+        }
+    }
+}
+@each $name, $value in $values {
+    @each $breakpointname, $breakpoint in $breakpoints {
+        @media screen and (min-width: $breakpoint) {
+            .#{$breakpointname}\:px-#{$name} {
+                padding-left: #{$value}rem;
+                padding-right: #{$value}rem;
+            }
+        }
+    }
+}
+@each $name, $value in $values {
+    @each $breakpointname, $breakpoint in $breakpoints {
+        @media screen and (min-width: $breakpoint) {
+            .#{$breakpointname}\:py-#{$name} {
+                padding-top: #{$value}rem;
+                padding-bottom: #{$value}rem;
+            }
+        }
+    }
+}
+
+@each $name, $value in $values {
+    @each $breakpointname, $breakpoint in $breakpoints {
+        @media screen and (min-width: $breakpoint) {
+            .#{$breakpointname}\:pt-#{$name} {
+                padding-top: #{$value}rem;
+            }
+        }
+    }
+}
+
+@each $name, $value in $values {
+    @each $breakpointname, $breakpoint in $breakpoints {
+        @media screen and (min-width: $breakpoint) {
+            .#{$breakpointname}\:pb-#{$name} {
+                padding-bottom: #{$value}rem;
+            }
+        }
+    }
+}
+
+@each $name, $value in $values {
+    @each $breakpointname, $breakpoint in $breakpoints {
+        @media screen and (min-width: $breakpoint) {
+            .#{$breakpointname}\:pl-#{$name} {
+                padding-left: #{$value}rem;
+            }
+        }
+    }
+}
+@each $name, $value in $values {
+    @each $breakpointname, $breakpoint in $breakpoints {
+        @media screen and (min-width: $breakpoint) {
+            .#{$breakpointname}\:pr-#{$name} {
+                padding-right: #{$value}rem;
+            }
+        }
+    }
+}
+
+// .px-#{$name} {
+//     padding: 0 #{$value}rem;
+// }
+// .py-#{$name} {
+//     padding: #{$value}rem 0;
+// }
+// .pt-#{$name} {
+//     padding-top: #{$value}rem;
+// }
+// .pb-#{$name} {
+//     padding-bottom: #{$value}rem;
+// }
+// .pl-#{$name} {
+//     padding-left: #{$value}rem;
+// }
+// .pr-#{$name} {
+//     padding-right: #{$value}rem;
+// }
+// }

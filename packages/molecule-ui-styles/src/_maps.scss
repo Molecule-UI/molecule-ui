@@ -50,30 +50,20 @@ $values: (
     '48': 14,
     '49': 14.5,
     '50': 15,
-    '51': 15.5,
-    '52': 16,
-    '53': 16.5,
-    '54': 17,
-    '55': 17.5,
-    '56': 18,
-    '57': 18.5,
-    '58': 19,
-    '59': 19.5,
-    '60': 20,
 );
 
 $headings: (
-    'h1': 7rem,
-    'h2': 5.2rem,
-    'h3': 4.2rem,
-    'h4': 3.2rem,
-    'h5': 2.6rem,
-    'h6': 2rem,
-    'subtitle': 1.8rem,
-    'body': 1.6rem,
-    'button': 1.4rem,
-    'caption': 1.2rem,
-    'note': 1rem,
+    'h1': var(--h1),
+    'h2': var(--h2),
+    'h3': var(--h3),
+    'h4': var(--h4),
+    'h5': var(--h5),
+    'h6': var(--h6),
+    'subtitle': var(--subtitle),
+    'body': var(--body),
+    'button': var(--button),
+    'caption': var(--caption),
+    'note': var(--note),
 );
 
 $font-sizes: (
@@ -87,10 +77,6 @@ $font-sizes: (
     '4xl': 3.8,
     '5xl': 4.6,
     '6xl': 5.4,
-    '7xl': 6.2,
-    '8xl': 7,
-    '9xl': 8.2,
-    '10xl': 9.4,
 );
 
 $font-weights: (
@@ -108,3 +94,11 @@ $font-weights: (
 $align: left right center justify;
 
 $transform: uppercase lowercase capitalize none;
+
+$breakpoints: (
+    'xs': $--xs,
+    's': $--s,
+    'm': $--m,
+    'l': $--l,
+    'xl': $--xl,
+);
