@@ -1,0 +1,34 @@
+$utils: () !default;
+$breakpoints: (
+    'sm': 480px,
+    'md': 960px,
+);
+$utils: map-merge(
+    (
+        font-size: (
+            'responsive': true,
+            'property': margin-top margin-bottom,
+            'prefix': mx,
+            'values': 10 15 20 25 30,
+            'unit': 'rem',
+        ),
+        padding: (
+            'responsive': true,
+            'property': padding,
+            'prefix': p,
+            'values': 10 15 20 25 30,
+            'unit': 'px',
+        ),
+        text: (
+            'responsive': true,
+            'property': font-weight,
+            'prefix': text,
+            'values': (
+                'thin': 100,
+                'regular': 400,
+                'bold': 700,
+            ),
+        ),
+    ),
+    $utils
+);

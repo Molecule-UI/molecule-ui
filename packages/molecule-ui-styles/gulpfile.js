@@ -24,6 +24,13 @@ gulp.task('non-mini', () => {
         .pipe(gulp.dest('./build'));
 });
 
+gulp.task('util', () => {
+    return gulp
+        .src('./src/exp.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./build'));
+});
+
 gulp.task('watch', () => {
     gulp.watch('./src/*.scss', gulp.parallel('non-mini'));
 });

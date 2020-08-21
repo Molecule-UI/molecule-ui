@@ -1,0 +1,54 @@
+$keys: map-keys($utils);
+
+@each $key in $keys {
+    $property: map-get(map-get($utils, $key), 'property');
+    $prefix: map-get(map-get($utils, $key), 'prefix');
+    $values: map-get(map-get($utils, $key), 'values');
+    $unit: map-get(map-get($utils, $key), 'unit');
+    $res: map-get(map-get($utils, $key), 'responsive');
+
+    @if type-of($values) == list {
+        @each $value in $values {
+            .#{$prefix}-#{$value} {
+                @each $prop in $property {
+                    #{$prop}: #{$value}#{$unit};
+                }
+            }
+        }
+    }
+
+    @if type-of($values) == map {
+        @each $name, $value in $values {
+            .#{$prefix}-#{$name} {
+                @each $prop in $property {
+                    #{$prop}: #{$value}#{$unit};
+                }
+            }
+        }
+    }
+
+    @if $res == true {
+        @each $breakpointname, $breakpoint in $breakpoints {
+            @media screen and (max-width: $breakpoint) {
+                @if type-of($values) == list {
+                    @each $value in $values {
+                        .#{$breakpointname}\:#{$prefix}-#{$value} {
+                            @each $prop in $property {
+                                #{$prop}: #{$value}#{$unit};
+                            }
+                        }
+                    }
+                }
+                @if type-of($values) == map {
+                    @each $name, $value in $values {
+                        .#{$breakpointname}\:#{$prefix}-#{$name} {
+                            @each $prop in $property {
+                                #{$prop}: #{$value}#{$unit};
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
