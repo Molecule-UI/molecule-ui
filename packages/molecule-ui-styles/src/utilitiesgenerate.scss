@@ -1,0 +1,124 @@
+@import './utilities';
+$keys: map-keys($utils);
+
+@each $key in $keys {
+    $properties: map-get(map-get($utils, $key), 'property');
+    $class: map-get(map-get($utils, $key), 'class');
+    $values: map-get(map-get($utils, $key), 'values');
+    $unit: map-get(map-get($utils, $key), 'unit');
+    $responsive: map-get(map-get($utils, $key), 'responsive');
+    $hover: map-get(map-get($utils, $key), 'hover');
+    $visited: map-get(map-get($utils, $key), 'visited');
+    $active: map-get(map-get($utils, $key), 'active');
+
+    @if type-of($values) == list {
+        @each $value in $values {
+            .#{$class}-#{$value} {
+                @each $property in $properties {
+                    #{$property}: #{$value}#{$unit};
+                }
+            }
+        }
+    }
+
+    @if type-of($values) == map {
+        @each $name, $value in $values {
+            .#{$class}-#{$name} {
+                @each $property in $properties {
+                    #{$property}: #{$value}#{$unit};
+                }
+            }
+        }
+    }
+
+    @if $responsive == true {
+        @each $breakpointname, $breakpoint in $breakpoints {
+            @media screen and (min-width: $breakpoint) {
+                @if type-of($values) == list {
+                    @each $value in $values {
+                        .#{$breakpointname}\:#{$class}-#{$value} {
+                            @each $property in $properties {
+                                #{$property}: #{$value}#{$unit};
+                            }
+                        }
+                    }
+                }
+                @if type-of($values) == map {
+                    @each $name, $value in $values {
+                        .#{$breakpointname}\:#{$class}-#{$name} {
+                            @each $property in $properties {
+                                #{$property}: #{$value}#{$unit};
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @if $hover == true {
+        @if type-of($values) == list {
+            @each $value in $values {
+                .hover\:#{$class}-#{$value}:hover {
+                    @each $property in $properties {
+                        #{$property}: #{$value}#{$unit};
+                    }
+                }
+            }
+        }
+
+        @if type-of($values) == map {
+            @each $name, $value in $values {
+                .hover\:#{$class}-#{$name}:hover {
+                    @each $property in $properties {
+                        #{$property}: #{$value}#{$unit};
+                    }
+                }
+            }
+        }
+    }
+
+    @if $visited == true {
+        @if type-of($values) == list {
+            @each $value in $values {
+                .visited\:#{$class}-#{$value}:visited {
+                    @each $property in $properties {
+                        #{$property}: #{$value}#{$unit};
+                    }
+                }
+            }
+        }
+
+        @if type-of($values) == map {
+            @each $name, $value in $values {
+                .visited\:#{$class}-#{$name}:visited {
+                    @each $property in $properties {
+                        #{$property}: #{$value}#{$unit};
+                    }
+                }
+            }
+        }
+    }
+
+    @if $active == true {
+        @if type-of($values) == list {
+            @each $value in $values {
+                .visited\:#{$class}-#{$value}:active {
+                    @each $property in $properties {
+                        #{$property}: #{$value}#{$unit};
+                    }
+                }
+            }
+        }
+
+        @if type-of($values) == map {
+            @each $name, $value in $values {
+                .visited\:#{$class}-#{$name}:active {
+                    @each $property in $properties {
+                        #{$property}: #{$value}#{$unit};
+                    }
+                }
+            }
+        }
+    }
+}

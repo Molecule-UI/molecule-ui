@@ -26,8 +26,9 @@ gulp.task('non-mini', () => {
 
 gulp.task('util', () => {
     return gulp
-        .src('./src/exp.scss')
+        .src('./src/utilitiesgenerate.scss')
         .pipe(sass().on('error', sass.logError))
+        .pipe(postcss(plugins))
         .pipe(gulp.dest('./build'));
 });
 
