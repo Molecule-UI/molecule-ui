@@ -388,6 +388,20 @@ $utils: map-merge(
             description:
                 'Provides classes for max-height property of css which can be used along side height property',
         ),
+        object-fit: (
+            responsive: true,
+            class: object-fit,
+            property: object-fit,
+            values: $object-fit,
+            description: 'Provides classes for object-fit property of css',
+        ),
+        object-position: (
+            responsive: true,
+            class: object-position,
+            property: object-position,
+            values: $object-position,
+            description: 'Provides classes for object-position property of css',
+        ),
     ),
     $utils
 );

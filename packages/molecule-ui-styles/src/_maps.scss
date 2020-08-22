@@ -283,8 +283,48 @@ $min-height: map-merge(
     )
 );
 
+$object-fit: fill contain cover scale-down none;
+
+$object-position: (
+    bottom: bottom,
+    center: center,
+    left: left,
+    left-bottom: left bottom,
+    left-top: left top,
+    right: right,
+    right-bottom: right bottom,
+    right-top: right top,
+    top: top,
+);
+
+$spacing: (
+    0: 0,
+    1: 0.5rem,
+    2: 1rem,
+    3: 1.5rem,
+    4: 2rem,
+    5: 2.5rem,
+    6: 3rem,
+    7: 3.5rem,
+    8: 4rem,
+    9: 4.5rem,
+    10: 5rem,
+    11: 5.5rem,
+    12: 6rem,
+    13: 6.5rem,
+    14: 7rem,
+    15: 7.5rem,
+    16: 8rem,
+);
+
 $breakpoints: (
     'sm': 22.5em,
     'md': 48em,
     'lg': 80em,
+);
+
+$reverse-breakpoints: (
+    'lg': 80em,
+    'md': 48em,
+    'sm': 22.5em,
 );
