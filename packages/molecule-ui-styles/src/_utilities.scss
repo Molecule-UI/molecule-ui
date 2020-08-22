@@ -7,12 +7,14 @@ $utils: map-merge(
             class: text,
             property: text-transform,
             values: $transform,
+            description: 'Provides classes for text-transform property of css',
         ),
         text-align: (
             responsive: true,
             class: text,
             property: text-align,
             values: $align,
+            description: 'Provides classes for text-align property of css',
         ),
         font-weights: (
             responsive: true,
@@ -20,6 +22,7 @@ $utils: map-merge(
             class: text,
             property: font-weight,
             values: $font-weights,
+            description: 'Provides classes for font-weights property of css',
         ),
         font-sizes: (
             responsive: true,
@@ -28,116 +31,120 @@ $utils: map-merge(
             unit: rem,
             property: font-size,
             values: $font-sizes,
+            description: 'Provides classes for font-size property of css',
         ),
         headings: (
             responsive: true,
             class: font,
             property: font-size,
+            unit: 'rem',
             values: $headings,
+            description: 'Provides classes for font-size property but for a specific type-scale',
         ),
         line-height: (
             responsive: true,
             class: line-height,
             property: line-height,
             values: $line-height,
+            description: 'Provides classes for line-height property of css',
         ),
         padding-all: (
             responsive: true,
             class: p,
-            unit: rem,
             property: padding,
             values: $values,
+            description: 'Provides classes to apply padding to all 4 sides',
         ),
         padding-x: (
             responsive: true,
             class: px,
-            unit: rem,
             property: padding-left padding-right,
             values: $values,
+            description: 'Provides classes to apply padding to horizontal sides (left and right)',
         ),
         padding-y: (
             responsive: true,
             class: py,
-            unit: rem,
             property: padding-top padding-bottom,
             values: $values,
+            description: 'Provides classes to apply padding to vertical sides (top and bottom)',
         ),
         padding-top: (
             responsive: true,
             class: pt,
-            unit: rem,
             property: padding-top,
             values: $values,
+            description: 'Provides classes to apply padding to the top',
         ),
         padding-bottom: (
             responsive: true,
             class: pb,
-            unit: rem,
             property: padding-bottom,
             values: $values,
+            description: 'Provides classes to apply padding to the bottom',
         ),
         padding-left: (
             responsive: true,
             class: pl,
-            unit: rem,
             property: padding-left,
             values: $values,
+            description: 'Provides classes to apply padding to the left',
         ),
         padding-right: (
             responsive: true,
             class: pr,
-            unit: rem,
             property: padding-right,
             values: $values,
+            description: 'Provides classes to apply padding to the right',
         ),
         margin-all: (
             responsive: true,
             class: m,
-            unit: rem,
             property: margin,
             values: $values,
+            description: 'Provides classes to apply margin to all 4 sides',
         ),
         margin-x: (
             responsive: true,
             class: mx,
-            unit: rem,
             property: margin-left margin-right,
             values: $values,
+            description: 'Provides classes to apply margin to horizontal sides (left and right)',
         ),
         margin-y: (
             responsive: true,
             class: my,
-            unit: rem,
             property: margin-top margin-bottom,
             values: $values,
+            description: 'Provides classes to apply margin to vertical sides (top and bottom)',
         ),
         margin-top: (
             responsive: true,
             class: mt,
-            unit: rem,
             property: margin-top,
             values: $values,
+            description: 'Provides classes to apply margin to the top',
         ),
         margin-bottom: (
             responsive: true,
             class: mb,
-            unit: rem,
             property: margin-bottom,
             values: $values,
+            description: 'Provides classes to apply margin to the bottom',
         ),
         margin-left: (
             responsive: true,
             class: ml,
-            unit: rem,
             property: margin-left,
             values: $values,
+            description: 'Provides classes to apply margin to the left',
         ),
         margin-right: (
             responsive: true,
             class: mr,
-            unit: rem,
             property: margin-right,
             values: $values,
+            description: 'Provides classes to apply margin to the right',
         ),
         neg-margin-all: (
             responsive: true,
@@ -145,6 +152,7 @@ $utils: map-merge(
             unit: rem,
             property: margin,
             values: $negative-values,
+            description: 'Provides classes to apply negative margin to all 4 sides',
         ),
         neg-margin-x: (
             responsive: true,
@@ -152,6 +160,8 @@ $utils: map-merge(
             unit: rem,
             property: margin-left margin-right,
             values: $negative-values,
+            description:
+                'Provides classes to apply negative margin to horizontal sides (left and right)',
         ),
         neg-margin-y: (
             responsive: true,
@@ -159,6 +169,8 @@ $utils: map-merge(
             unit: rem,
             property: margin-top margin-bottom,
             values: $negative-values,
+            description:
+                'Provides classes to apply negative margin to vertical sides (top and bottom)',
         ),
         neg-margin-top: (
             responsive: true,
@@ -166,6 +178,7 @@ $utils: map-merge(
             unit: rem,
             property: margin-top,
             values: $negative-values,
+            description: 'Provides classes to apply negative margin to the top',
         ),
         neg-margin-bottom: (
             responsive: true,
@@ -173,6 +186,7 @@ $utils: map-merge(
             unit: rem,
             property: margin-bottom,
             values: $negative-values,
+            description: 'Provides classes to apply negative margin to the bottom',
         ),
         neg-margin-left: (
             responsive: true,
@@ -180,6 +194,7 @@ $utils: map-merge(
             unit: rem,
             property: margin-left,
             values: $negative-values,
+            description: 'Provides classes to apply negative margin to the left',
         ),
         neg-margin-right: (
             responsive: true,
@@ -187,99 +202,126 @@ $utils: map-merge(
             unit: rem,
             property: margin-right,
             values: $negative-values,
+            description: 'Provides classes to apply negative margin to the right',
         ),
         box-sizing: (
             class: box,
             property: box-sizing,
             values: $boxsizes,
+            description: 'Provides classes for box-sizing property of css',
         ),
         display: (
             responsive: true,
             class: display,
             property: display,
             values: $displays,
+            description: 'Provides classes for display property of css',
         ),
         positions: (
             responsive: true,
             class: position,
             property: position,
             values: $positions,
+            description: 'Provides classes for position property of css',
         ),
         overflow: (
             responsive: true,
             class: overflow,
             property: overflow,
             values: $overflows,
+            description: 'Provides classes for overflow property of css',
         ),
         overflow-x: (
             responsive: true,
             class: overflow-x,
             property: overflow-x,
             values: $overflows,
+            description: 'Provides classes for overflow-x property of css',
         ),
         overflow-y: (
             responsive: true,
             class: overflow-y,
             property: overflow-y,
             values: $overflows,
+            description: 'Provides classes for overflow-y property of css',
         ),
         flex-direction: (
             responsive: true,
             class: flex,
             property: flex-direction,
             values: $flex-directions,
+            description:
+                'Provides classes for flex-direction property of css which can be used along side display: flex',
         ),
         flex-wraps: (
             responsive: true,
             class: flex,
             property: flex-wrap,
             values: $flex-wraps,
+            description:
+                'Provides classes for flex-wrap property of css which can be used along side display: flex',
         ),
         justify-content: (
             responsive: true,
             class: justify,
             property: justify-content,
             values: $justify-content,
+            description:
+                'Provides classes for justify-content property of css which can be used along side display: flex and display:grid',
         ),
         align-content: (
             responsive: true,
             class: align-content,
             property: align-content,
             values: $align-content,
+            description:
+                'Provides classes for align-content property of css which can be used along side display: flex and display:grid',
         ),
         align-items: (
             responsive: true,
             class: align-items,
             property: align-items,
             values: $align-items,
+            description:
+                'Provides classes for align-items property of css which can be used along side display: flex and display:grid',
         ),
         align-self: (
             responsive: true,
             class: align-self,
             property: align-self,
             values: $align-self,
+            description:
+                'Provides classes for align-self property of css which can be used along side display: flex and display:grid',
         ),
         flex-grow: (
             responsive: true,
             class: flex-grow,
             property: flex-grow,
             values: $grow-shrink,
+            description:
+                'Provides classes for flex-grow property of css which can be used along side display:flex',
         ),
         flex-shrink: (
             responsive: true,
             class: flex-shrink,
             property: flex-shrink,
             values: $grow-shrink,
+            description:
+                'Provides classes for flex-shrink property of css which can be used along side display: flex',
         ),
         list-style: (
             class: list,
             property: list-style-type,
             values: $list-style-types,
+            description:
+                'Provides classes for list-style-type property of css which be used along side <ul> <ol>',
         ),
         list-position: (
             class: list,
             property: list-style-position,
             values: inside outside,
+            description:
+                'Provides classes for list-style-position property of css which be used along side <ul> <ol>',
         ),
         font-style: (
             responsive: true,
@@ -287,6 +329,7 @@ $utils: map-merge(
             class: font-style,
             property: font-style,
             values: normal italic,
+            description: 'Provides classes for font-style property of css',
         ),
         letter-space: (
             responsive: true,
@@ -294,36 +337,45 @@ $utils: map-merge(
             unit: em,
             property: letter-spacing,
             values: $letter-spacing,
+            description: 'Provides classes for letter-spacing property of css',
         ),
         width: (
             responsive: true,
             class: width,
             property: width,
             values: $width,
+            description: 'Provides classes for width property of css',
         ),
         min-width: (
             responsive: true,
             class: min-width,
             property: min-width,
             values: $min-width,
+            description:
+                'Provides classes for min-width property of css which can be used along side width property',
         ),
         max-width: (
             responsive: true,
             class: max-width,
             property: max-width,
             values: $max-width,
+            description:
+                'Provides classes for max-width property of css which can be used along side width property',
         ),
         height: (
             responsive: true,
             class: height,
             property: height,
             values: $height,
+            description: 'Provides classes for height property of css',
         ),
         min-height: (
             responsive: true,
             class: min-height,
             property: min-height,
             values: $min-height,
+            description:
+                'Provides classes for min-height property of css which can be used along side height property',
         ),
         max-height: (
             responsive: true,
@@ -333,6 +385,8 @@ $utils: map-merge(
                 screen-100: 100vh,
                 full: 100%,
             ),
+            description:
+                'Provides classes for max-height property of css which can be used along side height property',
         ),
     ),
     $utils

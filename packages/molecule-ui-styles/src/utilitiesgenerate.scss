@@ -10,7 +10,19 @@ $keys: map-keys($utils);
     $hover: map-get(map-get($utils, $key), 'hover');
     $visited: map-get(map-get($utils, $key), 'visited');
     $active: map-get(map-get($utils, $key), 'active');
-
+    $description: map-get(map-get($utils, $key), 'description');
+    /** 
+        @name: #{$key}
+        @desc: desc #{$description}
+        @classprefix: #{$class}
+        @responsive: #{$responsive or false}
+        @hover: #{$hover or false}
+        @visited: #{$visited or false} 
+        @active: #{$active or false } 
+        @values: values #{$values}
+        @unit: #{$unit or N/A}
+        @type: #{type-of($values)}
+    */
     @if type-of($values) == list {
         @each $value in $values {
             .#{$class}-#{$value} {

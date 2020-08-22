@@ -23,10 +23,12 @@
     "main": "build/main.module.css",
     "style": "build/main.module.css",
     "scripts": {
-        "build": "gulp"
+        "build": "gulp",
+        "generate:docs": "node utils/CommentReader.js"
     },
     "devDependencies": {
         "autoprefixer": "^9.8.6",
+        "comment-parser": "^0.7.6",
         "css-loader": "^4.2.0",
         "cssnano": "^4.1.10",
         "gulp": "^4.0.2",
