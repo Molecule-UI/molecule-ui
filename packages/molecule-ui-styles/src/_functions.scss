@@ -1,0 +1,9 @@
+@function colors($type, $color, $level) {
+    @if $type == tint {
+        @return mix(white, $color, $level);
+    }
+
+    @if $type == shade {
+        @return mix(black, $color, $level);
+    }
+}

@@ -402,6 +402,82 @@ $utils: map-merge(
             values: $object-position,
             description: 'Provides classes for object-position property of css',
         ),
+        border-radius: (
+            responsive: true,
+            class: border-radius,
+            property: border-radius,
+            unit: px,
+            values: $border-radius,
+            description: 'Provides utility classes for border radius of all 4 corners',
+        ),
+        border-radius-top: (
+            responsive: true,
+            class: border-radius-t,
+            property: border-top-left-radius border-top-right-radius,
+            unit: px,
+            values: $border-radius,
+            description:
+                'Provides utility classes for border radius of all 2 corners Top-left and Top-right',
+        ),
+        border-radius-bottom: (
+            responsive: true,
+            class: border-radius-b,
+            property: border-bottom-left-radius border-bottom-right-radius,
+            unit: px,
+            values: $border-radius,
+            description:
+                'Provides utility classes for border radius of all 2 corners Bottom-left and Bottom-right',
+        ),
+        border-radius-left: (
+            responsive: true,
+            class: border-radius-l,
+            property: border-top-left-radius border-bottom-left-radius,
+            unit: px,
+            values: $border-radius,
+            description:
+                'Provides utility classes for border radius of all 2 corners Top-left and Bottom-Left',
+        ),
+        border-radius-right: (
+            responsive: true,
+            class: border-radius-r,
+            property: border-top-right-radius border-bottom-right-radius,
+            unit: px,
+            values: $border-radius,
+            description:
+                'Provides utility classes for border radius of all 2 corners Top-right and Bottom-right',
+        ),
+        border-radius-top-left: (
+            responsive: true,
+            class: border-radius-tl,
+            property: border-top-left-radius,
+            unit: px,
+            values: $border-radius,
+            description: 'Provides utility classes for border radius of 1 corner Top-left',
+        ),
+        border-radius-top-right: (
+            responsive: true,
+            class: border-radius-tr,
+            property: border-top-right-radius,
+            unit: px,
+            values: $border-radius,
+            description: 'Provides utility classes for border radius of 1 corner Top-right',
+        ),
+        border-radius-bottom-left: (
+            responsive: true,
+            class: border-radius-bl,
+            property: border-bottom-left-radius,
+            unit: px,
+            values: $border-radius,
+            description: 'Provides utility classes for border radius of 1 corner Bottom-left',
+        ),
+        border-radius-bottom-right: (
+            responsive: true,
+            class: border-radius-br,
+            property: border-bottom-right-radius,
+            unit: px,
+            values: $border-radius,
+            description: 'Provides utility classes for border radius of 1 corner Bottom-Right',
+        ),
     ),
     $utils
 );
