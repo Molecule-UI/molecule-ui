@@ -41,5 +41,7 @@
         "postcss-single-line": "^1.0.0"
     },
     "gitHead": "ae8b5229e708f9870542db8c74ec0ce763e0b78e",
-    "dependencies": {}
+    "dependencies": {
+        "gulp-rename": "^2.0.0"
+    }
 }

@@ -6,6 +6,7 @@ const cssnano = require('cssnano');
 const mergelonghand = require('postcss-merge-longhand');
 const mergemedia = require('postcss-combine-media-query');
 const singleline = require('postcss-single-line');
+const rename = require('gulp-rename');
 
 const plugins = [autoprefixer(), mergelonghand(), mergemedia()];
 
@@ -14,11 +15,20 @@ gulp.task('build', () => {
         .src('./src/index.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss([...plugins, cssnano()]))
+        .pipe(rename('index.min.css'))
         .pipe(gulp.dest('./build'));
 });
 gulp.task('non-mini', () => {
     return gulp
         .src('./src/index.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(postcss([...plugins, singleline()]))
+        .pipe(gulp.dest('./build'));
+});
+
+gulp.task('colors', () => {
+    return gulp
+        .src('./src/colorutil.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss([...plugins, singleline()]))
         .pipe(gulp.dest('./build'));

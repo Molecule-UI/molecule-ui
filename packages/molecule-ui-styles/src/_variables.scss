@@ -1,3 +1,4 @@
+$white: #fff;
 $red: #ef233c;
 $blue: #2176ff;
 $orange: #ff7900;
@@ -7,6 +8,7 @@ $pink: #fa198b;
 $violet: #6200b3;
 $teal: #02c39a;
 $gray: #808080;
+$black: #000;
 
 $red-100: colors('tint', $red, 40);
 $red-200: colors('tint', $red, 30);
@@ -97,32 +99,3 @@ $gray-600: colors('shade', $gray, 16);
 $gray-700: colors('shade', $gray, 36);
 $gray-800: colors('shade', $gray, 48);
 $gray-900: colors('shade', $gray, 64);
-
-.class-100 {
-    background-color: $teal-100;
-}
-.class-200 {
-    background-color: $teal-200;
-}
-
-.class-300 {
-    background-color: $teal-300;
-}
-.class-400 {
-    background-color: $teal-400;
-}
-.class-500 {
-    background-color: $teal-500;
-}
-.class-600 {
-    background-color: $teal-600;
-}
-.class-700 {
-    background-color: $teal-700;
-}
-.class-800 {
-    background-color: $teal-800;
-}
-.class-900 {
-    background-color: $teal-900;
-}
