@@ -1,0 +1,44 @@
+$palette: () !default;
+
+$palette: map-merge(
+  (
+    brand-red: #f25f5c,
+    brand-yellow: #ffca3a,
+    brand-blue: #1982c4,
+    brand-green: #8ac926,
+  ),
+  $palette
+);
+
+@each $name, $color in $palette {
+  .font-#{$name} {
+    color: $color;
+  }
+
+  .hover\:font-#{$name}:hover {
+    color: $color;
+  }
+
+  .bg-#{$name} {
+    background-color: $color;
+  }
+
+  .hover\:bg-#{$name}:hover {
+    background-color: $color;
+  }
+
+  .border-#{$name} {
+    border-color: $color;
+  }
+  .hover\:border-#{$name}:hover {
+    border-color: $color;
+  }
+
+  .placeholder-#{$name}::placeholder {
+    color: $color;
+  }
+
+  .focus-border-#{$name}:focus {
+    border-color: $color;
+  }
+}
