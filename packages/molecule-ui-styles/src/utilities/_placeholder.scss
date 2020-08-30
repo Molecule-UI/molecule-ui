@@ -1,0 +1,15 @@
+@each $name, $color in $colors {
+  .placeholder-#{$name}::placeholder {
+    color: $color;
+  }
+
+  .focus-border-#{$name}:focus {
+    border-color: $color;
+  }
+}
+
+@each $name, $opacity in $placeholder-opacity {
+  .placeholder-opacity-#{$name}::placeholder {
+    opacity: $opacity;
+  }
+}
