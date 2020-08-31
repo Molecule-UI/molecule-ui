@@ -1,38 +1,38 @@
-@import './maps';
+@import "../maps";
 
 $spacing-utilities: (
-    spacing-x: (
-        responsive: true,
-        class: spacing-x,
-        property: margin-right,
-        values: $spacing,
-        description:
-            'Provide classes to give spacing between direct child of an parent spacing-x will provide spacing between child in horizontal axis',
-    ),
-    spacing-y: (
-        responsive: true,
-        class: spacing-y,
-        property: margin-bottom,
-        values: $spacing,
-        description:
-            'Provide classes to give spacing between direct child of an parent spacing-y will provide spacing between child in vertical axis',
-    ),
+  spacing-x: (
+    responsive: true,
+    class: spacing-x,
+    property: margin-right,
+    values: $spacing,
+    description:
+      "Provide classes to give spacing between direct child of an parent spacing-x will provide spacing between child in horizontal axis",
+  ),
+  spacing-y: (
+    responsive: true,
+    class: spacing-y,
+    property: margin-bottom,
+    values: $spacing,
+    description:
+      "Provide classes to give spacing between direct child of an parent spacing-y will provide spacing between child in vertical axis",
+  ),
 );
 
 $spacer-keys: map-keys($spacing-utilities);
 
 @each $key in $spacer-keys {
-    $properties: map-get(map-get($spacing-utilities, $key), 'property');
-    $class: map-get(map-get($spacing-utilities, $key), 'class');
-    $values: map-get(map-get($spacing-utilities, $key), 'values');
-    $unit: map-get(map-get($spacing-utilities, $key), 'unit');
-    $responsive: map-get(map-get($spacing-utilities, $key), 'responsive');
-    $hover: map-get(map-get($spacing-utilities, $key), 'hover');
-    $visited: map-get(map-get($spacing-utilities, $key), 'visited');
-    $active: map-get(map-get($spacing-utilities, $key), 'active');
-    $description: map-get(map-get($spacing-utilities, $key), 'description');
+  $properties: map-get(map-get($spacing-utilities, $key), "property");
+  $class: map-get(map-get($spacing-utilities, $key), "class");
+  $values: map-get(map-get($spacing-utilities, $key), "values");
+  $unit: map-get(map-get($spacing-utilities, $key), "unit");
+  $responsive: map-get(map-get($spacing-utilities, $key), "responsive");
+  $hover: map-get(map-get($spacing-utilities, $key), "hover");
+  $visited: map-get(map-get($spacing-utilities, $key), "visited");
+  $active: map-get(map-get($spacing-utilities, $key), "active");
+  $description: map-get(map-get($spacing-utilities, $key), "description");
 
-    /** 
+  /** 
         @name: #{$key}
         @desc: desc #{$description}
         @classprefix: #{$class}
@@ -45,25 +45,25 @@ $spacer-keys: map-keys($spacing-utilities);
         @type: #{type-of($values)}
     */
 
-    @each $name, $value in $values {
-        .#{$class}-#{$name} > :not(:last-child) {
-            @each $property in $properties {
-                #{$property}: #{$value}#{$unit};
-            }
-        }
+  @each $name, $value in $values {
+    .#{$class}-#{$name} > :not(:last-child) {
+      @each $property in $properties {
+        #{$property}: #{$value}#{$unit};
+      }
     }
+  }
 
-    @if $responsive == true {
-        @each $breakpointname, $breakpoint in $reverse-breakpoints {
-            @media screen and (max-width: $breakpoint) {
-                @each $name, $value in $values {
-                    .#{$breakpointname}\:#{$class}-#{$name} > :not(:last-child) {
-                        @each $property in $properties {
-                            #{$property}: #{$value}#{$unit};
-                        }
-                    }
-                }
+  @if $responsive == true {
+    @each $breakpointname, $breakpoint in $reverse-breakpoints {
+      @media screen and (max-width: $breakpoint) {
+        @each $name, $value in $values {
+          .#{$breakpointname}\:#{$class}-#{$name} > :not(:last-child) {
+            @each $property in $properties {
+              #{$property}: #{$value}#{$unit};
             }
+          }
         }
+      }
     }
+  }
 }

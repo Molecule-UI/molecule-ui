@@ -1,18 +1,15 @@
 {
-    "name": "@molecule-ui/react",
-    "version": "0.0.6-alpha.0",
-    "main": "build/index.js",
-    "author": "Rushil dhinoja <mr.rushil17@gmail.com>",
-    "license": "MIT",
-    "publishConfig": {
-        "access": "public"
-    },
-    "devDependencies": {
-        "typescript": "^3.9.7"
-    },
-    "dependencies": {
-        "@molecule-ui/icons": "^0.0.4-alpha.2",
-        "@molecule-ui/styles": "^0.0.6-alpha.0"
-    },
-    "gitHead": "ae8b5229e708f9870542db8c74ec0ce763e0b78e"
+  "name": "@molecule-ui/react",
+  "version": "0.0.6-alpha.0",
+  "main": "build/index.js",
+  "author": "Rushil dhinoja <mr.rushil17@gmail.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {},
+  "gitHead": "ae8b5229e708f9870542db8c74ec0ce763e0b78e"
 }

@@ -12,10 +12,10 @@ const plugins = [autoprefixer(), mergelonghand(), mergemedia()];
 
 gulp.task("build", () => {
   return gulp
-    .src("./src/test.scss")
+    .src("./src/index.scss")
     .pipe(sass().on("error", sass.logError))
     .pipe(postcss([...plugins, cssnano()]))
-    .pipe(rename("test.min.css"))
+    .pipe(rename("molecule.min.css"))
     .pipe(gulp.dest("./build"));
 });
 gulp.task("non-mini", () => {
@@ -23,6 +23,7 @@ gulp.task("non-mini", () => {
     .src("./src/index.scss")
     .pipe(sass().on("error", sass.logError))
     .pipe(postcss([...plugins, singleline()]))
+    .pipe(rename("molecule.css"))
     .pipe(gulp.dest("./build"));
 });
 
