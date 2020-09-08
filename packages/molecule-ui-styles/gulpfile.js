@@ -47,4 +47,4 @@ gulp.task("watch", () => {
   gulp.watch("./src/**/*.scss", gulp.parallel("non-mini"));
 });
 
-gulp.task("default", gulp.parallel("build"));
+gulp.task("default", gulp.parallel("build", "non-mini"));

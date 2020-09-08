@@ -9,6 +9,12 @@ $utils: map-merge(
       values: $transform,
       description: "Provides classes for text-transform property of css",
     ),
+    text-decoration: (
+      class: decoration,
+      property: text-decoration,
+      values: $decoration,
+      description: "Provides classes for text-decoration property of css",
+    ),
     text-align: (
       responsive: true,
       class: text,
