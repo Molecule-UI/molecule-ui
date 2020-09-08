@@ -40,7 +40,7 @@
         "postcss-merge-rules": "^4.0.3",
         "postcss-single-line": "^1.0.0"
     },
-    "gitHead": "dce6d49c44d69549a39369dc5c5d62a48d5784b7",
+    "gitHead": "48373f30c4c505b9a93eddf99f37290dcf259a64",
     "dependencies": {
         "gulp-rename": "^2.0.0"
     }
