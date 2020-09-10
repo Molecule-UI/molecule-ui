@@ -304,6 +304,14 @@ $utils: map-merge(
       description:
         "Provides classes for align-self property of css which can be used along side display: flex and display:grid",
     ),
+    justify-self: (
+      responsive: true,
+      class: justify-self,
+      property: justify-self,
+      values: $justify-self,
+      description:
+        "Provides classes for justify-self property of css which can be used along side display: flex and display: grid",
+    ),
     flex-grow: (
       responsive: true,
       class: flex-grow,

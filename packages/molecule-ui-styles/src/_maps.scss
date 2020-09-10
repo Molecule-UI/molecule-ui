@@ -290,6 +290,8 @@ $align-self: map-merge(
   )
 );
 
+$justify-self: $align-self;
+
 $grow-shrink: 0 1;
 
 $width: (
