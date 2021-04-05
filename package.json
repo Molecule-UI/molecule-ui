@@ -7,7 +7,7 @@
     "build:icons": "yarn workspace @molecule-ui/icons build",
     "bootstrap": "lerna bootstrap",
     "build:docs": "yarn bootstrap && yarn docs",
-    "publish": "lerna publish"
+    "upload": "lerna publish"
   },
   "devDependencies": {
     "lerna": "^3.22.1"
