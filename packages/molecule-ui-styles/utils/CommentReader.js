@@ -2,7 +2,7 @@ const parse = require("comment-parser");
 const fs = require("fs");
 const path = require("path");
 const docsPath = path.resolve(__dirname, "../docs/documentation.js");
-const cssPath = path.resolve(__dirname, "../build/index.css");
+const cssPath = path.resolve(__dirname, "../build/molecule.css");
 
 const cssData = fs.readFileSync(cssPath, "utf-8");
 
