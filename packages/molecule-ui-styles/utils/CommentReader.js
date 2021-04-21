@@ -46,7 +46,23 @@ const modifiedData = comments.map((el) => {
   return el;
 });
 
-const writeData = `module.exports=${JSON.stringify(modifiedData)}`;
+const cleanedData = modifiedData.map((el) => {
+  const newObject = {};
+
+  el.tags.forEach((el) => {
+    if (el.tag === "desc:" || el.tag === "values:") {
+      newObject[el.tag.replace(":", "")] = el.description;
+    } else {
+      newObject[el.tag.replace(":", "")] = el.name;
+    }
+  });
+
+  return newObject;
+});
+
+// console.log(cleanedData[4]);
+
+const writeData = `module.exports=${JSON.stringify(cleanedData)}`;
 (async (writeData) => {
   await fs.writeFileSync(docsPath, writeData, { encoding: "utf-8" });
 })(writeData);

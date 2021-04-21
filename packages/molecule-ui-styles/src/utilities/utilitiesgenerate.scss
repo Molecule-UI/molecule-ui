@@ -16,8 +16,8 @@ $keys: map-keys($utils);
         @classprefix: #{$class}
         @responsive: #{$responsive or false}
         @hover: #{$hover or false}
-        @visited: #{$visited or false} 
-        @active: #{$active or false } 
+        @visited: #{$visited or false}
+        @active: #{$active or false }
         @values: values #{$values}
         @unit: #{$unit or N/A}
         @type: #{type-of($values)}
