@@ -46,7 +46,9 @@ const modifiedData = comments.map((el) => {
   return el;
 });
 
-const cleanedData = modifiedData.map((el) => {
+const cleanedData = {};
+
+modifiedData.forEach((el, i) => {
   const newObject = {};
 
   el.tags.forEach((el) => {
@@ -56,11 +58,8 @@ const cleanedData = modifiedData.map((el) => {
       newObject[el.tag.replace(":", "")] = el.name;
     }
   });
-
-  return newObject;
+  cleanedData[el.tags[0].name] = newObject;
 });
-
-// console.log(cleanedData[4]);
 
 const writeData = `module.exports=${JSON.stringify(cleanedData)}`;
 (async (writeData) => {

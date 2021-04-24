@@ -1,5 +1,5 @@
-module.exports = [
-  {
+module.exports = {
+  "text-transform": {
     name: "text-transform",
     desc: "Provides classes for text-transform property of css",
     classprefix: "text",
@@ -16,7 +16,7 @@ module.exports = [
     unit: "N/A",
     type: "list",
   },
-  {
+  "text-decoration": {
     name: "text-decoration",
     desc: "Provides classes for text-decoration property of css",
     classprefix: "decoration",
@@ -37,7 +37,7 @@ module.exports = [
     unit: "N/A",
     type: "list",
   },
-  {
+  "text-align": {
     name: "text-align",
     desc: "Provides classes for text-align property of css",
     classprefix: "text",
@@ -54,7 +54,7 @@ module.exports = [
     unit: "N/A",
     type: "list",
   },
-  {
+  "font-weights": {
     name: "font-weights",
     desc: "Provides classes for font-weights property of css",
     classprefix: "text",
@@ -76,7 +76,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "font-sizes": {
     name: "font-sizes",
     desc: "Provides classes for font-size property of css",
     classprefix: "font",
@@ -99,7 +99,7 @@ module.exports = [
     unit: "rem",
     type: "map",
   },
-  {
+  headings: {
     name: "headings",
     desc:
       "Provides classes for font-size property but for a specific type-scale",
@@ -124,7 +124,7 @@ module.exports = [
     unit: "rem",
     type: "map",
   },
-  {
+  "line-height": {
     name: "line-height",
     desc: "Provides classes for line-height property of css",
     classprefix: "line-height",
@@ -136,7 +136,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "padding-all": {
     name: "padding-all",
     desc: "Provides classes to apply padding to all 4 sides",
     classprefix: "p",
@@ -191,7 +191,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "padding-x": {
     name: "padding-x",
     desc:
       "Provides classes to apply padding to horizontal sides (left and right)",
@@ -247,7 +247,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "padding-y": {
     name: "padding-y",
     desc:
       "Provides classes to apply padding to vertical sides (top and bottom)",
@@ -303,7 +303,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "padding-top": {
     name: "padding-top",
     desc: "Provides classes to apply padding to the top",
     classprefix: "pt",
@@ -358,7 +358,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "padding-bottom": {
     name: "padding-bottom",
     desc: "Provides classes to apply padding to the bottom",
     classprefix: "pb",
@@ -413,7 +413,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "padding-left": {
     name: "padding-left",
     desc: "Provides classes to apply padding to the left",
     classprefix: "pl",
@@ -468,7 +468,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "padding-right": {
     name: "padding-right",
     desc: "Provides classes to apply padding to the right",
     classprefix: "pr",
@@ -523,7 +523,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "margin-all": {
     name: "margin-all",
     desc: "Provides classes to apply margin to all 4 sides",
     classprefix: "m",
@@ -578,7 +578,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "margin-x": {
     name: "margin-x",
     desc:
       "Provides classes to apply margin to horizontal sides (left and right)",
@@ -634,7 +634,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "margin-y": {
     name: "margin-y",
     desc: "Provides classes to apply margin to vertical sides (top and bottom)",
     classprefix: "my",
@@ -689,7 +689,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "margin-top": {
     name: "margin-top",
     desc: "Provides classes to apply margin to the top",
     classprefix: "mt",
@@ -744,7 +744,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "margin-bottom": {
     name: "margin-bottom",
     desc: "Provides classes to apply margin to the bottom",
     classprefix: "mb",
@@ -799,7 +799,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "margin-left": {
     name: "margin-left",
     desc: "Provides classes to apply margin to the left",
     classprefix: "ml",
@@ -854,7 +854,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "margin-right": {
     name: "margin-right",
     desc: "Provides classes to apply margin to the right",
     classprefix: "mr",
@@ -909,7 +909,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "neg-margin-all": {
     name: "neg-margin-all",
     desc: "Provides classes to apply negative margin to all 4 sides",
     classprefix: "-m",
@@ -963,7 +963,7 @@ module.exports = [
     unit: "rem",
     type: "map",
   },
-  {
+  "neg-margin-x": {
     name: "neg-margin-x",
     desc:
       "Provides classes to apply negative margin to horizontal sides (left and right)",
@@ -1018,7 +1018,7 @@ module.exports = [
     unit: "rem",
     type: "map",
   },
-  {
+  "neg-margin-y": {
     name: "neg-margin-y",
     desc:
       "Provides classes to apply negative margin to vertical sides (top and bottom)",
@@ -1073,7 +1073,7 @@ module.exports = [
     unit: "rem",
     type: "map",
   },
-  {
+  "neg-margin-top": {
     name: "neg-margin-top",
     desc: "Provides classes to apply negative margin to the top",
     classprefix: "-mt",
@@ -1127,7 +1127,7 @@ module.exports = [
     unit: "rem",
     type: "map",
   },
-  {
+  "neg-margin-bottom": {
     name: "neg-margin-bottom",
     desc: "Provides classes to apply negative margin to the bottom",
     classprefix: "-mb",
@@ -1181,7 +1181,7 @@ module.exports = [
     unit: "rem",
     type: "map",
   },
-  {
+  "neg-margin-left": {
     name: "neg-margin-left",
     desc: "Provides classes to apply negative margin to the left",
     classprefix: "-ml",
@@ -1235,7 +1235,7 @@ module.exports = [
     unit: "rem",
     type: "map",
   },
-  {
+  "neg-margin-right": {
     name: "neg-margin-right",
     desc: "Provides classes to apply negative margin to the right",
     classprefix: "-mr",
@@ -1289,7 +1289,7 @@ module.exports = [
     unit: "rem",
     type: "map",
   },
-  {
+  "box-sizing": {
     name: "box-sizing",
     desc: "Provides classes for box-sizing property of css",
     classprefix: "box",
@@ -1301,7 +1301,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  display: {
     name: "display",
     desc: "Provides classes for display property of css",
     classprefix: "display",
@@ -1331,7 +1331,7 @@ module.exports = [
     unit: "N/A",
     type: "list",
   },
-  {
+  positions: {
     name: "positions",
     desc: "Provides classes for position property of css",
     classprefix: "position",
@@ -1349,7 +1349,7 @@ module.exports = [
     unit: "N/A",
     type: "list",
   },
-  {
+  overflow: {
     name: "overflow",
     desc: "Provides classes for overflow property of css",
     classprefix: "overflow",
@@ -1366,7 +1366,7 @@ module.exports = [
     unit: "N/A",
     type: "list",
   },
-  {
+  "overflow-x": {
     name: "overflow-x",
     desc: "Provides classes for overflow-x property of css",
     classprefix: "overflow-x",
@@ -1383,7 +1383,7 @@ module.exports = [
     unit: "N/A",
     type: "list",
   },
-  {
+  "overflow-y": {
     name: "overflow-y",
     desc: "Provides classes for overflow-y property of css",
     classprefix: "overflow-y",
@@ -1400,7 +1400,7 @@ module.exports = [
     unit: "N/A",
     type: "list",
   },
-  {
+  "flex-direction": {
     name: "flex-direction",
     desc:
       "Provides classes for flex-direction property of css which can be used along side display: flex",
@@ -1418,7 +1418,7 @@ module.exports = [
     unit: "N/A",
     type: "list",
   },
-  {
+  "flex-wraps": {
     name: "flex-wraps",
     desc:
       "Provides classes for flex-wrap property of css which can be used along side display: flex",
@@ -1431,7 +1431,7 @@ module.exports = [
     unit: "N/A",
     type: "list",
   },
-  {
+  "justify-content": {
     name: "justify-content",
     desc:
       "Provides classes for justify-content property of css which can be used along side display: flex and display:grid",
@@ -1451,7 +1451,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "align-content": {
     name: "align-content",
     desc:
       "Provides classes for align-content property of css which can be used along side display: flex and display:grid",
@@ -1471,7 +1471,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "align-items": {
     name: "align-items",
     desc:
       "Provides classes for align-items property of css which can be used along side display: flex and display:grid",
@@ -1490,7 +1490,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "align-self": {
     name: "align-self",
     desc:
       "Provides classes for align-self property of css which can be used along side display: flex and display:grid",
@@ -1510,7 +1510,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "justify-self": {
     name: "justify-self",
     desc:
       "Provides classes for justify-self property of css which can be used along side display: flex and display: grid",
@@ -1530,7 +1530,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "flex-grow": {
     name: "flex-grow",
     desc:
       "Provides classes for flex-grow property of css which can be used along side display:flex",
@@ -1543,7 +1543,7 @@ module.exports = [
     unit: "N/A",
     type: "list",
   },
-  {
+  "flex-shrink": {
     name: "flex-shrink",
     desc:
       "Provides classes for flex-shrink property of css which can be used along side display: flex",
@@ -1556,7 +1556,7 @@ module.exports = [
     unit: "N/A",
     type: "list",
   },
-  {
+  "list-style": {
     name: "list-style",
     desc:
       "Provides classes for list-style-type property of css which be used along side <ul> <ol>",
@@ -1578,7 +1578,7 @@ module.exports = [
     unit: "N/A",
     type: "list",
   },
-  {
+  "list-position": {
     name: "list-position",
     desc:
       "Provides classes for list-style-position property of css which be used along side <ul> <ol>",
@@ -1591,7 +1591,7 @@ module.exports = [
     unit: "N/A",
     type: "list",
   },
-  {
+  "font-style": {
     name: "font-style",
     desc: "Provides classes for font-style property of css",
     classprefix: "font-style",
@@ -1603,7 +1603,7 @@ module.exports = [
     unit: "N/A",
     type: "list",
   },
-  {
+  "letter-space": {
     name: "letter-space",
     desc: "Provides classes for letter-spacing property of css",
     classprefix: "letter-space",
@@ -1621,7 +1621,7 @@ module.exports = [
     unit: "em",
     type: "map",
   },
-  {
+  width: {
     name: "width",
     desc: "Provides classes for width property of css",
     classprefix: "width",
@@ -1661,7 +1661,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "min-width": {
     name: "min-width",
     desc:
       "Provides classes for min-width property of css which can be used along side width property",
@@ -1674,7 +1674,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "max-width": {
     name: "max-width",
     desc:
       "Provides classes for max-width property of css which can be used along side width property",
@@ -1703,7 +1703,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  height: {
     name: "height",
     desc: "Provides classes for height property of css",
     classprefix: "height",
@@ -1728,7 +1728,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "min-height": {
     name: "min-height",
     desc:
       "Provides classes for min-height property of css which can be used along side height property",
@@ -1751,7 +1751,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "max-height": {
     name: "max-height",
     desc:
       "Provides classes for max-height property of css which can be used along side height property",
@@ -1764,7 +1764,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "object-fit": {
     name: "object-fit",
     desc: "Provides classes for object-fit property of css",
     classprefix: "object-fit",
@@ -1782,7 +1782,7 @@ module.exports = [
     unit: "N/A",
     type: "list",
   },
-  {
+  "object-position": {
     name: "object-position",
     desc: "Provides classes for object-position property of css",
     classprefix: "object-position",
@@ -1804,7 +1804,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "border-radius": {
     name: "border-radius",
     desc: "Provides utility classes for border radius of all 4 corners",
     classprefix: "border-radius",
@@ -1828,7 +1828,7 @@ module.exports = [
     unit: "px",
     type: "list",
   },
-  {
+  "border-radius-top": {
     name: "border-radius-top",
     desc:
       "Provides utility classes for border radius of all 2 corners Top-left and Top-right",
@@ -1853,7 +1853,7 @@ module.exports = [
     unit: "px",
     type: "list",
   },
-  {
+  "border-radius-bottom": {
     name: "border-radius-bottom",
     desc:
       "Provides utility classes for border radius of all 2 corners Bottom-left and Bottom-right",
@@ -1878,7 +1878,7 @@ module.exports = [
     unit: "px",
     type: "list",
   },
-  {
+  "border-radius-left": {
     name: "border-radius-left",
     desc:
       "Provides utility classes for border radius of all 2 corners Top-left and Bottom-Left",
@@ -1903,7 +1903,7 @@ module.exports = [
     unit: "px",
     type: "list",
   },
-  {
+  "border-radius-right": {
     name: "border-radius-right",
     desc:
       "Provides utility classes for border radius of all 2 corners Top-right and Bottom-right",
@@ -1928,7 +1928,7 @@ module.exports = [
     unit: "px",
     type: "list",
   },
-  {
+  "border-radius-top-left": {
     name: "border-radius-top-left",
     desc: "Provides utility classes for border radius of 1 corner Top-left",
     classprefix: "border-radius-tl",
@@ -1952,7 +1952,7 @@ module.exports = [
     unit: "px",
     type: "list",
   },
-  {
+  "border-radius-top-right": {
     name: "border-radius-top-right",
     desc: "Provides utility classes for border radius of 1 corner Top-right",
     classprefix: "border-radius-tr",
@@ -1976,7 +1976,7 @@ module.exports = [
     unit: "px",
     type: "list",
   },
-  {
+  "border-radius-bottom-left": {
     name: "border-radius-bottom-left",
     desc: "Provides utility classes for border radius of 1 corner Bottom-left",
     classprefix: "border-radius-bl",
@@ -2000,7 +2000,7 @@ module.exports = [
     unit: "px",
     type: "list",
   },
-  {
+  "border-radius-bottom-right": {
     name: "border-radius-bottom-right",
     desc: "Provides utility classes for border radius of 1 corner Bottom-Right",
     classprefix: "border-radius-br",
@@ -2024,7 +2024,7 @@ module.exports = [
     unit: "px",
     type: "list",
   },
-  {
+  "border-width": {
     name: "border-width",
     desc: "Provides utility classes for border width of all 4 sides",
     classprefix: "border-width",
@@ -2036,7 +2036,7 @@ module.exports = [
     unit: "px",
     type: "list",
   },
-  {
+  "border-top-width": {
     name: "border-top-width",
     desc: "Provides utility classes for border width of Border Top",
     classprefix: "border-width-t",
@@ -2048,7 +2048,7 @@ module.exports = [
     unit: "px",
     type: "list",
   },
-  {
+  "border-bottom-width": {
     name: "border-bottom-width",
     desc: "Provides utility classes for border width of Border Bottom",
     classprefix: "border-width-b",
@@ -2060,7 +2060,7 @@ module.exports = [
     unit: "px",
     type: "list",
   },
-  {
+  "border-left-width": {
     name: "border-left-width",
     desc: "Provides utility classes for border width of Border Left",
     classprefix: "border-width-l",
@@ -2072,7 +2072,7 @@ module.exports = [
     unit: "px",
     type: "list",
   },
-  {
+  "border-right-width": {
     name: "border-right-width",
     desc: "Provides utility classes for border width of Border Right",
     classprefix: "border-width-r",
@@ -2084,7 +2084,7 @@ module.exports = [
     unit: "px",
     type: "list",
   },
-  {
+  "border-style": {
     name: "border-style",
     desc: "Provides utility classes for border style",
     classprefix: "border",
@@ -2102,7 +2102,7 @@ module.exports = [
     unit: "N/A",
     type: "list",
   },
-  {
+  "box-shadows": {
     name: "box-shadows",
     desc: "Provides utility classes for box-shadows",
     classprefix: "shadow",
@@ -2120,7 +2120,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  scale: {
     name: "scale",
     desc: "Provides utility classes for scale-x and scale-y",
     classprefix: "scale",
@@ -2146,7 +2146,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "scale-x": {
     name: "scale-x",
     desc: "Provides utility classes for scale-x",
     classprefix: "scale-x",
@@ -2172,7 +2172,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "scale-y": {
     name: "scale-y",
     desc: "Provides utility classes for scale-y",
     classprefix: "scale-y",
@@ -2198,7 +2198,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  translate: {
     name: "translate",
     desc: "Provides utility classes for translate-x and translate-y",
     classprefix: "translate",
@@ -2228,7 +2228,7 @@ module.exports = [
     unit: "rem",
     type: "map",
   },
-  {
+  "translate-x": {
     name: "translate-x",
     desc: "Provides utility classes for translate-x",
     classprefix: "translate-x",
@@ -2258,7 +2258,7 @@ module.exports = [
     unit: "rem",
     type: "map",
   },
-  {
+  "translate-y": {
     name: "translate-y",
     desc: "Provides utility classes for translate-y",
     classprefix: "translate-y",
@@ -2288,7 +2288,7 @@ module.exports = [
     unit: "rem",
     type: "map",
   },
-  {
+  "negative-translate": {
     name: "negative-translate",
     desc:
       "Provides utility classes for translate-x and translate-y with negative value",
@@ -2318,7 +2318,7 @@ module.exports = [
     unit: "rem",
     type: "map",
   },
-  {
+  "negative-translate-x": {
     name: "negative-translate-x",
     desc: "Provides utility classes for translate-x with negative value",
     classprefix: "-translate-x",
@@ -2347,7 +2347,7 @@ module.exports = [
     unit: "rem",
     type: "map",
   },
-  {
+  "negative-translate-y": {
     name: "negative-translate-y",
     desc: "Provides utility classes for translate-y with negative value",
     classprefix: "-translate-y",
@@ -2376,7 +2376,7 @@ module.exports = [
     unit: "rem",
     type: "map",
   },
-  {
+  rotate: {
     name: "rotate",
     desc: "Provides utility classes for rotate property of transform",
     classprefix: "rotate",
@@ -2397,7 +2397,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "rotate-negative": {
     name: "rotate-negative",
     desc: "Provides negative utility classes for rotate property of transform",
     classprefix: "-rotate",
@@ -2417,7 +2417,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  skew: {
     name: "skew",
     desc: "Provides utility classes for skew property of transform",
     classprefix: "skew",
@@ -2436,7 +2436,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "skew-x": {
     name: "skew-x",
     desc: "Provides utility classes for skewX property of transform",
     classprefix: "skew-x",
@@ -2455,7 +2455,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "skew-y": {
     name: "skew-y",
     desc: "Provides utility classes for skewY property of transform",
     classprefix: "skew-y",
@@ -2474,7 +2474,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "negative-skew": {
     name: "negative-skew",
     desc: "Provides  negative  utility classes for skew property of transform",
     classprefix: "-skew",
@@ -2493,7 +2493,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "negative-skew-x": {
     name: "negative-skew-x",
     desc: "Provides negative utility classes for skewX property of transform",
     classprefix: "-skew-x",
@@ -2512,7 +2512,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "negative-skew-y": {
     name: "negative-skew-y",
     desc: "Provides negative  utility classes for skewY property of transform",
     classprefix: "-skew-y",
@@ -2531,7 +2531,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  cursor: {
     name: "cursor",
     desc: "Provides negative  utility classes for skewY property of transform",
     classprefix: "cursor",
@@ -2543,7 +2543,7 @@ module.exports = [
     unit: "N/A",
     type: "list",
   },
-  {
+  "font-color": {
     name: "font-color",
     desc: "font color utilities",
     classprefix: "font",
@@ -2640,7 +2640,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "background-color": {
     name: "background-color",
     desc: "background color utilities",
     classprefix: "bg",
@@ -2737,7 +2737,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "border-color": {
     name: "border-color",
     desc: "border color utilities",
     classprefix: "border",
@@ -2834,7 +2834,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  outline: {
     name: "outline",
     desc: "Outline Utilities",
     classprefix: "outline",
@@ -2846,7 +2846,7 @@ module.exports = [
     unit: "N/A",
     type: "list",
   },
-  {
+  "background-repeat": {
     name: "background-repeat",
     desc: "Provieds Utilites for background repeat",
     classprefix: "bg",
@@ -2865,7 +2865,7 @@ module.exports = [
     unit: "N/A",
     type: "list",
   },
-  {
+  "background-sizes": {
     name: "background-sizes",
     desc: "Provieds Utilites for background sizes",
     classprefix: "bg",
@@ -2877,7 +2877,7 @@ module.exports = [
     unit: "N/A",
     type: "list",
   },
-  {
+  "transition-duration": {
     name: "transition-duration",
     desc: "Provides utilites for transition duration",
     classprefix: "transition-duration",
@@ -2905,7 +2905,7 @@ module.exports = [
     unit: "ms",
     type: "list",
   },
-  {
+  "transition-delay": {
     name: "transition-delay",
     desc: "Provides utilites for transition delay",
     classprefix: "transition-delay",
@@ -2943,7 +2943,7 @@ module.exports = [
     unit: "ms",
     type: "list",
   },
-  {
+  "spacing-x": {
     name: "spacing-x",
     desc:
       "Provide classes to give spacing between direct child of an parent spacing-x will provide spacing between child in horizontal axis",
@@ -2974,7 +2974,7 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-  {
+  "spacing-y": {
     name: "spacing-y",
     desc:
       "Provide classes to give spacing between direct child of an parent spacing-y will provide spacing between child in vertical axis",
@@ -3005,4 +3005,222 @@ module.exports = [
     unit: "N/A",
     type: "map",
   },
-];
+  transform: {
+    name: "transform",
+    desc: "provides utilities to control transform behavior",
+    classprefix: "transform",
+    responsive: "false",
+    hover: "false",
+    visited: "false",
+    active: "false",
+    values: "",
+    unit: "N/A",
+    type: "N/a",
+  },
+  "placeholder-color": {
+    name: "placeholder-color",
+    desc: "provides color classes to change the colors of placeholder",
+    classprefix: "placeholder",
+    responsive: "false",
+    hover: "false",
+    visited: "false",
+    active: "false",
+    values: {
+      "red-100": "#f06671",
+      "red-200": "#ee4d59",
+      "red-300": "#eb3341",
+      "red-400": "#e91a2a",
+      "red-500": "#e60012",
+      "red-600": "#cf0010",
+      "red-700": "#b8000e",
+      "red-800": "#a1000d",
+      "red-900": "#8a000b",
+      "blue-100": "#7aadff",
+      "blue-200": "#649fff",
+      "blue-300": "#4d91ff",
+      "blue-400": "#3784ff",
+      "blue-500": "#2176ff",
+      "blue-600": "#1e6ae6",
+      "blue-700": "#1a5ecc",
+      "blue-800": "#1753b3",
+      "blue-900": "#144799",
+      "orange-100": "#fb9e66",
+      "orange-200": "#fa8e4d",
+      "orange-300": "#f97e33",
+      "orange-400": "#f96e1a",
+      "orange-500": "#f85e00",
+      "orange-600": "#df5500",
+      "orange-700": "#c64b00",
+      "orange-800": "#ae4200",
+      "orange-900": "#953800",
+      "yellow-100": "#fdf866",
+      "yellow-200": "#fdf74d",
+      "yellow-300": "#fdf533",
+      "yellow-400": "#fcf41a",
+      "yellow-500": "#fcf300",
+      "yellow-600": "#e3db00",
+      "yellow-700": "#cac200",
+      "yellow-800": "#b0aa00",
+      "yellow-900": "#979200",
+      "green-100": "#72e0a0",
+      "green-200": "#5bdb90",
+      "green-300": "#43d680",
+      "green-400": "#2cd170",
+      "green-500": "#14cc60",
+      "green-600": "#12b856",
+      "green-700": "#10a34d",
+      "green-800": "#0e8f43",
+      "green-900": "#0c7a3a",
+      "pink-100": "#fc75b9",
+      "pink-200": "#fc5eae",
+      "pink-300": "#fb47a2",
+      "pink-400": "#fb3097",
+      "pink-500": "#fa198b",
+      "pink-600": "#e1177d",
+      "pink-700": "#c8146f",
+      "pink-800": "#af1261",
+      "pink-900": "#960f53",
+      "violet-100": "#a166d1",
+      "violet-200": "#914dca",
+      "violet-300": "#8133c2",
+      "violet-400": "#721abb",
+      "violet-500": "#6200b3",
+      "violet-600": "#5800a1",
+      "violet-700": "#4e008f",
+      "violet-800": "#45007d",
+      "violet-900": "#3b006b",
+      "teal-100": "#67dbc2",
+      "teal-200": "#4ed5b8",
+      "teal-300": "#35cfae",
+      "teal-400": "#1bc9a4",
+      "teal-500": "#02c39a",
+      "teal-600": "#02b08b",
+      "teal-700": "#029c7b",
+      "teal-800": "#01896c",
+      "teal-900": "#01755c",
+      "gray-100": "#d1d1d1",
+      "gray-200": "#bdbdbd",
+      "gray-300": "#aeaeae",
+      "gray-400": "#949494",
+      "gray-500": "#808080",
+      "gray-600": "#6c6c6c",
+      "gray-700": "#525252",
+      "gray-800": "#434343",
+      "gray-900": "#2e2e2e",
+      white: "#fff",
+      black: "#000",
+      transparent: "transparent",
+    },
+    unit: "N/A",
+    type: "map",
+  },
+  "border-focus": {
+    name: "border-focus",
+    desc: "provides color classes to change the border color on focus",
+    classprefix: "focus-border",
+    responsive: "false",
+    hover: "false",
+    visited: "false",
+    active: "false",
+    values: {
+      "red-100": "#f06671",
+      "red-200": "#ee4d59",
+      "red-300": "#eb3341",
+      "red-400": "#e91a2a",
+      "red-500": "#e60012",
+      "red-600": "#cf0010",
+      "red-700": "#b8000e",
+      "red-800": "#a1000d",
+      "red-900": "#8a000b",
+      "blue-100": "#7aadff",
+      "blue-200": "#649fff",
+      "blue-300": "#4d91ff",
+      "blue-400": "#3784ff",
+      "blue-500": "#2176ff",
+      "blue-600": "#1e6ae6",
+      "blue-700": "#1a5ecc",
+      "blue-800": "#1753b3",
+      "blue-900": "#144799",
+      "orange-100": "#fb9e66",
+      "orange-200": "#fa8e4d",
+      "orange-300": "#f97e33",
+      "orange-400": "#f96e1a",
+      "orange-500": "#f85e00",
+      "orange-600": "#df5500",
+      "orange-700": "#c64b00",
+      "orange-800": "#ae4200",
+      "orange-900": "#953800",
+      "yellow-100": "#fdf866",
+      "yellow-200": "#fdf74d",
+      "yellow-300": "#fdf533",
+      "yellow-400": "#fcf41a",
+      "yellow-500": "#fcf300",
+      "yellow-600": "#e3db00",
+      "yellow-700": "#cac200",
+      "yellow-800": "#b0aa00",
+      "yellow-900": "#979200",
+      "green-100": "#72e0a0",
+      "green-200": "#5bdb90",
+      "green-300": "#43d680",
+      "green-400": "#2cd170",
+      "green-500": "#14cc60",
+      "green-600": "#12b856",
+      "green-700": "#10a34d",
+      "green-800": "#0e8f43",
+      "green-900": "#0c7a3a",
+      "pink-100": "#fc75b9",
+      "pink-200": "#fc5eae",
+      "pink-300": "#fb47a2",
+      "pink-400": "#fb3097",
+      "pink-500": "#fa198b",
+      "pink-600": "#e1177d",
+      "pink-700": "#c8146f",
+      "pink-800": "#af1261",
+      "pink-900": "#960f53",
+      "violet-100": "#a166d1",
+      "violet-200": "#914dca",
+      "violet-300": "#8133c2",
+      "violet-400": "#721abb",
+      "violet-500": "#6200b3",
+      "violet-600": "#5800a1",
+      "violet-700": "#4e008f",
+      "violet-800": "#45007d",
+      "violet-900": "#3b006b",
+      "teal-100": "#67dbc2",
+      "teal-200": "#4ed5b8",
+      "teal-300": "#35cfae",
+      "teal-400": "#1bc9a4",
+      "teal-500": "#02c39a",
+      "teal-600": "#02b08b",
+      "teal-700": "#029c7b",
+      "teal-800": "#01896c",
+      "teal-900": "#01755c",
+      "gray-100": "#d1d1d1",
+      "gray-200": "#bdbdbd",
+      "gray-300": "#aeaeae",
+      "gray-400": "#949494",
+      "gray-500": "#808080",
+      "gray-600": "#6c6c6c",
+      "gray-700": "#525252",
+      "gray-800": "#434343",
+      "gray-900": "#2e2e2e",
+      white: "#fff",
+      black: "#000",
+      transparent: "transparent",
+    },
+    unit: "N/A",
+    type: "map",
+  },
+  "placeholder-opacity": {
+    name: "placeholder-opacity",
+    desc: "provides classes to change the opacity of the placeholder",
+    classprefix: "focus-border",
+    responsive: "false",
+    hover: "false",
+    visited: "false",
+    active: "false",
+    values: { 5: "0.5", 6: "0.6", 7: "0.7", 8: "0.8", 9: "0.9", 10: "1" },
+    unit: "N/A",
+    type: "map",
+  },
+};

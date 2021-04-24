@@ -1,47 +1,49 @@
 {
-    "name": "@molecule-ui/styles",
-    "version": "0.0.7-alpha.3",
-    "license": "MIT",
-    "author": {
-        "email": "mr.rushil17@gmail.com",
-        "name": "Rushil Dhinoja"
-    },
-    "directories": {
-        "build": "./build"
-    },
-    "publishConfig": {
-        "access": "public"
-    },
-    "keywords": [
-        "css",
-        "styles",
-        "molecule-styles",
-        "css-framework",
-        "molecule-ui",
-        "molecule-design"
-    ],
-    "main": "build/main.module.css",
-    "style": "build/main.module.css",
-    "scripts": {
-        "build": "gulp",
-        "generate:docs": "node utils/CommentReader.js"
-    },
-    "devDependencies": {
-        "autoprefixer": "^9.8.6",
-        "comment-parser": "^0.7.6",
-        "css-loader": "^4.2.0",
-        "cssnano": "^4.1.10",
-        "gulp": "^4.0.2",
-        "gulp-postcss": "^8.0.0",
-        "gulp-sass": "^4.1.0",
-        "node-sass": "^4.14.1",
-        "postcss-combine-media-query": "^1.0.1",
-        "postcss-merge-longhand": "^4.0.11",
-        "postcss-merge-rules": "^4.0.3",
-        "postcss-single-line": "^1.0.0"
-    },
-    "gitHead": "48373f30c4c505b9a93eddf99f37290dcf259a64",
-    "dependencies": {
-        "gulp-rename": "^2.0.0"
-    }
+  "name": "@molecule-ui/styles",
+  "version": "0.0.7-alpha.3",
+  "license": "MIT",
+  "author": {
+    "email": "mr.rushil17@gmail.com",
+    "name": "Rushil Dhinoja"
+  },
+  "directories": {
+    "build": "./build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "css",
+    "styles",
+    "molecule-styles",
+    "css-framework",
+    "molecule-ui",
+    "molecule-design"
+  ],
+  "main": "build/main.module.css",
+  "style": "build/main.module.css",
+  "scripts": {
+    "build": "gulp",
+    "generate:docs": "node ./utils/CommentReader.js"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "comment-parser": "^0.7.6",
+    "css-loader": "^4.2.0",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^4.14.1",
+    "postcss-combine-media-query": "^1.0.1",
+    "postcss-merge-longhand": "^4.0.11",
+    "postcss-merge-rules": "^4.0.3",
+    "postcss-single-line": "^1.0.0"
+  },
+  "gitHead": "48373f30c4c505b9a93eddf99f37290dcf259a64",
+  "dependencies": {
+    "gulp-nodemon": "^2.5.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-run": "^1.7.1"
+  }
 }

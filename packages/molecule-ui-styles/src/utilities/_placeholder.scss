@@ -1,12 +1,53 @@
+/** 
+        @name: placeholder-color
+        @desc: desc provides color classes to change the colors of placeholder
+        @classprefix: placeholder
+        @responsive: false
+        @hover: false
+        @visited:  false 
+        @active: false  
+        @values: values #{$colors}
+        @unit:  N/A
+        @type: #{type-of($colors)}
+    */
+
 @each $name, $color in $colors {
   .placeholder-#{$name}::placeholder {
     color: $color;
   }
+}
 
+/** 
+        @name: border-focus
+        @desc: desc provides color classes to change the border color on focus 
+        @classprefix: focus-border
+        @responsive: false
+        @hover: false
+        @visited:  false 
+        @active: false  
+        @values: values #{$colors}
+        @unit:  N/A
+        @type: #{type-of($colors)}
+    */
+
+@each $name, $color in $colors {
   .focus-border-#{$name}:focus {
     border-color: $color;
   }
 }
+
+/** 
+        @name: placeholder-opacity
+        @desc: desc provides classes to change the opacity of the placeholder 
+        @classprefix: focus-border
+        @responsive: false
+        @hover: false
+        @visited:  false 
+        @active: false  
+        @values: values #{$placeholder-opacity}
+        @unit:  N/A
+        @type: #{type-of($placeholder-opacity)}
+    */
 
 @each $name, $opacity in $placeholder-opacity {
   .placeholder-opacity-#{$name}::placeholder {

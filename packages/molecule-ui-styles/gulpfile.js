@@ -7,6 +7,8 @@ const mergelonghand = require("postcss-merge-longhand");
 const mergemedia = require("postcss-combine-media-query");
 const singleline = require("postcss-single-line");
 const rename = require("gulp-rename");
+const nodemon = require("gulp-nodemon");
+const run = require("gulp-run");
 
 const plugins = [autoprefixer(), mergelonghand(), mergemedia()];
 
@@ -43,8 +45,12 @@ gulp.task("util", () => {
     .pipe(gulp.dest("./build"));
 });
 
+gulp.task("generate-docs", () => {
+  return run("node ./utils/CommentReader.js").exec();
+});
+
 gulp.task("watch", () => {
   gulp.watch("./src/**/*.scss", gulp.parallel("non-mini"));
 });
 
-gulp.task("default", gulp.parallel("build", "non-mini"));
+gulp.task("default", gulp.series("build", "non-mini", "generate-docs"));
