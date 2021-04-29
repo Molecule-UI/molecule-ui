@@ -1,4 +1,4 @@
-// Mapp file is the raw data for all the utilites classes.
+// Map file is the raw data for all the utilites classes.
 $colors: (
   "red-100": $red-100,
   "red-200": $red-200,
@@ -444,6 +444,7 @@ $scales: (
 
 $translate: (
   0: 0,
+  "02": 0.2,
   "05": 0.5,
   10: 1,
   15: 1.5,
@@ -463,7 +464,8 @@ $translate: (
 );
 
 $negative-translate: (
-  05: -0.5,
+  "02": -0.2,
+  "05": -0.5,
   10: -1,
   15: -1.5,
   20: -2,

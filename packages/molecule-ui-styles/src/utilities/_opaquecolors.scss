@@ -1,0 +1,29 @@
+@each $name, $color in $colors {
+  .bg-#{$name}-10 {
+    background-color: #{$color}#{"1a"};
+  }
+  .hover\:bg-#{$name}-10:hover {
+    background-color: #{$color}#{"1a"};
+  }
+  .font-#{$name}-10 {
+    color: #{$color}#{"1a"};
+  }
+  .hover\:font-#{$name}-10:hover {
+    color: #{$color}#{"1a"};
+  }
+}
+
+@each $name, $color in $colors {
+  .bg-#{$name}-30 {
+    background-color: #{$color}#{"4d"};
+  }
+  .hover\:bg-#{$name}-30:hover {
+    background-color: #{$color}#{"4d"};
+  }
+  .font-#{$name}-30 {
+    color: #{$color}#{"4d"};
+  }
+  .hover\:font-#{$name}-30:hover {
+    color: #{$color}#{"4d"};
+  }
+}

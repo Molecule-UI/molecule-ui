@@ -1,11 +1,23 @@
 {
-    "extends": "../../tsconfig.json",
-    "compilerOptions": {
-        "module": "CommonJS",
-        "declaration": true,
-        "rootDir": "src",
-        "outDir": "build",
-        "target": "ES6",
-        "moduleResolution": "Node"
-    }
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "module": "esnext",
+    "declaration": true,
+    "rootDir": "src",
+    "outDir": "build",
+    "target": "ES5",
+    "moduleResolution": "Node",
+    "jsx": "react",
+    "noImplicitUseStrict": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["es2015", "dom"]
+  },
+  "include": ["./src/*.tsx"],
+  "exclude": [
+    "node_modules",
+    "build",
+    "example",
+    "rollup.config.js",
+    "gulpfile.js"
+  ]
 }

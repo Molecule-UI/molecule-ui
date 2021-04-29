@@ -7,8 +7,44 @@
   "publishConfig": {
     "access": "public"
   },
-  "devDependencies": {
-    "typescript": "^3.9.7"
+  "scripts": {
+    "watch": "rollup -c -w",
+    "build": "rollup -c"
   },
-  "gitHead": "ae8b5229e708f9870542db8c74ec0ce763e0b78e"
+  "devDependencies": {
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
+    "glob": "^7.1.6",
+    "gulp": "^4.0.2",
+    "gulp-purifycss": "^0.2.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-uglify": "^3.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup": "^2.45.2",
+    "rollup-plugin-purgecss": "^4.0.3",
+    "rollup-plugin-sass": "^1.2.2",
+    "rollup-plugin-styles": "^3.14.1",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "^4.2.4"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2"
+  },
+  "files": [
+    "build"
+  ],
+  "gitHead": "ae8b5229e708f9870542db8c74ec0ce763e0b78e",
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^18.0.0",
+    "@rollup/plugin-node-resolve": "^11.2.1",
+    "classnames": "^2.3.1",
+    "postcss-remove-unused-css": "^1.0.4",
+    "postcss-uncss": "^0.17.0",
+    "rollup-plugin-postcss": "^4.0.0",
+    "uncss": "^0.17.3"
+  }
 }

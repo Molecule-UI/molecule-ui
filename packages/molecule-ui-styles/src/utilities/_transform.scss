@@ -22,5 +22,5 @@
 
   transform: translateX(var(--translate-x)) translateY(var(--translate-y))
     rotate(var(--rotate)) skewX(var(--skew-x)) skewY(var(--skew-y))
-    scale(var(--scale-x), var(--scale-y));
+    scale(var(--scale-x), var(--scale-y)) perspective(1px);
 }
