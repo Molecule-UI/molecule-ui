@@ -29,7 +29,7 @@ const Button: React.FC<Props> = (props) => {
   } = props;
 
   const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
-  // const [isRippling, setIsRippling] = useState(false);
+  const [isRippling, setIsRippling] = useState(false);
   const colorMap = {
     primary: "blue",
     danger: "red",
