@@ -1,12 +1,9 @@
 import sass from "rollup-plugin-sass";
 import typescript from "rollup-plugin-typescript2";
-import purgecss from "rollup-plugin-purgecss";
 import commonjs from "@rollup/plugin-commonjs";
 import postcss from "rollup-plugin-postcss";
 import glob from "glob";
-import uncss from "postcss-uncss";
-import remover from "postcss-remove-unused-css";
-import nodeResolver from "@rollup/plugin-node-resolve";
+
 const sources = [];
 glob.sync("./src/**/*.tsx").forEach((filePath) => {
   sources.push(filePath);
@@ -16,28 +13,19 @@ export default {
   input: "./src/index.tsx",
   output: [
     {
-      file: "./build/index.js",
+      dir: "build",
       format: "cjs",
       exports: "named",
       sourcemap: true,
       strict: false,
     },
   ],
-  // preserveModules: true,
+  preserveModules: true,
   plugins: [
-    sass({ insert: true }),
-    typescript({ objectHashIgnoreUnknownHack: false }),
-    purgecss({ content: ["src/index.tsx"] }),
+    sass(),
+    typescript({ tsconfig: "./tsconfig.json" }),
     commonjs(),
-    postcss({
-      extensions: [".css"],
-      plugins: [
-        remover({
-          path: "./src",
-          exts: [".tsx"],
-        }),
-      ],
-    }),
+    postcss({ extension: [".css"] }),
   ],
   external: ["react", "react-dom"],
 };

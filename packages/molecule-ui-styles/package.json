@@ -24,6 +24,7 @@
   "style": "build/main.module.css",
   "scripts": {
     "build": "gulp",
+    "watch": "gulp watch",
     "generate:docs": "node ./utils/CommentReader.js"
   },
   "devDependencies": {

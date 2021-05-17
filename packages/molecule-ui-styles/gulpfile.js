@@ -28,6 +28,14 @@ gulp.task("non-mini", () => {
     .pipe(rename("molecule.css"))
     .pipe(gulp.dest("./build"));
 });
+gulp.task("modules", () => {
+  return gulp
+    .src("./src/index.scss")
+    .pipe(sass().on("error", sass.logError))
+    .pipe(postcss([...plugins, singleline()]))
+    .pipe(rename("molecule.module.css"))
+    .pipe(gulp.dest("./build"));
+});
 
 gulp.task("colors", () => {
   return gulp
@@ -50,7 +58,10 @@ gulp.task("generate-docs", () => {
 });
 
 gulp.task("watch", () => {
-  gulp.watch("./src/**/*.scss", gulp.parallel("non-mini"));
+  gulp.watch("./src/**/*.scss", gulp.series("build", "non-mini"));
 });
 
-gulp.task("default", gulp.series("build", "non-mini", "generate-docs"));
+gulp.task(
+  "default",
+  gulp.series("build", "non-mini", "modules", "generate-docs")
+);

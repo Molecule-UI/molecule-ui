@@ -1,0 +1,40 @@
+@each $name, $color in $colors {
+  .fill-#{$name} {
+    svg {
+      transition: inherit;
+      fill: $color;
+    }
+  }
+
+  .hover\:fill-#{$name}:hover {
+    svg {
+      fill: $color;
+    }
+  }
+
+  .fill-#{$name}-10 {
+    svg {
+      transition: inherit;
+      fill: #{$color}#{"1a"};
+    }
+  }
+
+  .hover\:fill-#{$name}-10:hover {
+    svg {
+      fill: #{$color}#{"1a"};
+    }
+  }
+
+  .fill-#{$name}-30 {
+    svg {
+      transition: inherit;
+      fill: #{$color}#{"4d"};
+    }
+  }
+
+  .hover\:fill-#{$name}-30:hover {
+    svg {
+      fill: #{$color}#{"4d"};
+    }
+  }
+}
