@@ -10,7 +10,8 @@
   "scripts": {
     "watch": "rollup -c -w",
     "build": "rollup -c",
-    "docs": "jsdoc -c jsdoc.conf.json"
+    "docs": "jsdoc -c jsdoc.conf.json",
+    "styles": "tsm src/ --watch"
   },
   "devDependencies": {
     "@types/react": "^17.0.3",
@@ -25,6 +26,7 @@
     "gulp-typescript": "^6.0.0-alpha.1",
     "gulp-uglify": "^3.0.2",
     "jsdoc": "^3.6.6",
+    "node-sass": "^6.0.1",
     "react-docgen": "^5.4.0",
     "react-docgen-typescript": "^1.22.0",
     "rollup": "^2.45.2",
@@ -49,6 +51,7 @@
     "postcss-remove-unused-css": "^1.0.4",
     "postcss-uncss": "^0.17.0",
     "rollup-plugin-postcss": "^4.0.0",
+    "typed-scss-modules": "^4.1.1",
     "uncss": "^0.17.3"
   }
 }
