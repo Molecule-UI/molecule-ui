@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import cx from "classnames";
-const styles = require("@molecule-ui/styles/build/molecule.module.css");
+const styles = require("@molecule-ui/styles/build/global.module.css");
 export interface Props {
   /**Color of the button */
   color?: "primary" | "danger" | "success" | "default" | "delay" | "info";
@@ -38,7 +38,7 @@ export const Button: React.FC<Props> = React.forwardRef<
     children,
     className,
   } = props;
-
+  const [test, setTest] = useState();
   const colorMap = {
     primary: "blue",
     danger: "red",

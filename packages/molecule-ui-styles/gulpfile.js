@@ -37,6 +37,15 @@ gulp.task("modules", () => {
     .pipe(gulp.dest("./build"));
 });
 
+gulp.task("globalStyles", () => {
+  return gulp
+    .src("./src/ComponentsStyle/globalStyles.scss")
+    .pipe(sass().on("error", sass.logError))
+    .pipe(postcss([...plugins, singleline()]))
+    .pipe(rename("global.module.css"))
+    .pipe(gulp.dest("./build"));
+});
+
 gulp.task("colors", () => {
   return gulp
     .src("./src/colorutil.scss")
@@ -63,5 +72,6 @@ gulp.task("watch", () => {
 
 gulp.task(
   "default",
-  gulp.series("build", "non-mini", "modules", "generate-docs")
+  // gulp.series("build", "non-mini", "modules", "generate-docs")
+  gulp.series("globalStyles")
 );

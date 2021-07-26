@@ -25,7 +25,6 @@ export default {
     sass(),
     typescript({ tsconfig: "./tsconfig.json" }),
     commonjs(),
-    postcss({ extension: [".css"] }),
   ],
   external: ["react", "react-dom"],
 };
