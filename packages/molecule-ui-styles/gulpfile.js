@@ -42,7 +42,7 @@ gulp.task("globalStyles", () => {
     .src("./src/ComponentsStyle/globalStyles.scss")
     .pipe(sass().on("error", sass.logError))
     .pipe(postcss([...plugins, singleline()]))
-    .pipe(rename("global.module.css"))
+    .pipe(rename("global.css"))
     .pipe(gulp.dest("./build"));
 });
 
@@ -72,6 +72,5 @@ gulp.task("watch", () => {
 
 gulp.task(
   "default",
-  // gulp.series("build", "non-mini", "modules", "generate-docs")
-  gulp.series("globalStyles")
+  gulp.series("build", "non-mini", "modules", "generate-docs", "globalStyles")
 );
