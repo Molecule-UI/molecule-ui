@@ -9,8 +9,7 @@ export interface Props {
   className?: string;
   variant?: "default" | "rounded" | "capsule";
   type?: "default" | "outlined" | "opaque" | "text";
-  hoverEffect?: "fill" | "opaque";
-  clickEffect?: "shrink" | "enlarge";
+  hoverEffect?: "fill";
   size?: "small" | "medium" | "large" | "huge";
   elevated?: boolean;
   fullWidth?: boolean;
@@ -29,7 +28,6 @@ export const Button: React.FC<Props> = React.forwardRef<
     variant = "default",
     type = "default",
     hoverEffect = "fill",
-    clickEffect = "shrink",
     size = "medium",
     fullWidth = false,
     circle = false,
@@ -52,7 +50,6 @@ export const Button: React.FC<Props> = React.forwardRef<
   const clickHandler = (e) => {
     onPress(e);
   };
-  console.log(componentStyles);
   const classes = cx(
     { "text-medium": size === "large" },
     { "text-regular": size === "huge" },
@@ -69,7 +66,7 @@ export const Button: React.FC<Props> = React.forwardRef<
     },
     {
       [`fill-${colorMap[color]}-${colorStrength}`]:
-        type === "outlined" || type === "text",
+        (type === "outlined" || type === "text") && !disabled,
     },
     {
       [`font-${colorMap[color]}-${colorStrength}`]:
@@ -77,13 +74,18 @@ export const Button: React.FC<Props> = React.forwardRef<
     },
     {
       [`hover:bg-${colorMap[color]}-${colorStrength}`]:
-        type === "outlined" && hoverEffect === "fill",
+        type === "outlined" && hoverEffect === "fill" && !disabled,
     },
     {
-      "hover:font-white": type === "outlined" && hoverEffect === "fill",
+      "hover:font-white":
+        type === "outlined" && hoverEffect === "fill" && !disabled,
     },
+    { "border-radius-4": variant === "rounded" },
+    { "border-radius-999": variant === "capsule" },
+    { "border-radius-9999": circle === true },
     {
-      [`border-${colorMap[color]}-${colorStrength}`]: type === "outlined",
+      [`border-${colorMap[color]}-${colorStrength}`]:
+        type === "outlined" && !disabled,
     },
     {
       "shadow-elevated":
@@ -100,9 +102,11 @@ export const Button: React.FC<Props> = React.forwardRef<
     {
       "bg-transparent": type === "outlined" || type === "text",
     },
+    { "fill-gray-100": disabled },
+    { "hover:fill-white": type === "outlined" && !disabled },
     {
       [`hover:bg-${colorMap[color]}-${+colorStrength + 100}-30`]:
-        type === "opaque",
+        type === "opaque" && !disabled,
     },
     {
       [`bg-${colorMap[color]}-${colorStrength}-30`]: type === "opaque",
@@ -118,7 +122,7 @@ export const Button: React.FC<Props> = React.forwardRef<
         type === "default" && !disabled,
     },
     {
-      [`hover:bg-${colorMap[color]}-${"100"}-10`]: type === "text",
+      [`hover:bg-${colorMap[color]}-${"100"}-10`]: type === "text" && !disabled,
     },
     `${componentStyles["button-base"]}`,
     {
@@ -136,27 +140,14 @@ export const Button: React.FC<Props> = React.forwardRef<
     {
       [`${componentStyles["letter-space-softer"]}`]:
         size === "small" || fullWidth === true,
+    },
+    {
+      [`${componentStyles["hover-effect"]}`]: !disabled,
+    },
+    {
+      [`${componentStyles["disabled"]}`]: disabled,
     }
   );
-  // `${styles["transform"]}`,
-
-  // { [`${styles["hover:-translate-y-02"]}`]: !disabled },
-
-  // {
-  //   [`${styles["visited:scale-90"]}`]: clickEffect === "shrink" && !disabled,
-  // },
-  // {
-  //   [`${styles["visited:scale-105"]}`]:
-  //     clickEffect === "enlarge" && !disabled,
-  // },
-
-  //
-
-  // { [`${styles["border-radius-4"]}`]: variant === "rounded" },
-  // { [`${styles["border-radius-999"]}`]: variant === "capsule" },
-  // { [`${styles["border-radius-9999"]}`]: circle === true },
-
-  // { [`${styles["hover:fill-white"]}`]: type === "outlined" },
 
   return (
     <button

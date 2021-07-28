@@ -14,9 +14,18 @@ const styles = createUseStyles({
     alignItems: "center",
     justifyContent: "center",
     backfaceVisibility: "hidden",
+    boxSizing: "border-box",
     "& > :not(:last-child)": {
       marginRight: "0.5rem",
     },
+  },
+  "hover-effect": {
+    "&:hover": {
+      transform: " translateY(-2px) scale(0.95)  perspective(1px) ",
+    },
+  },
+  disabled: {
+    cursor: "not-allowed",
   },
   "square-padding": {
     paddingLeft: "2.5rem",
