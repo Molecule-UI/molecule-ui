@@ -1,7 +1,6 @@
 import sass from "rollup-plugin-sass";
 import typescript from "rollup-plugin-typescript2";
 import commonjs from "@rollup/plugin-commonjs";
-import postcss from "rollup-plugin-postcss";
 import glob from "glob";
 
 const sources = [];
@@ -21,10 +20,6 @@ export default {
     },
   ],
   preserveModules: true,
-  plugins: [
-    sass(),
-    typescript({ tsconfig: "./tsconfig.json" }),
-    commonjs(),
-  ],
+  plugins: [typescript({ tsconfig: "./tsconfig.json" }), commonjs(), sass()],
   external: ["react", "react-dom"],
 };

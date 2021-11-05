@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import cx from "classnames";
-const styles = require("@molecule-ui/styles/build/global.module.css");
+import Styles from "./Style/ButtonStyles";
+// const styles = require("@molecule-ui/styles/build/global.module.css");
 export interface Props {
   /**Color of the button */
   color?: "primary" | "danger" | "success" | "default" | "delay" | "info";
@@ -8,8 +9,7 @@ export interface Props {
   className?: string;
   variant?: "default" | "rounded" | "capsule";
   type?: "default" | "outlined" | "opaque" | "text";
-  hoverEffect?: "fill" | "opaque";
-  clickEffect?: "shrink" | "enlarge";
+  hoverEffect?: "fill";
   size?: "small" | "medium" | "large" | "huge";
   elevated?: boolean;
   fullWidth?: boolean;
@@ -28,13 +28,12 @@ export const Button: React.FC<Props> = React.forwardRef<
     variant = "default",
     type = "default",
     hoverEffect = "fill",
-    clickEffect = "shrink",
     size = "medium",
     fullWidth = false,
     circle = false,
     disabled = false,
     onPress,
-    elevated,
+    elevated = true,
     children,
     className,
   } = props;
@@ -47,126 +46,106 @@ export const Button: React.FC<Props> = React.forwardRef<
     delay: "orange",
     info: "teal",
   };
-
+  const componentStyles = Styles();
   const clickHandler = (e) => {
     onPress(e);
   };
-
   const classes = cx(
-    `${styles["text-uppercase"]}`,
-    `${styles["cursor-pointer"]}`,
-    `${styles["transform"]}`,
-    `${styles["transition-duration-300"]}`,
-    `${styles["backface-visibility-hidden"]}`,
-    `${styles["display-flex"]}`,
-    `${styles["align-items-center"]}`,
-    `${styles["justify-center"]}`,
-    `${styles["spacing-x-1"]}`,
-
-    { [`${styles["hover:-translate-y-02"]}`]: !disabled },
-
-    { [`${styles["bg-gray-500"]}`]: disabled },
-    { [`${styles["p-2"]}`]: circle === true },
-    { [`${styles["px-10"]}`]: circle === false },
-    { [`${styles["py-4"]}`]: circle === false },
-    { [`${styles["fill-white"]}`]: type === "default" },
-    { [`${styles["width-100"]}`]: fullWidth === true },
-    { [`${styles["text-bold"]}`]: size === "small" || size === "medium" },
-    { [`${styles["text-medium"]}`]: size === "large" },
-    { [`${styles["text-regular"]}`]: size === "huge" },
-    { [`${styles["font-caption"]}`]: size === "small" },
-    { [`${styles["font-button"]}`]: size === "medium" },
-    { [`${styles["font-body"]}`]: size === "large" },
+    { "text-medium": size === "large" },
+    { "text-regular": size === "huge" },
+    { "font-caption": size === "small" },
+    { "font-button": size === "medium" },
+    { "font-body": size === "large" },
+    { "font-subtitle": size === "huge" },
+    { "bg-gray-500": disabled },
+    { "font-gray-100": disabled },
+    { "fill-white": type === "default" },
     {
-      [`${styles["letter-space-softer"]}`]:
-        size === "small" || fullWidth === true,
-    },
-    { [`${styles["font-subtitle"]}`]: size === "huge" },
-    {
-      [`${styles["visited:scale-90"]}`]: clickEffect === "shrink" && !disabled,
+      [`hover:bg-${colorMap[color]}-${+colorStrength + 100}`]:
+        type === "default" && !disabled,
     },
     {
-      [`${styles["visited:scale-105"]}`]:
-        clickEffect === "enlarge" && !disabled,
+      [`fill-${colorMap[color]}-${colorStrength}`]:
+        (type === "outlined" || type === "text") && !disabled,
     },
     {
-      [`${styles["bg-transparent"]}`]: type === "outlined" || type === "text",
+      [`font-${colorMap[color]}-${colorStrength}`]:
+        type === "outlined" || type === "text",
     },
     {
-      [`${styles["shadow-elevated"]}`]:
-        !elevated &&
+      [`hover:bg-${colorMap[color]}-${colorStrength}`]:
+        type === "outlined" && hoverEffect === "fill" && !disabled,
+    },
+    {
+      "hover:font-white":
+        type === "outlined" && hoverEffect === "fill" && !disabled,
+    },
+    { "border-radius-4": variant === "rounded" },
+    { "border-radius-999": variant === "capsule" },
+    { "border-radius-9999": circle === true },
+    {
+      [`border-${colorMap[color]}-${colorStrength}`]:
+        type === "outlined" && !disabled,
+    },
+    {
+      "shadow-elevated":
+        elevated &&
         type !== "text" &&
         type !== "opaque" &&
         type !== "outlined" &&
         !disabled,
     },
     {
-      [`${styles["font-white"]}`]:
-        colorStrength && type === "default" && !disabled,
+      "font-white": colorStrength && type === "default" && !disabled,
     },
-    { [`${styles["font-gray-100"]}`]: disabled },
-    { [`${styles["border-radius-4"]}`]: variant === "rounded" },
-    { [`${styles["border-radius-999"]}`]: variant === "capsule" },
-    { [`${styles["border-radius-9999"]}`]: circle === true },
-    { [`${styles["border-width-1"]}`]: type === "outlined" },
-
+    { "width-100": fullWidth === true },
     {
-      [`${styles["border-none"]}`]:
+      "bg-transparent": type === "outlined" || type === "text",
+    },
+    { "fill-gray-100": disabled },
+    { "hover:fill-white": type === "outlined" && !disabled },
+    {
+      [`hover:bg-${colorMap[color]}-${+colorStrength + 100}-30`]:
+        type === "opaque" && !disabled,
+    },
+    {
+      [`bg-${colorMap[color]}-${colorStrength}-30`]: type === "opaque",
+    },
+    {
+      [`font-${colorMap[color]}-${colorStrength}`]: type === "opaque",
+    },
+    {
+      [`fill-${colorMap[color]}-${colorStrength}`]: type === "opaque",
+    },
+    {
+      [`bg-${colorMap[color]}-${colorStrength}`]:
+        type === "default" && !disabled,
+    },
+    {
+      [`hover:bg-${colorMap[color]}-${"100"}-10`]: type === "text" && !disabled,
+    },
+    `${componentStyles["button-base"]}`,
+    {
+      [`${componentStyles["square-padding"]}`]: circle === false,
+    },
+    { [`${componentStyles["circle"]}`]: circle === true },
+    {
+      "text-bold": size === "small" || size === "medium",
+    },
+    {
+      [`${componentStyles["border-none"]}`]:
         type === "default" || type === "text" || type === "opaque",
     },
+    { [`${componentStyles["outlined"]}`]: type === "outlined" },
     {
-      [`${styles["hover:font-white"]}`]:
-        type === "outlined" && hoverEffect === "fill",
-    },
-    { [`${styles["border-solid"]}`]: type === "outlined" },
-    { [`${styles["hover:fill-white"]}`]: type === "outlined" },
-
-    {
-      [`${styles[`bg-${colorMap[color]}-${colorStrength}`]}`]:
-        type === "default" && !disabled,
+      [`${componentStyles["letter-space-softer"]}`]:
+        size === "small" || fullWidth === true,
     },
     {
-      [`${styles[`hover:bg-${colorMap[color]}-${+colorStrength + 100}`]}`]:
-        type === "default" && !disabled,
+      [`${componentStyles["hover-effect"]}`]: !disabled,
     },
     {
-      [`${styles[`font-${colorMap[color]}-${colorStrength}`]}`]:
-        type === "outlined" || type === "text",
-    },
-    {
-      [`${styles[`fill-${colorMap[color]}-${colorStrength}`]}`]:
-        type === "outlined" || type === "text",
-    },
-    {
-      [`${styles[`border-${colorMap[color]}-${colorStrength}`]}`]:
-        type === "outlined",
-    },
-    {
-      [`${styles[`hover:bg-${colorMap[color]}-${colorStrength}`]}`]:
-        type === "outlined" && hoverEffect === "fill",
-    },
-    {
-      [`${styles[`hover:bg-${colorMap[color]}-100-30`]}`]:
-        type === "outlined" && hoverEffect === "opaque",
-    },
-    {
-      [`${styles[`hover:bg-${colorMap[color]}-${"100"}-10`]}`]: type === "text",
-    },
-    {
-      [`${styles[`hover:bg-${colorMap[color]}-${+colorStrength + 100}-30`]}`]:
-        type === "opaque",
-    },
-    {
-      [`${styles[`bg-${colorMap[color]}-${colorStrength}-30`]}`]:
-        type === "opaque",
-    },
-    {
-      [`${styles[`font-${colorMap[color]}-${colorStrength}`]}`]:
-        type === "opaque",
-    },
-    {
-      [`${styles[`fill-${colorMap[color]}-${colorStrength}`]}`]:
-        type === "opaque",
+      [`${componentStyles["disabled"]}`]: disabled,
     }
   );
 
