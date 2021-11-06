@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import cx from "classnames";
 import Styles from "./Style/ButtonStyles";
-// const styles = require("@molecule-ui/styles/build/global.module.css");
 export interface Props {
   /**Color of the button */
   color?: "primary" | "danger" | "success" | "default" | "delay" | "info";
@@ -23,21 +22,20 @@ export const Button: React.FC<Props> = React.forwardRef<
   Props
 >((props, ref) => {
   const {
-    color = "default",
-    colorStrength = 500,
-    variant = "default",
-    type = "default",
-    hoverEffect = "fill",
-    size = "medium",
-    fullWidth = false,
-    circle = false,
-    disabled = false,
+    color,
+    colorStrength,
+    variant,
+    type,
+    hoverEffect,
+    size,
+    fullWidth,
+    circle,
+    disabled,
     onPress,
-    elevated = true,
+    elevated,
     children,
     className,
   } = props;
-  const [test, setTest] = useState();
   const colorMap = {
     primary: "blue",
     danger: "red",
@@ -162,5 +160,17 @@ export const Button: React.FC<Props> = React.forwardRef<
 });
 
 Button.displayName = "Button";
+Button.defaultProps = {
+  color: "default",
+  colorStrength: 500,
+  variant: "default",
+  type: "default",
+  hoverEffect: "fill",
+  size: "medium",
+  fullWidth: false,
+  circle: false,
+  disabled: false,
+  elevated: true,
+};
 
 export default Button;
