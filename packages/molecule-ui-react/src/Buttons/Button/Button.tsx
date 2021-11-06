@@ -8,7 +8,6 @@ export interface Props {
   className?: string;
   variant?: "default" | "rounded" | "capsule";
   type?: "default" | "outlined" | "opaque" | "text";
-  hoverEffect?: "fill";
   size?: "small" | "medium" | "large" | "huge";
   elevated?: boolean;
   fullWidth?: boolean;
@@ -26,7 +25,6 @@ export const Button: React.FC<Props> = React.forwardRef<
     colorStrength,
     variant,
     type,
-    hoverEffect,
     size,
     fullWidth,
     circle,
@@ -72,11 +70,10 @@ export const Button: React.FC<Props> = React.forwardRef<
     },
     {
       [`hover:bg-${colorMap[color]}-${colorStrength}`]:
-        type === "outlined" && hoverEffect === "fill" && !disabled,
+        type === "outlined" && !disabled,
     },
     {
-      "hover:font-white":
-        type === "outlined" && hoverEffect === "fill" && !disabled,
+      "hover:font-white": type === "outlined" && !disabled,
     },
     { "border-radius-4": variant === "rounded" },
     { "border-radius-999": variant === "capsule" },
@@ -165,7 +162,6 @@ Button.defaultProps = {
   colorStrength: 500,
   variant: "default",
   type: "default",
-  hoverEffect: "fill",
   size: "medium",
   fullWidth: false,
   circle: false,
