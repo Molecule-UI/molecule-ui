@@ -1,33 +1,39 @@
 import React from "react";
 import cx from "classnames";
 import Styles from "./Style/AlertStyles";
+import styles from "./Style/AlertStyles";
+import AlertTitle from "./AlertTitle/AlertTitle";
 import {
   DoneOutline,
   InfoOutline,
   WarningOutline,
   ErrorOutline,
+  CloseSolid,
 } from "@molecule-ui/icons";
+
 export interface Props {
-  color?: "primary" | "success" | "warning" | "danger";
-  closeIcon?: boolean;
+  color?: "primary" | "success" | "danger";
+  showCloseIcon?: boolean;
   onClose?: Function;
   showIcon?: boolean;
-  message: string;
-  description?: string;
   type?: "default" | "opaque";
 }
 
 interface AlertRootProps {
   type?: "default" | "opaque";
-  color?: "primary" | "success" | "warning" | "danger";
+  color?: "primary" | "success" | "danger";
 }
 
 interface AlertIconProps {
-  showIcon?: boolean;
-  color?: "primary" | "success" | "warning" | "danger";
+  color?: "primary" | "success" | "danger";
   type?: "default" | "opaque";
 }
 
+interface AlertCloseIcon {
+  type?: "default" | "opaque";
+  color?: "primary" | "success" | "warning" | "danger";
+  onClose?: Function;
+}
 const colorMap = {
   primary: "blue",
   success: "green",
@@ -45,18 +51,10 @@ const AlertRoot: React.FC<AlertRootProps> = (props) => {
     { "font-white": type === "default" },
     { [`font-${colorMap[color]}-500`]: type === "opaque" },
     {
-      [`bg-${colorMap[color]}-500`]: type === "default" && color !== "warning",
+      [`bg-${colorMap[color]}-500`]: type === "default",
     },
     {
-      [`bg-${colorMap[color]}-100`]: type === "default" && color === "warning",
-    },
-    {
-      [`bg-${colorMap[color]}-500-30`]:
-        type === "opaque" && color !== "warning",
-    },
-    {
-      [`bg-${colorMap[color]}-100-30`]:
-        type === "opaque" && color === "warning",
+      [`bg-${colorMap[color]}-500-30`]: type === "opaque",
     }
   );
 
@@ -65,54 +63,91 @@ const AlertRoot: React.FC<AlertRootProps> = (props) => {
 
 const AlertIcon: React.FC<AlertIconProps> = (props) => {
   const { type, color } = props;
+  const componentStyles = Styles();
+
+  const IconClassName = cx(
+    {
+      [`${componentStyles["icon-fill-white"]}`]: type === "default",
+    },
+    { [`${componentStyles[`icon-fill-${color}`]}`]: type === "opaque" },
+    `${componentStyles["icon-base"]}`
+  );
+  const ContainerClasses = cx(`${componentStyles["icon-container"]}`);
 
   const IconMap = {
-    success: <DoneOutline size="normal" />,
-    primary: <InfoOutline size="normal" />,
-    warning: <WarningOutline size="normal" />,
-    danger: <ErrorOutline size="normal" />,
+    success: DoneOutline,
+    primary: InfoOutline,
+    warning: WarningOutline,
+    danger: ErrorOutline,
   };
 
-  return IconMap[color];
+  let Component = IconMap[color];
+
+  return (
+    <div className={ContainerClasses}>
+      <Component size={"normal"} className={IconClassName} />
+    </div>
+  );
 };
 
-const Alert: React.FC<Props> = React.forwardRef<HTMLDivElement, Props>(
-  (props, ref) => {
-    const {
-      color,
-      closeIcon,
-      onClose,
-      showIcon,
-      message,
-      description,
-      type,
-    } = props;
+const AlertContent: React.FC = (props) => {
+  const { children } = props;
+  const componentStyles = styles();
+  const classes = cx(`${componentStyles["content-base"]}`, "font-body");
+  return <div className={classes}>{children}</div>;
+};
 
-    return (
-      <AlertRoot {...props}>{showIcon && <AlertIcon {...props} />}</AlertRoot>
-      // <div className={classes}>
-      //   {/* <div style={{ display: "flex", alignItems: "center" }}>
-      //     <span
-      //       style={{
-      //         display: "flex",
-      //         alignItems: "center",
-      //         justifyContent: "center ",
-      //       }}
-      //     >
-      //       {showIcon && IconMap[color]}
-      //     </span>
-      //     <span style={{ marginLeft: "1rem" }}>{message}</span>
-      //   </div>
-      //   <div></div> */}
-      // </div>
-    );
-  }
-);
+const AlertCloseIcon: React.FC<AlertCloseIcon> = (props) => {
+  const { type, color, onClose } = props;
 
+  const onClick = () => {
+    onClose && onClose();
+  };
+
+  const componentStyles = Styles();
+
+  const IconClassName = cx(
+    {
+      [`${componentStyles["icon-fill-white"]}`]: type === "default",
+    },
+    { [`${componentStyles[`icon-fill-${color}`]}`]: type === "opaque" },
+    `${componentStyles["icon-base"]}`,
+    `${componentStyles["close-icon-base"]}`
+  );
+
+  const ContainerClasses = cx(
+    `${componentStyles["close-icon-container"]}`,
+    `${componentStyles["icon-container"]}`
+  );
+
+  return (
+    <div onClick={onClick} className={ContainerClasses}>
+      <CloseSolid className={IconClassName} size="normal" />
+    </div>
+  );
+};
+
+const Alert: React.FC<Props> & { Title?: React.FC } = React.forwardRef<
+  HTMLDivElement,
+  Props
+>((props, ref) => {
+  const { showCloseIcon, showIcon, children } = props;
+
+  return (
+    <AlertRoot {...props}>
+      {showIcon && <AlertIcon {...props} />}
+      <AlertContent>{children}</AlertContent>
+      {showCloseIcon && <AlertCloseIcon {...props} />}
+    </AlertRoot>
+  );
+});
+
+Alert.Title = AlertTitle;
 Alert.defaultProps = {
   color: "primary",
-  closeIcon: false,
+  showCloseIcon: false,
   type: "default",
+  showIcon: true,
 };
 
 export default Alert;
