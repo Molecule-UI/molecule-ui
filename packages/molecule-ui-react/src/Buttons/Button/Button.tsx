@@ -143,7 +143,8 @@ export const Button: React.FC<Props> = React.forwardRef<
     },
     {
       [`${componentStyles["disabled"]}`]: disabled,
-    }
+    },
+    className
   );
 
   return (
