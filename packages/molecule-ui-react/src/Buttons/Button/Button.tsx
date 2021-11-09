@@ -14,6 +14,7 @@ export interface Props {
   circle?: boolean;
   disabled?: boolean;
   onPress: Function;
+  hoverEffect: boolean;
 }
 
 export const Button: React.FC<Props> = React.forwardRef<
@@ -33,6 +34,7 @@ export const Button: React.FC<Props> = React.forwardRef<
     elevated,
     children,
     className,
+    hoverEffect,
   } = props;
   const colorMap = {
     primary: "blue",
@@ -137,7 +139,7 @@ export const Button: React.FC<Props> = React.forwardRef<
         size === "small" || fullWidth === true,
     },
     {
-      [`${componentStyles["hover-effect"]}`]: !disabled,
+      [`${componentStyles["hover-effect"]}`]: !disabled && hoverEffect,
     },
     {
       [`${componentStyles["disabled"]}`]: disabled,
@@ -167,6 +169,7 @@ Button.defaultProps = {
   circle: false,
   disabled: false,
   elevated: true,
+  hoverEffect: true,
 };
 
 export default Button;
