@@ -2,7 +2,6 @@ import React from "react";
 import cx from "classnames";
 import Styles from "./Style/ButtonStyles";
 export interface Props {
-  /**Color of the button */
   color?: "primary" | "danger" | "success" | "default" | "delay" | "info";
   colorStrength?: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800;
   className?: string;
