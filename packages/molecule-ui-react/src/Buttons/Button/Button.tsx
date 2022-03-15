@@ -2,19 +2,18 @@ import React from "react";
 import cx from "classnames";
 import Styles from "./Style/ButtonStyles";
 export interface Props {
-  /**Color of the button */
   color?: "primary" | "danger" | "success" | "default" | "delay" | "info";
   colorStrength?: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800;
   className?: string;
   variant?: "default" | "rounded" | "capsule";
   type?: "default" | "outlined" | "opaque" | "text";
-  hoverEffect?: "fill";
   size?: "small" | "medium" | "large" | "huge";
   elevated?: boolean;
   fullWidth?: boolean;
   circle?: boolean;
   disabled?: boolean;
   onPress: Function;
+  hoverEffect: boolean;
 }
 
 export const Button: React.FC<Props> = React.forwardRef<
@@ -26,7 +25,6 @@ export const Button: React.FC<Props> = React.forwardRef<
     colorStrength,
     variant,
     type,
-    hoverEffect,
     size,
     fullWidth,
     circle,
@@ -35,6 +33,7 @@ export const Button: React.FC<Props> = React.forwardRef<
     elevated,
     children,
     className,
+    hoverEffect,
   } = props;
   const colorMap = {
     primary: "blue",
@@ -72,11 +71,10 @@ export const Button: React.FC<Props> = React.forwardRef<
     },
     {
       [`hover:bg-${colorMap[color]}-${colorStrength}`]:
-        type === "outlined" && hoverEffect === "fill" && !disabled,
+        type === "outlined" && !disabled,
     },
     {
-      "hover:font-white":
-        type === "outlined" && hoverEffect === "fill" && !disabled,
+      "hover:font-white": type === "outlined" && !disabled,
     },
     { "border-radius-4": variant === "rounded" },
     { "border-radius-999": variant === "capsule" },
@@ -140,11 +138,12 @@ export const Button: React.FC<Props> = React.forwardRef<
         size === "small" || fullWidth === true,
     },
     {
-      [`${componentStyles["hover-effect"]}`]: !disabled,
+      [`${componentStyles["hover-effect"]}`]: !disabled && hoverEffect,
     },
     {
       [`${componentStyles["disabled"]}`]: disabled,
-    }
+    },
+    className
   );
 
   return (
@@ -165,12 +164,12 @@ Button.defaultProps = {
   colorStrength: 500,
   variant: "default",
   type: "default",
-  hoverEffect: "fill",
   size: "medium",
   fullWidth: false,
   circle: false,
   disabled: false,
   elevated: true,
+  hoverEffect: true,
 };
 
 export default Button;
