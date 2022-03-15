@@ -5,6 +5,7 @@
     "start": "lerna run build",
     "build:css": "yarn workspace @molecule-ui/styles build",
     "build:icons": "yarn workspace @molecule-ui/icons build",
+    "build:components": "yarn workspace @molecule-ui/react build",
     "bootstrap": "lerna bootstrap",
     "build:docs": "yarn bootstrap && yarn docs",
     "upload": "lerna publish"

@@ -1,0 +1,10 @@
+name: build
+
+on: pull_requests
+
+jobs:
+  run-build:
+    runs-on: ubuntu-latest
+    steps:
+      name: build
+      run: npm run build:components
