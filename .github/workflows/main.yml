@@ -14,8 +14,6 @@ jobs:
         with:
           node-version: 14.x
       - name: Install Dependencies
-        working-directory: ./packages/molecule-ui-react
-        run: npm install
+        run: yarn install
       - name: build
-        working-directory: ./packages/molecule-ui-react
-        run: npm run build
+        run: yarn build:components
