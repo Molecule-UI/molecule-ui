@@ -1,7 +1,7 @@
 import React from "react";
 // import mdx from "./ButtonDoc.stories.mdx";
 import { Button } from "../index";
-import { AddCart } from "@molecule-ui/icons";
+import { AddCart } from "@moleculeui/icons";
 
 import {
   Title,

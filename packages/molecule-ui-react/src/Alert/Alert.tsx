@@ -9,7 +9,7 @@ import {
   WarningOutline,
   ErrorOutline,
   CloseSolid,
-} from "@molecule-ui/icons";
+} from "@moleculeui/icons";
 
 export interface Props {
   color?: "primary" | "success" | "danger";

@@ -1,5 +1,5 @@
 import React from "react";
-import { AddCart } from "@molecule-ui/icons";
+import { AddCart } from "@moleculeui/icons";
 import { ProfileCard } from "../index";
 
 export default {
