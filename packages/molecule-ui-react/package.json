@@ -2,7 +2,7 @@
   "name": "@molecule-ui/react",
   "version": "1.0.0-alpha.0",
   "main": "build/index.js",
-  "author": "Rushil dhinoja <mr.rushil17@gmail.com>",
+  "author": "Rushil dhinoja <moleculeui@gmail.com>",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
