@@ -21,7 +21,6 @@
     "@storybook/theming": "^6.3.12",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
-    "glob": "^7.1.6",
     "react-docgen-typescript": "^2.2.2",
     "rollup": "^2.45.2",
     "rollup-plugin-typescript2": "^0.30.0",
@@ -36,8 +35,8 @@
   ],
   "gitHead": "75f91880c628fbf017025c022d07186236947107",
   "dependencies": {
-    "@molecule-ui/icons": "^1.0.0-beta.0",
-    "@molecule-ui/styles": "^1.0.0-beta.0",
+    "@moleculeui/icons": "^1.0.1-beta.0",
+    "@moleculeui/styles": "^1.0.2-beta.0",
     "classnames": "^2.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
