@@ -1,14 +1,14 @@
 {
-    "extends": "../../tsconfig.json",
-    "compilerOptions": {
-        "module": "CommonJS",
-        "declaration": true,
-        "rootDir": "src",
-        "outDir": "build",
-        "target": "ES6",
-        "moduleResolution": "Node",
-        "jsx": "react",
-        "noImplicitUseStrict": true
-    },
-    "include": ["./src/*.tsx"]
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "module": "esnext",
+    "declaration": true,
+    "rootDir": "src",
+    "outDir": "build",
+    "target": "ES6",
+    "moduleResolution": "Node",
+    "jsx": "react",
+    "noImplicitUseStrict": true
+  },
+  "include": ["./src/*.tsx"]
 }

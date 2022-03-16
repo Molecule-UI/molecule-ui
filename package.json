@@ -8,10 +8,11 @@
     "build:components": "yarn workspace @molecule-ui/react build",
     "bootstrap": "lerna bootstrap",
     "build:docs": "yarn bootstrap && yarn docs",
-    "upload": "lerna publish"
+    "upload": "lerna publish",
+    "ls": "lerna ls"
   },
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^4.0.0"
   },
   "workspaces": [
     "packages/*"

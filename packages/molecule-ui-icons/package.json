@@ -1,65 +1,61 @@
 {
-    "name": "@molecule-ui/icons",
-    "version": "0.0.8-alpha.0",
-    "author": {
-        "email": "mr.rushil17@gmail.com",
-        "name": "Rushil Dhinoja"
-    },
-    "main": "build/index.js",
-    "description": "Molecule UI Icon library converted into react components",
-    "typings": "build/index.d.ts",
-    "directories": {
-        "build": "./build",
-        "test": "./test"
-    },
-    "publishConfig": {
-        "access": "public"
-    },
-    "keywords": [
-        "react",
-        "react-component",
-        "molecule-ui",
-        "molecule-design",
-        "icon-component",
-        "svg-icons",
-        "icons"
-    ],
-    "license": "MIT",
-    "scripts": {
-        "jest": "jest --verbose",
-        "jest:coverage": "jest --verbose --coverage",
-        "jest:watch": "jest --verbose --watch",
-        "build": "gulp",
-        "build:watch": "tsc --watch",
-        "build:icons": "node utils/CreateComponents.js"
-    },
-    "devDependencies": {
-        "@babel/core": "^7.11.1",
-        "@babel/preset-env": "^7.11.0",
-        "@babel/preset-react": "^7.10.4",
-        "@babel/preset-typescript": "^7.10.4",
-        "@types/classnames": "^2.2.10",
-        "@types/react": "^16.9.44",
-        "enzyme": "^3.11.0",
-        "enzyme-adapter-react-16": "^1.15.2",
-        "gulp": "^4.0.2",
-        "gulp-typescript": "^6.0.0-alpha.1",
-        "gulp-uglify": "^3.0.2",
-        "identity-obj-proxy": "^3.0.0",
-        "jest": "^26.2.2",
-        "prefix": "^1.0.0",
-        "typescript": "^3.9.7"
-    },
-    "dependencies": {
-        "classnames": "^2.2.6"
-    },
-    "peerDependencies": {
-        "@types/react": "^16.9.44"
-    },
-    "jest": {
-        "moduleNameMapper": {
-            "\\.(css|less|scss|sass)$": "identity-obj-proxy"
-        }
-    },
-    "gitHead": "e58908a98ea7d8970610898d2d5fccd1a4a05aa8"
+  "name": "@moleculeui/icons",
+  "version": "1.0.1-beta.0",
+  "author": {
+    "email": "moleculeui@gmail.com",
+    "name": "Rushil Dhinoja"
+  },
+  "main": "build/index.js",
+  "description": "Molecule UI Icon library converted into react components",
+  "typings": "build/index.d.ts",
+  "directories": {
+    "build": "./build",
+    "test": "./test"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "molecule-ui",
+    "molecule-design",
+    "icon-component",
+    "svg-icons",
+    "icons"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "jest": "jest --verbose",
+    "jest:coverage": "jest --verbose --coverage",
+    "jest:watch": "jest --verbose --watch",
+    "build:icons": "node utils/CreateComponents.js",
+    "build": "rollup -c",
+    "watch": "rollup -c -w"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.2",
+    "@types/classnames": "^2.2.10",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "glob": "^7.2.0",
+    "jest": "^26.2.2",
+    "rollup": "^2.45.2",
+    "rollup-plugin-import-css": "^3.0.3",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
+  },
+  "gitHead": "75f91880c628fbf017025c022d07186236947107"
 }

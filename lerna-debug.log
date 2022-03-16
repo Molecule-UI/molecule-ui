@@ -1,0 +1,9 @@
+46 error Error: Command failed with exit code 1: git commit -m v1.0.0-beta.0
+46 error On branch development
+46 error Your branch is up to date with 'origin/development'.
+46 error
+46 error nothing to commit, working tree clean
+46 error     at makeError (/Users/rushil/Personal/molecule-ui/node_modules/execa/lib/error.js:60:11)
+46 error     at handlePromise (/Users/rushil/Personal/molecule-ui/node_modules/execa/index.js:118:26)
+46 error     at processTicksAndRejections (internal/process/task_queues.js:95:5)
+46 error     at async Promise.all (index 0)

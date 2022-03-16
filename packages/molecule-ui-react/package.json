@@ -1,8 +1,8 @@
 {
-  "name": "@molecule-ui/react",
-  "version": "0.0.10-alpha.0",
+  "name": "@moleculeui/react",
+  "version": "1.0.1-beta.0",
   "main": "build/index.js",
-  "author": "Rushil dhinoja <mr.rushil17@gmail.com>",
+  "author": "Rushil dhinoja <moleculeui@gmail.com>",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -10,7 +10,7 @@
   "scripts": {
     "watch": "rollup -c -w",
     "build": "rollup -c",
-    "storybook": "start-storybook -p 6006",
+    "dev": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
@@ -19,13 +19,12 @@
     "@storybook/addons": "^6.3.12",
     "@storybook/react": "^6.3.12",
     "@storybook/theming": "^6.3.12",
-    "@types/react": "^17.0.3",
-    "@types/react-dom": "^17.0.3",
-    "glob": "^7.1.6",
+    "@types/react": "^17.0.40",
+    "@types/react-dom": "^17.0.13",
     "react-docgen-typescript": "^2.2.2",
     "rollup": "^2.45.2",
     "rollup-plugin-typescript2": "^0.30.0",
-    "typescript": "^4.2.4"
+    "typescript": "^4.6.2"
   },
   "peerDependencies": {
     "react": "^17.0.2",
@@ -34,11 +33,12 @@
   "files": [
     "build"
   ],
-  "gitHead": "ae8b5229e708f9870542db8c74ec0ce763e0b78e",
+  "gitHead": "75f91880c628fbf017025c022d07186236947107",
   "dependencies": {
+    "@moleculeui/icons": "^1.0.1-beta.0",
     "classnames": "^2.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-jss": "^10.7.1"
+    "react-jss": "^10.9.0"
   }
 }

@@ -1,9 +1,9 @@
 {
-  "name": "@molecule-ui/styles",
-  "version": "0.0.11-alpha.0",
+  "name": "@moleculeui/styles",
+  "version": "1.0.2-beta.0",
   "license": "MIT",
   "author": {
-    "email": "mr.rushil17@gmail.com",
+    "email": "moleculeui@gmail.com",
     "name": "Rushil Dhinoja"
   },
   "directories": {
@@ -30,18 +30,15 @@
   "devDependencies": {
     "autoprefixer": "^9.8.6",
     "comment-parser": "^0.7.6",
-    "css-loader": "^4.2.0",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.1.0",
-    "node-sass": "^4.14.1",
     "postcss-combine-media-query": "^1.0.1",
     "postcss-merge-longhand": "^4.0.11",
-    "postcss-merge-rules": "^4.0.3",
     "postcss-single-line": "^1.0.0"
   },
-  "gitHead": "48373f30c4c505b9a93eddf99f37290dcf259a64",
+  "gitHead": "75f91880c628fbf017025c022d07186236947107",
   "dependencies": {
     "gulp-nodemon": "^2.5.0",
     "gulp-rename": "^2.0.0",

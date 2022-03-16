@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, ButtonGroup } from "../index";
-import { Send } from "@molecule-ui/icons";
 export default {
   component: ButtonGroup,
   title: "Components/ButtonGroup",
