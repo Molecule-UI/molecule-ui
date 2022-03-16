@@ -1,7 +1,6 @@
 import React from "react";
 import cx from "classnames";
 import Styles from "./Style/AlertStyles";
-import styles from "./Style/AlertStyles";
 import AlertTitle from "./AlertTitle/AlertTitle";
 import {
   DoneOutline,
@@ -92,7 +91,7 @@ const AlertIcon: React.FC<AlertIconProps> = (props) => {
 
 const AlertContent: React.FC = (props) => {
   const { children } = props;
-  const componentStyles = styles();
+  const componentStyles = Styles();
   const classes = cx(`${componentStyles["content-base"]}`, "font-body");
   return <div className={classes}>{children}</div>;
 };

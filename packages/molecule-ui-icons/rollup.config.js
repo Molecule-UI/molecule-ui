@@ -1,6 +1,5 @@
 import typescript from "rollup-plugin-typescript2";
 import commonjs from "@rollup/plugin-commonjs";
-import css from "rollup-plugin-import-css";
 
 export default {
   input: "./src/index.tsx",
@@ -14,6 +13,6 @@ export default {
     },
   ],
   preserveModules: true,
-  plugins: [typescript({ tsconfig: "./tsconfig.json" }), commonjs(), css()],
-  external: ["react", "react-dom", "classnames"],
+  plugins: [typescript({ tsconfig: "./tsconfig.json" }), commonjs()],
+  external: ["react", "react-dom", "classnames", "react-jss"],
 };

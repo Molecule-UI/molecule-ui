@@ -1,8 +1,7 @@
 import * as React from 'react';
 import cx from 'classnames';
 import { throwPropError } from './helpers';
-import '../styles/index.css';
-
+import Styles from './Style/Styles'
 
 type Props = {
     fill?: string;
@@ -64,7 +63,9 @@ const PriceTagSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, cla
         };
     }
 
-    const classes = cx(size, className);
+    const componentStyles = Styles()
+
+    const classes = cx(componentStyles[size], className);
     return (
         <svg
             className={classes}

@@ -18,8 +18,8 @@ export default {
     "react",
     "react-dom",
     "classnames",
-    "@molecule-ui/styles/build/global.css",
-    "@molecule-ui/icons",
+    "@moleculeui/styles/build/global.css",
+    "@moleculeui/icons",
     "react-jss",
   ],
 };
