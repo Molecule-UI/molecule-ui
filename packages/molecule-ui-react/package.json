@@ -36,6 +36,8 @@
   ],
   "gitHead": "ae8b5229e708f9870542db8c74ec0ce763e0b78e",
   "dependencies": {
+    "@molecule-ui/icons": "^0.0.8-alpha.0",
+    "@molecule-ui/styles": "^0.0.11-alpha.0",
     "classnames": "^2.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

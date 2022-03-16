@@ -20,5 +20,12 @@ export default {
   ],
   preserveModules: true,
   plugins: [typescript({ tsconfig: "./tsconfig.json" }), commonjs()],
-  external: ["react", "react-dom"],
+  external: [
+    "react",
+    "react-dom",
+    "classnames",
+    "@molecule-ui/styles/build/global.css",
+    "@molecule-ui/icons",
+    "react-jss",
+  ],
 };
