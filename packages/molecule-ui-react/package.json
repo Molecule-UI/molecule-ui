@@ -1,5 +1,5 @@
 {
-  "name": "@molecule-ui/react",
+  "name": "@moleculeui/react",
   "version": "1.0.0-beta.0",
   "main": "build/index.js",
   "author": "Rushil dhinoja <moleculeui@gmail.com>",
@@ -34,7 +34,7 @@
   "files": [
     "build"
   ],
-  "gitHead": "ae8b5229e708f9870542db8c74ec0ce763e0b78e",
+  "gitHead": "75f91880c628fbf017025c022d07186236947107",
   "dependencies": {
     "@molecule-ui/icons": "^1.0.0-beta.0",
     "@molecule-ui/styles": "^1.0.0-beta.0",

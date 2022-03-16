@@ -1,5 +1,5 @@
 {
-  "name": "@molecule-ui/icons",
+  "name": "@moleculeui/icons",
   "version": "1.0.0-beta.0",
   "author": {
     "email": "moleculeui@gmail.com",
@@ -61,5 +61,5 @@
       "\\.(css|less|scss|sass)$": "identity-obj-proxy"
     }
   },
-  "gitHead": "e58908a98ea7d8970610898d2d5fccd1a4a05aa8"
+  "gitHead": "75f91880c628fbf017025c022d07186236947107"
 }
