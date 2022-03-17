@@ -1,4 +1,5 @@
 node_modules
 build
+docs
 yarn-error.log
 coverage

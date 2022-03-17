@@ -16,9 +16,10 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.2",
     "@storybook/addon-docs": "^6.4.19",
-    "@storybook/addons": "^6.3.12",
-    "@storybook/react": "^6.3.12",
-    "@storybook/theming": "^6.3.12",
+    "@storybook/addon-links": "^6.4.19",
+    "@storybook/addons": "^6.4.19",
+    "@storybook/react": "^6.4.19",
+    "@storybook/theming": "^6.4.19",
     "@types/react": "^17.0.40",
     "@types/react-dom": "^17.0.13",
     "react-docgen-typescript": "^2.2.2",
@@ -26,14 +27,19 @@
     "rollup-plugin-typescript2": "^0.30.0",
     "typescript": "^4.6.2"
   },
-  "peerDependencies": {},
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
   "files": [
     "build"
   ],
   "gitHead": "75f91880c628fbf017025c022d07186236947107",
   "dependencies": {
-    "@moleculeui/icons": "^1.0.1-beta.0",
     "classnames": "^2.3.1",
-    "react-jss": "^10.9.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-jss": "^10.9.0",
+    "remove": "^0.1.5"
   }
 }

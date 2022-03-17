@@ -23,16 +23,12 @@ interface AlertRootProps {
   color?: "primary" | "success" | "danger";
 }
 
-interface AlertIconProps {
-  color?: "primary" | "success" | "danger";
-  type?: "default" | "opaque";
-}
+interface AlertIconProps extends AlertRootProps {}
 
-interface AlertCloseIcon {
-  type?: "default" | "opaque";
-  color?: "primary" | "success" | "warning" | "danger";
+interface AlertCloseIcon extends AlertRootProps {
   onClose?: Function;
 }
+
 const colorMap = {
   primary: "blue",
   success: "green",
@@ -142,6 +138,7 @@ const Alert: React.FC<Props> & { Title?: React.FC } = React.forwardRef<
 });
 
 Alert.Title = AlertTitle;
+
 Alert.defaultProps = {
   color: "primary",
   showCloseIcon: false,
