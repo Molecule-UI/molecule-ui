@@ -9,12 +9,20 @@
     "bootstrap": "lerna bootstrap",
     "build:docs": "yarn bootstrap && yarn docs",
     "upload": "lerna publish",
-    "ls": "lerna ls"
+    "ls": "lerna ls",
+    "create:component": "sh component.sh"
   },
   "devDependencies": {
+    "husky": "^7.0.4",
     "lerna": "^4.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn build"
+    }
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "dependencies": {}
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import cx from "classnames";
 import Styles from "./Style/AlertTitleStyles";
+
 const AlertTitle: React.FC = (props) => {
   const { children } = props;
   const componentStyles = Styles();

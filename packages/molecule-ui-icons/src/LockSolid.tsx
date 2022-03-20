@@ -5,12 +5,13 @@ import Styles from './Style/Styles'
 
 type Props = {
     fill?: string;
-    size: 'small' | 'normal' | 'large' | 'huge';
+    size?: 'small' | 'normal' | 'large' | 'huge';
     customSize?: string;
     className?: string;
+    onClick?: () => void;
 };
 
-const LockSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, className }) => {
+const LockSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, className, onClick }) => {
 
     const sizeValues = ['small', 'normal', 'large', 'huge'];
 
@@ -63,11 +64,16 @@ const LockSolid: React.FC<Props> = ({ fill, size = 'normal', customSize, classNa
         };
     }
 
+    const onClickHandle = () => {
+        onClick && onClick()
+    }
+
     const componentStyles = Styles()
 
     const classes = cx(componentStyles[size], className);
     return (
         <svg
+            onClick={onClickHandle}
             className={classes}
             style={customStyles}
             xmlns='http://www.w3.org/2000/svg'

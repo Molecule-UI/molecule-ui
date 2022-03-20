@@ -3,33 +3,10 @@ import React from "react";
 import { Button } from "../index";
 import { AddCart } from "@moleculeui/icons";
 
-import {
-  Title,
-  Subtitle,
-  Description,
-  Primary,
-  ArgsTable,
-  Stories,
-  PRIMARY_STORY,
-} from "@storybook/addon-docs";
-
 export default {
   component: Button,
   title: "Components/Button",
   parameters: {
-    docs: {
-      // inlineStories: false,
-      // page: () => (
-      //   <>
-      //     <Title />
-      //     <Subtitle>Hi I am a Button</Subtitle>
-      //     <Description />
-      //     <Primary />
-      //     <Stories />
-      //     <ArgsTable story={PRIMARY_STORY} />
-      //   </>
-      // ),
-    },
     previewTabs: {
       canvas: {
         hidden: false,

@@ -51,6 +51,12 @@ const ProfileCardBottomBar: React.FC<ProfileCardBottomBar> = (props) => {
     }
   );
 
+  const iconClasses = cx(
+    "icon-container",
+    { "shadow-elevated": icon },
+    { hidden: !icon }
+  );
+
   const onClick = () => {
     onIconClick && onIconClick();
   };
@@ -58,14 +64,11 @@ const ProfileCardBottomBar: React.FC<ProfileCardBottomBar> = (props) => {
   return (
     <div className={classes}>
       <div className="title">{title}</div>
-      <div
-        onClick={onClick}
-        className={`icon-container ${icon && "shadow-elevated"} ${
-          icon ? null : "hidden"
-        } `}
-      >
-        {icon && React.cloneElement(icon, { size: "normal" })}
-      </div>
+      {icon && (
+        <div onClick={onClick} className={iconClasses}>
+          {icon && React.cloneElement(icon, { size: "normal" })}
+        </div>
+      )}
     </div>
   );
 };

@@ -4,6 +4,7 @@ const styles = createUseStyles({
   "@global": {
     html: {
       fontSize: "62.5%",
+      boxSizing: "border-box",
     },
     h4: {
       margin: 0,

@@ -10,7 +10,7 @@ const Template = (args) => (
     <Button color="primary" elevated>
       One
     </Button>
-    <Button color="primary" elevated>
+    <Button color="" elevated>
       Two
     </Button>
     <Button color="primary" elevated>
