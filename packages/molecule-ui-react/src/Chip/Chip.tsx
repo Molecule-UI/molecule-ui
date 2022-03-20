@@ -2,6 +2,7 @@ import React from "react";
 import cx from "classnames";
 import Styles from "./Style/ChipStyles";
 import { AddSolid } from "@moleculeui/icons";
+
 type color =
   | "danger" //red
   | "primary" //blue
