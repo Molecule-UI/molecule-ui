@@ -4,17 +4,15 @@ echo "Creating Component"
 echo "Add Component Name"
 read COMPONENT
 
+
+
+
 # Create a Folder inside src with the User Input
 mkdir  "./packages/molecule-ui-react/src/"$COMPONENT""
 
 # Create a Sub-Folder of Style inside the newely created folder
 mkdir  "./packages/molecule-ui-react/src/"$COMPONENT"/Style"
 
-# Create 3 Files One for Styles, One for Component, and One index for exporting
-# touch "./packages/molecule-ui-react/src/"$COMPONENT"/Style/"$COMPONENT"Styles.tsx"
-# touch "./packages/molecule-ui-react/src/"$COMPONENT"/"$COMPONENT".tsx"
-# touch "./packages/molecule-ui-react/src/"$COMPONENT"/index.tsx"
-# touch "./packages/molecule-ui-react/src/Stories/"$COMPONENT".stories.js"
 
 # Write BoilerPlate code in Styles File
 echo "import { createUseStyles } from \"react-jss\";\n" >> "./packages/molecule-ui-react/src/"$COMPONENT"/Style/"$COMPONENT"Styles.tsx"
@@ -22,15 +20,20 @@ echo "const styles = createUseStyles({});\n" >> "./packages/molecule-ui-react/sr
 echo "export default styles;\n" >> "./packages/molecule-ui-react/src/"$COMPONENT"/Style/"$COMPONENT"Styles.tsx"
 
 # Write BoilerPlate Code in Component File
-echo "import React from \"react\";" >> "./packages/molecule-ui-react/src/"$COMPONENT"/"$COMPONENT".tsx"
+echo "import React, {CSSProperties} from \"react\";" >> "./packages/molecule-ui-react/src/"$COMPONENT"/"$COMPONENT".tsx"
 echo "import cx from \"classnames\";" >> "./packages/molecule-ui-react/src/"$COMPONENT"/"$COMPONENT".tsx"
 echo "import Styles from \"./Style/"$COMPONENT"Styles\";\n" >> "./packages/molecule-ui-react/src/"$COMPONENT"/"$COMPONENT".tsx"
-echo "export interface Props {} \n" >> "./packages/molecule-ui-react/src/"$COMPONENT"/"$COMPONENT".tsx"
+echo "export interface Props {
+    className?: string;
+    style?:CSSProperties;
+} \n" >> "./packages/molecule-ui-react/src/"$COMPONENT"/"$COMPONENT".tsx"
 echo "const "$COMPONENT": React.FC<Props> = (props) => {
-    const {} = props;\n
+    const {
+        className, style
+    } = props;\n
     const componentStyle = Styles();\n
-    const classes = cx();\n
-    return <div></div>
+    const classes = cx(className);\n
+    return <div style={style} ></div>
 };\n" >> "./packages/molecule-ui-react/src/"$COMPONENT"/"$COMPONENT".tsx"
 echo "export default "$COMPONENT";" >> "./packages/molecule-ui-react/src/"$COMPONENT"/"$COMPONENT".tsx"
 
