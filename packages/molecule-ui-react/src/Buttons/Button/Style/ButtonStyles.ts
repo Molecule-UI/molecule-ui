@@ -1,4 +1,5 @@
 import { createUseStyles } from "react-jss";
+import { Props } from "../Button";
 
 const styles = createUseStyles({
   "@global": {

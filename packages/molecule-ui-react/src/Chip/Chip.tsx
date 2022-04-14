@@ -1,4 +1,4 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import cx from "classnames";
 import Styles from "./Style/ChipStyles";
 import { AddSolid } from "@moleculeui/icons";
@@ -22,6 +22,8 @@ export interface Props {
   closeIcon?: boolean;
   notificationCount?: number;
   onClose?: (id: number) => void;
+  className?: string;
+  style?: CSSProperties;
 }
 
 const colorMap = {
@@ -36,15 +38,23 @@ const colorMap = {
 };
 
 const Chip: React.FC<Props> = (props) => {
-  const { color, colorStrength, closeIcon, notificationCount, children } =
-    props;
+  const {
+    color,
+    colorStrength,
+    closeIcon,
+    notificationCount,
+    children,
+    className,
+    style,
+  } = props;
 
   const componentStyle = Styles(props);
 
   const classes = cx(
     `bg-${colorMap[color]}-${colorStrength}`,
     "border-radius-999",
-    `${componentStyle["chip-base"]}`
+    `${componentStyle["chip-base"]}`,
+    className
   );
   const containerClasses = cx(`${componentStyle["container-base"]}`);
   const notificationClasses = cx(
@@ -55,7 +65,7 @@ const Chip: React.FC<Props> = (props) => {
   const iconClasses = cx(`${componentStyle["close-icon"]}`);
 
   return (
-    <div className={classes}>
+    <div className={classes} style={style}>
       <div className={containerClasses}>{children}</div>
       {(notificationCount || notificationCount !== 0) && (
         <div className={notificationClasses}>

@@ -2,6 +2,7 @@ import React from "react";
 import cx from "classnames";
 import Styles, { accordionBorder } from "./Style/AccordionStyles";
 import { AddSolid } from "@moleculeui/icons";
+import { CSSProperties } from "react";
 
 type color = "primary" | "success" | "danger" | "warning";
 
@@ -11,6 +12,8 @@ export interface Props {
   color?: color;
   sideBorder?: boolean;
   onClick: (isOpen: boolean) => void;
+  style?: CSSProperties;
+  className?: string;
 }
 
 interface AccordionBorderProps {
@@ -65,17 +68,18 @@ const AccordionContent: React.FC<AccordionContentProps> = (props) => {
 };
 
 const Accordion: React.FC<Props> & { Title?: React.FC } = (props) => {
-  const { color, sideBorder, children } = props;
+  const { color, sideBorder, children, className, style } = props;
   const componentStyle = Styles({ ...props });
 
   const classes = cx(
     "border-radius-4",
     `${componentStyle["accordion-base"]}`,
-    `bg-${colorMap[color]}-500-30`
+    `bg-${colorMap[color]}-500-30`,
+    className
   );
 
   return (
-    <div className={classes}>
+    <div className={classes} style={style}>
       {sideBorder && <AccordionBorder color={color} />}
       <AccordionTitle {...props} />
       <AccordionContent {...props}>{children}</AccordionContent>

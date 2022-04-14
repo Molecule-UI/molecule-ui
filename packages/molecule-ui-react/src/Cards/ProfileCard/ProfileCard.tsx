@@ -1,6 +1,7 @@
 import React from "react";
 import cx from "classnames";
 import Styles from "./Style/ProfileCardStyle";
+import { CSSProperties } from "react";
 
 export interface ProfileCardRootProps {
   src: string;
@@ -9,6 +10,7 @@ export interface ProfileCardRootProps {
   type?: "covered" | "spaced";
   icon?: React.ReactElement;
   onIconClick?: Function;
+  style?: CSSProperties;
 }
 
 interface ProfileCardImageProps {
@@ -74,7 +76,7 @@ const ProfileCardBottomBar: React.FC<ProfileCardBottomBar> = (props) => {
 };
 
 const ProfileCard: React.FC<ProfileCardRootProps> = (props) => {
-  const { src, title, className, type, icon, onIconClick } = props;
+  const { src, title, className, type, icon, onIconClick, style } = props;
 
   if (!src) {
     throw Error("Profile Cards requires src prop.");
@@ -92,7 +94,7 @@ const ProfileCard: React.FC<ProfileCardRootProps> = (props) => {
   );
 
   return (
-    <div className={classes}>
+    <div style={style} className={classes}>
       <ProfileCardImage src={src} type={type} />
       <ProfileCardBottomBar
         type={type}

@@ -1,6 +1,7 @@
 import React from "react";
 import cx from "classnames";
 import Styles from "./Style/ButtonStyles";
+import { CSSProperties } from "react";
 export interface Props {
   color?: "primary" | "danger" | "success" | "default" | "delay" | "info";
   colorStrength?: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800;
@@ -14,6 +15,7 @@ export interface Props {
   disabled?: boolean;
   onPress: Function;
   hoverEffect: boolean;
+  style?: CSSProperties;
 }
 
 export const Button: React.FC<Props> = React.forwardRef<
@@ -34,6 +36,7 @@ export const Button: React.FC<Props> = React.forwardRef<
     children,
     className,
     hoverEffect,
+    style,
   } = props;
   const colorMap = {
     primary: "blue",
@@ -152,6 +155,7 @@ export const Button: React.FC<Props> = React.forwardRef<
       onClick={(e) => clickHandler(e)}
       className={classes}
       disabled={disabled}
+      style={{ ...style }}
     >
       {children}
     </button>

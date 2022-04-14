@@ -9,6 +9,7 @@ import {
   ErrorOutline,
   CloseSolid,
 } from "@moleculeui/icons";
+import { CSSProperties } from "react";
 
 export interface Props {
   color?: "primary" | "success" | "danger";
@@ -16,11 +17,15 @@ export interface Props {
   onClose?: Function;
   showIcon?: boolean;
   type?: "default" | "opaque";
+  className?: string;
+  style?: CSSProperties;
 }
 
 interface AlertRootProps {
   type?: "default" | "opaque";
   color?: "primary" | "success" | "danger";
+  className?: string;
+  style?: CSSProperties;
 }
 
 interface AlertIconProps extends AlertRootProps {}
@@ -37,7 +42,7 @@ const colorMap = {
 };
 
 const AlertRoot: React.FC<AlertRootProps> = (props) => {
-  const { type, color, children } = props;
+  const { type, color, children, className, style } = props;
   const componentStyles = Styles();
   const classes = cx(
     componentStyles["alert-base"],
@@ -50,10 +55,15 @@ const AlertRoot: React.FC<AlertRootProps> = (props) => {
     },
     {
       [`bg-${colorMap[color]}-500-30`]: type === "opaque",
-    }
+    },
+    className
   );
 
-  return <div className={classes}>{children}</div>;
+  return (
+    <div style={style} className={classes}>
+      {children}
+    </div>
+  );
 };
 
 const AlertIcon: React.FC<AlertIconProps> = (props) => {
