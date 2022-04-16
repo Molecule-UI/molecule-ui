@@ -10,7 +10,7 @@
     "build:docs": "yarn bootstrap && yarn docs",
     "upload": "lerna publish",
     "ls": "lerna ls",
-    "build:stroy": "yarn workspace @moleculeui/react build-storybook"
+    "build:story": "yarn workspace @moleculeui/react build-storybook"
   },
   "devDependencies": {
     "lerna": "^4.0.0"
