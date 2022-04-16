@@ -21,7 +21,8 @@ export interface Props {
   colorStrength?: colorStrength;
   closeIcon?: boolean;
   notificationCount?: number;
-  onClose?: (id: number) => void;
+  // Todo: Add a parameter type here
+  onClose?: () => void;
   className?: string;
   style?: CSSProperties;
 }
@@ -46,6 +47,7 @@ const Chip: React.FC<Props> = (props) => {
     children,
     className,
     style,
+    onClose,
   } = props;
 
   const componentStyle = Styles(props);
@@ -69,7 +71,6 @@ const Chip: React.FC<Props> = (props) => {
       <div className={containerClasses}>{children}</div>
       {(notificationCount || notificationCount !== 0) && (
         <div className={notificationClasses}>
-          {console.log(notificationCount)}
           {notificationCount <= 99 ? notificationCount : "99+"}
         </div>
       )}
@@ -77,7 +78,7 @@ const Chip: React.FC<Props> = (props) => {
         <AddSolid
           className={iconClasses}
           customSize="16"
-          onClick={() => console.log("hii")}
+          onClick={() => onClose()}
           fill="#fff"
         />
       )}
