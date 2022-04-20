@@ -10,3 +10,4 @@ export { default as Avatar } from "./Avatar";
 export { default as Text } from "./Text";
 export { default as OTP } from "./InputFields/OTP";
 export { default as InputField } from "./InputFields/InputField/InputField";
+export { default as Wrapper } from "./Wrapper/Wrapper";
