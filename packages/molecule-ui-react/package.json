@@ -1,6 +1,6 @@
 {
   "name": "@moleculeui/react",
-  "version": "1.1.0-beta.0",
+  "version": "1.1.1-beta.0",
   "main": "build/index.js",
   "author": "Rushil dhinoja <moleculeui@gmail.com>",
   "license": "MIT",
