@@ -20,7 +20,6 @@ export default {
     "classnames",
     "@moleculeui/styles/build/global.css",
     "@moleculeui/icons",
-    "@moleculeui/styles",
     "react-jss",
   ],
 };
