@@ -1,0 +1,45 @@
+[
+  {
+    "tags": {},
+    "filePath": "/Users/rushil/Personal/molecule-ui/packages/molecule-ui-react/src/Buttons/ButtonGroup/ButtonGroup.tsx",
+    "description": "",
+    "displayName": "ButtonGroup",
+    "methods": [],
+    "props": {
+      "direction": {
+        "defaultValue": { "value": "row" },
+        "description": "",
+        "name": "direction",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Buttons/ButtonGroup/ButtonGroup.tsx",
+          "name": "Props"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Buttons/ButtonGroup/ButtonGroup.tsx",
+            "name": "Props"
+          }
+        ],
+        "required": false,
+        "type": { "name": "\"row\" | \"column\"" }
+      },
+      "ofSameColor": {
+        "defaultValue": { "value": true },
+        "description": "",
+        "name": "ofSameColor",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Buttons/ButtonGroup/ButtonGroup.tsx",
+          "name": "Props"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Buttons/ButtonGroup/ButtonGroup.tsx",
+            "name": "Props"
+          }
+        ],
+        "required": false,
+        "type": { "name": "boolean" }
+      }
+    }
+  }
+]
