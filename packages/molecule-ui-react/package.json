@@ -1,6 +1,6 @@
 {
   "name": "@moleculeui/react",
-  "version": "1.0.1-beta.0",
+  "version": "1.0.3-beta.0",
   "main": "build/index.js",
   "author": "Rushil dhinoja <moleculeui@gmail.com>",
   "license": "MIT",
@@ -35,7 +35,7 @@
   ],
   "gitHead": "75f91880c628fbf017025c022d07186236947107",
   "dependencies": {
-    "@moleculeui/icons": "^1.0.1-beta.0",
+    "@moleculeui/icons": "^1.0.3-beta.0",
     "classnames": "^2.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
