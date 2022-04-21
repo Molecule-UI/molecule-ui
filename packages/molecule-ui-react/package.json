@@ -13,7 +13,7 @@
     "dev": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "component": "sh ../../component.sh",
-    "docs:deploy": "yarn build-storybook && netlify deploy --prod --dir=storybook-static"
+    "docs:deploy": "yarn build-storybook && netlify deploy --prod --dir=storybook-static && rm -rf storybook-static"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.2",
