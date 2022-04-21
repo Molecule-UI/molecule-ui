@@ -10,7 +10,8 @@
     "build:docs": "yarn bootstrap && yarn docs",
     "upload": "lerna publish",
     "ls": "lerna ls",
-    "create:component": "sh component.sh"
+    "create:component": "sh component.sh",
+    "deploy:docs": "yarn workspace @molecule-ui/react docs:deploy"
   },
   "devDependencies": {
     "husky": "^7.0.4",
@@ -18,7 +19,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn build"
+      "pre-commit": "yarn deploy:docs && yarn build"
     }
   },
   "workspaces": [

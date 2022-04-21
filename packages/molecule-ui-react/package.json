@@ -12,13 +12,14 @@
     "build": "rollup -c",
     "dev": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "component": "sh ../../component.sh"
+    "component": "sh ../../component.sh",
+    "docs:deploy": "yarn build-storybook && netlify deploy --prod --dir=storybook-static"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.2",
     "@storybook/addon-docs": "^6.4.19",
-    "@storybook/addon-essentials": "^6.4.19",
-    "@storybook/addon-links": "^6.4.19",
+    "@storybook/addon-essentials": "^6.4.22",
+    "@storybook/addon-links": "^6.4.22",
     "@storybook/addons": "^6.4.19",
     "@storybook/react": "^6.4.19",
     "@storybook/theming": "^6.4.19",
@@ -37,6 +38,8 @@
     "@moleculeui/icons": "1.1.0-beta.0",
     "@moleculeui/styles": "1.1.0-beta.0",
     "classnames": "^2.3.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "react-jss": "^10.9.0",
     "remove": "^0.1.5"
   }
