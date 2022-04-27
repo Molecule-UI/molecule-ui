@@ -1,38 +1,15 @@
 import React from "react";
 // import mdx from "./ButtonDoc.stories.mdx";
-import { Button } from "../index";
+import { Button, MoleculeProvider } from "../index";
 import { AddCart } from "@moleculeui/icons";
-
-import {
-  Title,
-  Subtitle,
-  Description,
-  Primary,
-  ArgsTable,
-  Stories,
-  PRIMARY_STORY,
-} from "@storybook/addon-docs";
-
+import { ThemeProvider } from "react-jss";
 export default {
   component: Button,
   title: "Components/Button",
   parameters: {
-    docs: {
-      // inlineStories: false,
-      // page: () => (
-      //   <>
-      //     <Title />
-      //     <Subtitle>Hi I am a Button</Subtitle>
-      //     <Description />
-      //     <Primary />
-      //     <Stories />
-      //     <ArgsTable story={PRIMARY_STORY} />
-      //   </>
-      // ),
-    },
     previewTabs: {
       canvas: {
-        hidden: false,
+        hidden: true,
       },
     },
   },

@@ -1,17 +1,17 @@
 import * as React from 'react';
 import cx from 'classnames';
 import { throwPropError } from './helpers';
-import '../styles/index.css';
-
+import Styles from './Style/Styles'
 
 type Props = {
     fill?: string;
-    size: 'small' | 'normal' | 'large' | 'huge';
+    size?: 'small' | 'normal' | 'large' | 'huge';
     customSize?: string;
     className?: string;
+    onClick?: () => void;
 };
 
-const PieChart: React.FC<Props> = ({ fill, size = 'normal', customSize, className }) => {
+const PieChart: React.FC<Props> = ({ fill, size = 'normal', customSize, className, onClick }) => {
 
     const sizeValues = ['small', 'normal', 'large', 'huge'];
 
@@ -64,9 +64,16 @@ const PieChart: React.FC<Props> = ({ fill, size = 'normal', customSize, classNam
         };
     }
 
-    const classes = cx(size, className);
+    const onClickHandle = () => {
+        onClick && onClick()
+    }
+
+    const componentStyles = Styles()
+
+    const classes = cx(componentStyles[size], className);
     return (
         <svg
+            onClick={onClickHandle}
             className={classes}
             style={customStyles}
             xmlns='http://www.w3.org/2000/svg'

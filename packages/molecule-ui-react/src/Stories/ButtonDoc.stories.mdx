@@ -1,6 +1,18 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta
+  title="Documentation/ButtonDoc"
+  parameters={{
+    viewMode: "docs",
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
 <!-- Custom-MDX-Documentation.mdx -->
 
-# Replacing DocsPage with custom `MDX` content
+# Replacing DocsPage with custom MDX content
 
 This file is a documentation-only `MDX`file to customize Storybook's [DocsPage](https://storybook.js.org/docs/react/writing-docs/docs-page#replacing-docspage).
 
@@ -21,4 +33,4 @@ Button is the primary component. It has four possible states.
 
 ### Primary
 
-<Story id="components-button--default" />
+<Story id="components-button--variants" />

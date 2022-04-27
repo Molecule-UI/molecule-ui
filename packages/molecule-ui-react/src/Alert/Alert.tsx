@@ -1,7 +1,6 @@
 import React from "react";
 import cx from "classnames";
 import Styles from "./Style/AlertStyles";
-import styles from "./Style/AlertStyles";
 import AlertTitle from "./AlertTitle/AlertTitle";
 import {
   DoneOutline,
@@ -10,6 +9,7 @@ import {
   ErrorOutline,
   CloseSolid,
 } from "@moleculeui/icons";
+import { CSSProperties } from "react";
 
 export interface Props {
   color?: "primary" | "success" | "danger";
@@ -17,23 +17,23 @@ export interface Props {
   onClose?: Function;
   showIcon?: boolean;
   type?: "default" | "opaque";
+  className?: string;
+  style?: CSSProperties;
 }
 
 interface AlertRootProps {
   type?: "default" | "opaque";
   color?: "primary" | "success" | "danger";
+  className?: string;
+  style?: CSSProperties;
 }
 
-interface AlertIconProps {
-  color?: "primary" | "success" | "danger";
-  type?: "default" | "opaque";
-}
+interface AlertIconProps extends AlertRootProps {}
 
-interface AlertCloseIcon {
-  type?: "default" | "opaque";
-  color?: "primary" | "success" | "warning" | "danger";
+interface AlertCloseIcon extends AlertRootProps {
   onClose?: Function;
 }
+
 const colorMap = {
   primary: "blue",
   success: "green",
@@ -42,7 +42,7 @@ const colorMap = {
 };
 
 const AlertRoot: React.FC<AlertRootProps> = (props) => {
-  const { type, color, children } = props;
+  const { type, color, children, className, style } = props;
   const componentStyles = Styles();
   const classes = cx(
     componentStyles["alert-base"],
@@ -55,10 +55,15 @@ const AlertRoot: React.FC<AlertRootProps> = (props) => {
     },
     {
       [`bg-${colorMap[color]}-500-30`]: type === "opaque",
-    }
+    },
+    className
   );
 
-  return <div className={classes}>{children}</div>;
+  return (
+    <div style={style} className={classes}>
+      {children}
+    </div>
+  );
 };
 
 const AlertIcon: React.FC<AlertIconProps> = (props) => {
@@ -92,7 +97,7 @@ const AlertIcon: React.FC<AlertIconProps> = (props) => {
 
 const AlertContent: React.FC = (props) => {
   const { children } = props;
-  const componentStyles = styles();
+  const componentStyles = Styles();
   const classes = cx(`${componentStyles["content-base"]}`, "font-body");
   return <div className={classes}>{children}</div>;
 };
@@ -143,6 +148,7 @@ const Alert: React.FC<Props> & { Title?: React.FC } = React.forwardRef<
 });
 
 Alert.Title = AlertTitle;
+
 Alert.defaultProps = {
   color: "primary",
   showCloseIcon: false,

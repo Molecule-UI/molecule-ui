@@ -1,9 +1,11 @@
 import { createUseStyles } from "react-jss";
+import { Props } from "../Button";
 
 const styles = createUseStyles({
   "@global": {
     html: {
       fontSize: "62.5%",
+      boxSizing: "border-box",
     },
   },
   "button-base": {

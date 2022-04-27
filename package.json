@@ -2,20 +2,29 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "start": "lerna run build",
-    "build:css": "yarn workspace @molecule-ui/styles build",
-    "build:icons": "yarn workspace @molecule-ui/icons build",
-    "build:components": "yarn workspace @molecule-ui/react build",
+    "build": "lerna run build",
+    "build:css": "yarn workspace @moleculeui/styles build",
+    "build:icons": "yarn workspace @moleculeui/icons build",
+    "build:components": "yarn workspace @moleculeui/react build",
     "bootstrap": "lerna bootstrap",
     "build:docs": "yarn bootstrap && yarn docs",
-    "upload": "lerna publish",
+    "upload": "yarn remove react && react-dom && lerna publish",
     "ls": "lerna ls",
-    "build:story": "lerna run build-storybook --scope={@moleculeui/icons,@moleculeui/react,@moleculeui/styles}"
+    "create:component": "sh component.sh",
+    "deploy:docs": "yarn workspace @moleculeui/react docs:deploy "
   },
   "devDependencies": {
+    "husky": "^7.0.4",
     "lerna": "^4.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn build",
+      "pre-push": "yarn deploy:docs "
+    }
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "dependencies": {}
 }

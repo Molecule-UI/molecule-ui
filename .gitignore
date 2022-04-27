@@ -1,4 +1,9 @@
 node_modules
 build
+docs
 yarn-error.log
 coverage
+# Local Netlify folder
+.netlify
+storybook-static
+.DS_store

@@ -4,6 +4,7 @@ const styles = createUseStyles({
   "@global": {
     html: {
       fontSize: "62.5%",
+      boxSizing: "border-box",
     },
   },
 
@@ -57,6 +58,10 @@ const styles = createUseStyles({
     },
     "& > .icon-container": {
       cursor: "pointer",
+      transition: "all .1s",
+      "&:hover": {
+        transform: "scale(.95)",
+      },
     },
     "& > .hidden": {
       pointerEvents: "none !important",

@@ -3,6 +3,13 @@ import { Button, ButtonGroup } from "../index";
 export default {
   component: ButtonGroup,
   title: "Components/ButtonGroup",
+  parameters: {
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  },
 };
 
 const Template = (args) => (
@@ -10,7 +17,7 @@ const Template = (args) => (
     <Button color="primary" elevated>
       One
     </Button>
-    <Button color="primary" elevated>
+    <Button color="" elevated>
       Two
     </Button>
     <Button color="primary" elevated>

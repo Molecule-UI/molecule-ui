@@ -7,9 +7,7 @@ export interface Props {
   ofSameColor?: boolean;
 }
 
-interface ButtonGroupRootProps {
-  direction?: "row" | "column";
-}
+interface ButtonGroupRootProps extends Props {}
 
 const ButtonGroupRoot: React.FC<ButtonGroupRootProps> = (props) => {
   const { direction, children } = props;

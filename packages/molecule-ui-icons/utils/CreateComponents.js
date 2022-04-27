@@ -4,8 +4,20 @@ const glob = require("glob");
 const reactTemplate = require("./template");
 const pathsObj = {};
 
+const files = fs.readdirSync("../src");
+
+// This wll delete all the files in the src directory with .tsx extension
+files.forEach((file) => {
+  if (file.endsWith(".tsx")) {
+    fs.unlinkSync(`../src/${file}`);
+  }
+});
+
 //Delete the index.tsx file
-fs.unlinkSync("../src/index.tsx");
+
+if (fs.existsSync("../src/index.tsx")) {
+  fs.unlinkSync("../src/index.tsx");
+}
 
 // Export string to add in Index.tsx
 const exportString = `export {default as %FILENAME%} from './%FILENAME%';`;
