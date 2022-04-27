@@ -8,7 +8,7 @@
     "build:components": "yarn workspace @moleculeui/react build",
     "bootstrap": "lerna bootstrap",
     "build:docs": "yarn bootstrap && yarn docs",
-    "upload": "yarn remove react && react-dom && lerna publish",
+    "upload": "lerna publish",
     "ls": "lerna ls",
     "create:component": "sh component.sh",
     "deploy:docs": "yarn workspace @moleculeui/react docs:deploy "
