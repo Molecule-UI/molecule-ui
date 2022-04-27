@@ -11,8 +11,6 @@
     "watch": "rollup -c -w",
     "build": "rollup -c",
     "dev": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "component": "sh ../../component.sh",
     "docs:deploy": "yarn build-storybook && netlify deploy --prod --dir=storybook-static && rm -rf storybook-static"
   },
   "devDependencies": {
@@ -35,12 +33,14 @@
   ],
   "gitHead": "75f91880c628fbf017025c022d07186236947107",
   "dependencies": {
-    "@moleculeui/icons": "1.1.0-beta.0",
-    "@moleculeui/styles": "1.1.0-beta.0",
     "classnames": "^2.3.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-jss": "^10.9.0",
     "remove": "^0.1.5"
+  },
+  "peerDependencies": {
+    "@moleculeui/icons": "1.0.0",
+    "@moleculeui/styles": "1.0.0"
   }
 }

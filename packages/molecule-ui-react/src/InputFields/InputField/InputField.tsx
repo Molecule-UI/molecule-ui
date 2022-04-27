@@ -21,12 +21,14 @@ export interface InputFieldProps {
   className?: string;
   style?: CSSProperties;
   type: "password" | "text" | "email";
-  placeHolder?: string;
+  placeholder?: string;
   iconColor?: string;
   allowPasswordShow?: boolean;
   isPasswordVisible?: boolean;
   labelOptions?: LabelOption;
+  showIcon?: boolean;
   onIconClick?: (isPasswordVisible: boolean) => void;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export interface InputLabelProps {
@@ -58,12 +60,14 @@ const InputField: React.FC<InputFieldProps> = (props) => {
     className,
     style,
     type,
-    placeHolder,
+    placeholder,
     iconColor,
     labelOptions,
     allowPasswordShow,
     isPasswordVisible,
+    showIcon,
     onIconClick,
+    onChange,
   } = props;
 
   const onIconClickHandle = () => {
@@ -102,6 +106,10 @@ const InputField: React.FC<InputFieldProps> = (props) => {
     }
   }
 
+  const onChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    onChange && onChange(event);
+  };
+
   return (
     <>
       <InputLabel {...labelOptions} />
@@ -110,11 +118,12 @@ const InputField: React.FC<InputFieldProps> = (props) => {
           style={style}
           type={isPasswordVisible ? "text" : type}
           className={inputClasses}
-          placeholder={placeHolder}
+          placeholder={placeholder}
           id={labelOptions?.labelId}
+          onChange={onChangeHandler}
         />
         <div className={iconClasses}>
-          {type && IconComponent && (
+          {type && IconComponent && showIcon && (
             <IconComponent onClick={onIconClickHandle} fill={iconColor} />
           )}
         </div>
@@ -127,6 +136,7 @@ InputField.defaultProps = {
   allowPasswordShow: false,
   isPasswordVisible: false,
   type: "text",
+  showIcon: true,
 };
 
 export default InputField;

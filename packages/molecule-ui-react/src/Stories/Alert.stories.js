@@ -5,6 +5,13 @@ import { Alert } from "../index";
 export default {
   component: Alert,
   title: "Components/Alert",
+  parameters: {
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  },
 };
 
 const Template = (args) => (

@@ -8,6 +8,13 @@ import { Accordion } from "../index";
 export default {
   component: Accordion,
   title: "Components/Accordion",
+  parameters: {
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  },
 };
 
 const Template = (args) => {

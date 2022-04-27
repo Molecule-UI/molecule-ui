@@ -5,6 +5,13 @@ import { Chip } from "../index";
 export default {
   component: Chip,
   title: "Components/Chip",
+  parameters: {
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  },
 };
 
 const Template = (args) => <Chip {...args}>JavaScript</Chip>;

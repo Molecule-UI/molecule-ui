@@ -9,7 +9,7 @@ export default {
   parameters: {
     previewTabs: {
       canvas: {
-        hidden: false,
+        hidden: true,
       },
     },
   },

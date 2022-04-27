@@ -6,6 +6,13 @@ import { OTP } from "../index";
 export default {
   component: OTP,
   title: "Components/OTP",
+  parameters: {
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  },
 };
 
 const Template = (args) => <OTP {...args}></OTP>;

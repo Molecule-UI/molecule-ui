@@ -3,6 +3,13 @@ import { Button, ButtonGroup } from "../index";
 export default {
   component: ButtonGroup,
   title: "Components/ButtonGroup",
+  parameters: {
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  },
 };
 
 const Template = (args) => (

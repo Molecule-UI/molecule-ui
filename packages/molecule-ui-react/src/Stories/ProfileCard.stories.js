@@ -5,6 +5,13 @@ import { ProfileCard } from "../index";
 export default {
   component: ProfileCard,
   title: "Components/ProfileCard",
+  parameters: {
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  },
 };
 
 const Template = (args) => <ProfileCard {...args} />;

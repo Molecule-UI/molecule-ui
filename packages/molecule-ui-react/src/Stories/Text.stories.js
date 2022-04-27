@@ -5,6 +5,13 @@ import { Text } from "../index";
 export default {
   component: Text,
   title: "Components/Text",
+  parameters: {
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  },
 };
 
 const Template = (args) => <Text {...args}>I am a default Heading</Text>;

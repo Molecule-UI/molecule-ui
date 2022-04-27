@@ -6,6 +6,13 @@ import { InputField } from "../index";
 export default {
   component: InputField,
   title: "Components/InputField",
+  parameters: {
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  },
 };
 
 const Template = (args) => (
@@ -16,16 +23,29 @@ const Template = (args) => (
 
 export const Default = Template.bind({});
 
+export const TextField = Template.bind({});
+
+export const PasswordField = Template.bind({});
+
 Default.args = {
-  placeHolder: "johndoe@example.com",
+  placeholder: "My Text Field",
+};
+
+TextField.args = {
   type: "text",
+  placeholder: "Text field",
   labelOptions: {
-    label: "Email",
-    labelId: "Email",
+    label: "Enter Text",
+    labelId: "text",
   },
+};
+
+PasswordField.args = {
+  type: "password",
+  placeholder: "Password",
   allowPasswordShow: true,
-  isPasswordVisible: true,
-  onIconClick: (isPasswordVisible) => {
-    console.log(isPasswordVisible);
+  labelOptions: {
+    label: "Password",
+    labelId: "Pass",
   },
 };
