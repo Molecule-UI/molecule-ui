@@ -1,0 +1,96 @@
+[
+  {
+    "tags": {},
+    "filePath": "/Users/rushil/Personal/molecule-ui/packages/molecule-ui-react/src/Alert/Alert.tsx",
+    "description": "",
+    "displayName": "Alert",
+    "methods": [],
+    "props": {
+      "color": {
+        "defaultValue": { "value": "primary" },
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Alert/Alert.tsx",
+          "name": "Props"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Alert/Alert.tsx",
+            "name": "Props"
+          }
+        ],
+        "required": false,
+        "type": { "name": "\"primary\" | \"success\" | \"danger\"" }
+      },
+      "showCloseIcon": {
+        "defaultValue": { "value": false },
+        "description": "",
+        "name": "showCloseIcon",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Alert/Alert.tsx",
+          "name": "Props"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Alert/Alert.tsx",
+            "name": "Props"
+          }
+        ],
+        "required": false,
+        "type": { "name": "boolean" }
+      },
+      "onClose": {
+        "defaultValue": null,
+        "description": "",
+        "name": "onClose",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Alert/Alert.tsx",
+          "name": "Props"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Alert/Alert.tsx",
+            "name": "Props"
+          }
+        ],
+        "required": false,
+        "type": { "name": "Function" }
+      },
+      "showIcon": {
+        "defaultValue": { "value": true },
+        "description": "",
+        "name": "showIcon",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Alert/Alert.tsx",
+          "name": "Props"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Alert/Alert.tsx",
+            "name": "Props"
+          }
+        ],
+        "required": false,
+        "type": { "name": "boolean" }
+      },
+      "type": {
+        "defaultValue": { "value": "default" },
+        "description": "",
+        "name": "type",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Alert/Alert.tsx",
+          "name": "Props"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Alert/Alert.tsx",
+            "name": "Props"
+          }
+        ],
+        "required": false,
+        "type": { "name": "\"default\" | \"opaque\"" }
+      }
+    }
+  }
+]

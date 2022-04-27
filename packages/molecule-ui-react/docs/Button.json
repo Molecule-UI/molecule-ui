@@ -1,0 +1,217 @@
+[
+  {
+    "tags": {},
+    "filePath": "/Users/rushil/Personal/molecule-ui/packages/molecule-ui-react/src/Buttons/Button/Button.tsx",
+    "description": "",
+    "displayName": "Button",
+    "methods": [],
+    "props": {
+      "color": {
+        "defaultValue": { "value": "default" },
+        "description": "",
+        "name": "color",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Buttons/Button/Button.tsx",
+          "name": "Props"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Buttons/Button/Button.tsx",
+            "name": "Props"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "\"primary\" | \"danger\" | \"success\" | \"default\" | \"delay\" | \"info\""
+        }
+      },
+      "colorStrength": {
+        "defaultValue": { "value": 500 },
+        "description": "",
+        "name": "colorStrength",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Buttons/Button/Button.tsx",
+          "name": "Props"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Buttons/Button/Button.tsx",
+            "name": "Props"
+          }
+        ],
+        "required": false,
+        "type": { "name": "100 | 200 | 300 | 400 | 500 | 600 | 700 | 800" }
+      },
+      "className": {
+        "defaultValue": null,
+        "description": "",
+        "name": "className",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Buttons/Button/Button.tsx",
+          "name": "Props"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Buttons/Button/Button.tsx",
+            "name": "Props"
+          }
+        ],
+        "required": false,
+        "type": { "name": "string" }
+      },
+      "variant": {
+        "defaultValue": { "value": "default" },
+        "description": "",
+        "name": "variant",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Buttons/Button/Button.tsx",
+          "name": "Props"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Buttons/Button/Button.tsx",
+            "name": "Props"
+          }
+        ],
+        "required": false,
+        "type": { "name": "\"default\" | \"rounded\" | \"capsule\"" }
+      },
+      "type": {
+        "defaultValue": { "value": "default" },
+        "description": "",
+        "name": "type",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Buttons/Button/Button.tsx",
+          "name": "Props"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Buttons/Button/Button.tsx",
+            "name": "Props"
+          }
+        ],
+        "required": false,
+        "type": { "name": "\"default\" | \"outlined\" | \"opaque\" | \"text\"" }
+      },
+      "size": {
+        "defaultValue": { "value": "medium" },
+        "description": "",
+        "name": "size",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Buttons/Button/Button.tsx",
+          "name": "Props"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Buttons/Button/Button.tsx",
+            "name": "Props"
+          }
+        ],
+        "required": false,
+        "type": { "name": "\"small\" | \"medium\" | \"large\" | \"huge\"" }
+      },
+      "elevated": {
+        "defaultValue": { "value": true },
+        "description": "",
+        "name": "elevated",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Buttons/Button/Button.tsx",
+          "name": "Props"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Buttons/Button/Button.tsx",
+            "name": "Props"
+          }
+        ],
+        "required": false,
+        "type": { "name": "boolean" }
+      },
+      "fullWidth": {
+        "defaultValue": { "value": false },
+        "description": "",
+        "name": "fullWidth",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Buttons/Button/Button.tsx",
+          "name": "Props"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Buttons/Button/Button.tsx",
+            "name": "Props"
+          }
+        ],
+        "required": false,
+        "type": { "name": "boolean" }
+      },
+      "circle": {
+        "defaultValue": { "value": false },
+        "description": "",
+        "name": "circle",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Buttons/Button/Button.tsx",
+          "name": "Props"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Buttons/Button/Button.tsx",
+            "name": "Props"
+          }
+        ],
+        "required": false,
+        "type": { "name": "boolean" }
+      },
+      "disabled": {
+        "defaultValue": { "value": false },
+        "description": "",
+        "name": "disabled",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Buttons/Button/Button.tsx",
+          "name": "Props"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Buttons/Button/Button.tsx",
+            "name": "Props"
+          }
+        ],
+        "required": false,
+        "type": { "name": "boolean" }
+      },
+      "onPress": {
+        "defaultValue": null,
+        "description": "",
+        "name": "onPress",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Buttons/Button/Button.tsx",
+          "name": "Props"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Buttons/Button/Button.tsx",
+            "name": "Props"
+          }
+        ],
+        "required": true,
+        "type": { "name": "Function" }
+      },
+      "hoverEffect": {
+        "defaultValue": { "value": true },
+        "description": "",
+        "name": "hoverEffect",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Buttons/Button/Button.tsx",
+          "name": "Props"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Buttons/Button/Button.tsx",
+            "name": "Props"
+          }
+        ],
+        "required": false,
+        "type": { "name": "boolean" }
+      }
+    }
+  }
+]

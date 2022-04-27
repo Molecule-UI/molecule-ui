@@ -6,3 +6,4 @@ coverage
 # Local Netlify folder
 .netlify
 storybook-static
+.DS_store

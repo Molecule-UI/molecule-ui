@@ -1,0 +1,115 @@
+[
+  {
+    "tags": {},
+    "filePath": "/Users/rushil/Personal/molecule-ui/packages/molecule-ui-react/src/Cards/ProfileCard/ProfileCard.tsx",
+    "description": "",
+    "displayName": "ProfileCard",
+    "methods": [],
+    "props": {
+      "src": {
+        "defaultValue": null,
+        "description": "",
+        "name": "src",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Cards/ProfileCard/ProfileCard.tsx",
+          "name": "ProfileCardRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Cards/ProfileCard/ProfileCard.tsx",
+            "name": "ProfileCardRootProps"
+          }
+        ],
+        "required": true,
+        "type": { "name": "string" }
+      },
+      "title": {
+        "defaultValue": null,
+        "description": "",
+        "name": "title",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Cards/ProfileCard/ProfileCard.tsx",
+          "name": "ProfileCardRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Cards/ProfileCard/ProfileCard.tsx",
+            "name": "ProfileCardRootProps"
+          }
+        ],
+        "required": true,
+        "type": { "name": "string" }
+      },
+      "className": {
+        "defaultValue": null,
+        "description": "",
+        "name": "className",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Cards/ProfileCard/ProfileCard.tsx",
+          "name": "ProfileCardRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Cards/ProfileCard/ProfileCard.tsx",
+            "name": "ProfileCardRootProps"
+          }
+        ],
+        "required": false,
+        "type": { "name": "string" }
+      },
+      "type": {
+        "defaultValue": { "value": "spaced" },
+        "description": "",
+        "name": "type",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Cards/ProfileCard/ProfileCard.tsx",
+          "name": "ProfileCardRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Cards/ProfileCard/ProfileCard.tsx",
+            "name": "ProfileCardRootProps"
+          }
+        ],
+        "required": false,
+        "type": { "name": "\"covered\" | \"spaced\"" }
+      },
+      "icon": {
+        "defaultValue": null,
+        "description": "",
+        "name": "icon",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Cards/ProfileCard/ProfileCard.tsx",
+          "name": "ProfileCardRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Cards/ProfileCard/ProfileCard.tsx",
+            "name": "ProfileCardRootProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "ReactElement<any, string | JSXElementConstructor<any>>"
+        }
+      },
+      "onIconClick": {
+        "defaultValue": null,
+        "description": "",
+        "name": "onIconClick",
+        "parent": {
+          "fileName": "molecule-ui-react/src/Cards/ProfileCard/ProfileCard.tsx",
+          "name": "ProfileCardRootProps"
+        },
+        "declarations": [
+          {
+            "fileName": "molecule-ui-react/src/Cards/ProfileCard/ProfileCard.tsx",
+            "name": "ProfileCardRootProps"
+          }
+        ],
+        "required": false,
+        "type": { "name": "Function" }
+      }
+    }
+  }
+]
