@@ -11,7 +11,7 @@
     "watch": "rollup -c -w",
     "build": "rollup -c",
     "dev": "start-storybook -p 6006",
-    "docs:deploy": "yarn build-storybook && netlify deploy --prod --dir=storybook-static && rm -rf storybook-static"
+    "docs:deploy": "yarn build-storybook && netlify deploy --prod --dir=storybook-static && rm -rf storybook-static && yarn remove react react-dom"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.2",
@@ -34,8 +34,6 @@
   "gitHead": "75f91880c628fbf017025c022d07186236947107",
   "dependencies": {
     "classnames": "^2.3.1",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
     "react-jss": "^10.9.0",
     "remove": "^0.1.5"
   },
