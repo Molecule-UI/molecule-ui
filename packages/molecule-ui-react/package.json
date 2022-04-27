@@ -38,7 +38,7 @@
     "remove": "^0.1.5"
   },
   "peerDependencies": {
-    "@moleculeui/icons": "1.0.0",
-    "@moleculeui/styles": "1.0.0"
+    "@moleculeui/icons": "^1.0.0",
+    "@moleculeui/styles": "^1.0.0"
   }
 }
