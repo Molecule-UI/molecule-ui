@@ -11,7 +11,7 @@
     "watch": "rollup -c -w",
     "build": "rollup -c",
     "dev": "start-storybook -p 6006",
-    "docs:deploy": "yarn build-storybook && netlify deploy --prod --dir=storybook-static && rm -rf storybook-static && yarn remove react react-dom"
+    "docs:deploy": "yarn add react react-dom && yarn build-storybook && netlify deploy --prod --dir=storybook-static && rm -rf storybook-static && yarn remove react react-dom"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.2",
