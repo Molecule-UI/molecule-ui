@@ -33,10 +33,10 @@
   ],
   "gitHead": "75f91880c628fbf017025c022d07186236947107",
   "dependencies": {
+    "@moleculeui/icons": "^1.0.0",
+    "@moleculeui/styles": "^1.0.0",
     "classnames": "^2.3.1",
     "react-jss": "^10.9.0",
-    "remove": "^0.1.5",
-    "@moleculeui/icons": "^1.0.0",
-    "@moleculeui/styles": "^1.0.0"
+    "remove": "^0.1.5"
   }
 }
