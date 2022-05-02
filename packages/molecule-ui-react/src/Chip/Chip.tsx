@@ -25,6 +25,7 @@ export interface Props {
   onClose?: () => void;
   className?: string;
   style?: CSSProperties;
+  children: React.ReactNode;
 }
 
 const colorMap = {

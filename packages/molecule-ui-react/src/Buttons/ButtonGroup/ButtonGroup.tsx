@@ -5,6 +5,7 @@ import { Props as ButtonProps } from "../Button/Button";
 export interface Props {
   direction?: "row" | "column";
   ofSameColor?: boolean;
+  children: React.ReactNode;
 }
 
 interface ButtonGroupRootProps extends Props {}

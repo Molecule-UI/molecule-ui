@@ -19,6 +19,7 @@ export interface Props {
   type?: "default" | "opaque";
   className?: string;
   style?: CSSProperties;
+  children: React.ReactNode;
 }
 
 interface AlertRootProps {
@@ -26,6 +27,11 @@ interface AlertRootProps {
   color?: "primary" | "success" | "danger";
   className?: string;
   style?: CSSProperties;
+  children: React.ReactNode;
+}
+
+interface AlertContentProps {
+  children: React.ReactNode;
 }
 
 interface AlertIconProps extends AlertRootProps {}
@@ -95,7 +101,7 @@ const AlertIcon: React.FC<AlertIconProps> = (props) => {
   );
 };
 
-const AlertContent: React.FC = (props) => {
+const AlertContent: React.FC<AlertContentProps> = (props) => {
   const { children } = props;
   const componentStyles = Styles();
   const classes = cx(`${componentStyles["content-base"]}`, "font-body");

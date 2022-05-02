@@ -16,6 +16,7 @@ export interface Props {
   onPress: Function;
   hoverEffect: boolean;
   style?: CSSProperties;
+  children?: React.ReactNode;
 }
 
 export const Button: React.FC<Props> = React.forwardRef<
