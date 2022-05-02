@@ -1,4 +1,5 @@
 import { createUseStyles } from "react-jss";
+import globalStyles from "../../../globalStyles";
 
 const styles = createUseStyles({
   "@global": {
@@ -6,6 +7,7 @@ const styles = createUseStyles({
       fontSize: "62.5%",
       boxSizing: "border-box",
     },
+    ...globalStyles,
   },
 
   "profile-card-base": {

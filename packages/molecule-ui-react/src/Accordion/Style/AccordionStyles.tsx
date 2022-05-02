@@ -1,10 +1,12 @@
 import { createUseStyles } from "react-jss";
 import { Props } from "../Accordion";
+import globalStyles from "../../globalStyles";
 const styles = createUseStyles({
   "@global": {
     html: {
       fontSize: "62.5%",
     },
+    ...globalStyles,
   },
   "accordion-base": {
     boxSizing: "border-box",

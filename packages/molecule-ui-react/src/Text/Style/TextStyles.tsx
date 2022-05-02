@@ -1,4 +1,5 @@
 import { createUseStyles } from "react-jss";
+import globalStyles from "../../globalStyles";
 import { Props } from "../Text";
 
 const styles = createUseStyles({
@@ -7,6 +8,7 @@ const styles = createUseStyles({
       fontSize: "62.5%",
       boxSizing: "border-box",
     },
+    ...globalStyles,
   },
   "heading-root": {
     fontFamily: "sans-serif",

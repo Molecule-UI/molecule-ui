@@ -1,4 +1,5 @@
 import { createUseStyles } from "react-jss";
+import globalStyles from "../../../globalStyles";
 
 const styles = createUseStyles({
   "@global": {
@@ -14,6 +15,7 @@ const styles = createUseStyles({
     "input[type=number]": {
       "-moz-appearance": "textfield",
     },
+    ...globalStyles,
   },
   "single-input": {
     border: "none",

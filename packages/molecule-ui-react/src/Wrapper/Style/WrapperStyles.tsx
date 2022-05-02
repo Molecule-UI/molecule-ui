@@ -1,4 +1,5 @@
 import { createUseStyles } from "react-jss";
+import globalStyles from "../../globalStyles";
 import { Props } from "../Wrapper";
 
 const paddingMap = {
@@ -44,6 +45,7 @@ const styles = createUseStyles({
     html: {
       fontSize: "62.5%",
     },
+    ...globalStyles,
   },
   "wrapper-root": {
     padding: (props: Props) => paddingMap[props.padding],

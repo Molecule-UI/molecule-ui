@@ -1,4 +1,5 @@
 import { createUseStyles } from "react-jss";
+import globalStyles from "../../../globalStyles";
 import { InputFieldProps } from "../InputField";
 
 const styles = createUseStyles({
@@ -9,6 +10,7 @@ const styles = createUseStyles({
     html: {
       fontSize: "62.5%",
     },
+    ...globalStyles,
   },
   "input-wrapper": {
     position: "relative",

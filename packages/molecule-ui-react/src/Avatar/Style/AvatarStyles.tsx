@@ -1,6 +1,6 @@
 import { createUseStyles } from "react-jss";
+import globalStyles from "../../globalStyles";
 import { Props } from "../Avatar";
-
 const sizeMap = {
   tiny: "50px",
   small: "75px",
@@ -16,6 +16,9 @@ const dotSizeMap = {
 };
 
 const styles = createUseStyles({
+  "@global": {
+    ...globalStyles,
+  },
   "avatar-base": {
     width: (props: Props) => sizeMap[props.size],
     height: (props: Props) => sizeMap[props.size],

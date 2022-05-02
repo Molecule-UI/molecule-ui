@@ -1,5 +1,5 @@
 import { createUseStyles } from "react-jss";
-
+import globalStyles from "../../../globalStyles";
 const styles = createUseStyles({
   "@global": {
     html: {
@@ -10,6 +10,7 @@ const styles = createUseStyles({
       margin: 0,
       textAlign: "left",
     },
+    ...globalStyles,
   },
 });
 

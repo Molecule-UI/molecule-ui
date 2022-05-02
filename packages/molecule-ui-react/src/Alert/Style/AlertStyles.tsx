@@ -1,11 +1,12 @@
 import { createUseStyles } from "react-jss";
-
+import globalStyles from "../../globalStyles";
 const styles = createUseStyles({
   "@global": {
     html: {
       fontSize: "62.5%",
       boxSizing: "border-box",
     },
+    // ...globalStyles,
   },
   "alert-base": {
     padding: "1.5rem 2rem",

@@ -1,12 +1,13 @@
 import { createUseStyles } from "react-jss";
 import { Props } from "../Button";
-
+import globalStyles from "../../../globalStyles";
 const styles = createUseStyles({
   "@global": {
     html: {
       fontSize: "62.5%",
       boxSizing: "border-box",
     },
+    ...globalStyles,
   },
   "button-base": {
     textTransform: "uppercase",

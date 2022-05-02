@@ -1,4 +1,5 @@
 import { createUseStyles } from "react-jss";
+import globalStyles from "../../globalStyles";
 import { Props } from "../Chip";
 
 const styles = createUseStyles({
