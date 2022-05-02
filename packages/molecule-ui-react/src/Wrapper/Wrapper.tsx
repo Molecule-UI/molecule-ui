@@ -14,6 +14,7 @@ export interface Props {
   verticalAlign?: "top" | "middle" | "down";
   horizontalAlign?: "left" | "center" | "right";
   gap?: number;
+  children: React.ReactNode;
 }
 
 const Wrapper: React.FC<Props> = (props) => {

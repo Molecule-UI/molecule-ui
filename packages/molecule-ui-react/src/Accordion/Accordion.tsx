@@ -14,6 +14,7 @@ export interface Props {
   onClick: (isOpen: boolean) => void;
   style?: CSSProperties;
   className?: string;
+  children: React.ReactNode;
 }
 
 interface AccordionBorderProps {
